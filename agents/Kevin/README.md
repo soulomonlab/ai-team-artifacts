@@ -1,11 +1,12 @@
 # ⚡ Kevin — Frontend Engineer
 
-> 🤖 Auto-generated · 2026-03-04 18:30 UTC
+> 🤖 Auto-generated · 2026-03-04 18:31 UTC
 
 ## 산출물 목록
 
 ### 📁 code/
 
+- [frontend/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/)
 - [frontend/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/)
 - [frontend/,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/,)
 - [frontend/mocks/crud_api_mock.ts](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/mocks/crud_api_mock.ts)
@@ -32,6 +33,7 @@
 - [2026-03-04/20260304_183032_Kevin_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-04/20260304_183032_Kevin_1772648728.246069.md)
 - [2026-03-04/20260304_183044_Kevin_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-04/20260304_183044_Kevin_1772648728.246069.md)
 - [2026-03-04/20260304_183058_Kevin_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-04/20260304_183058_Kevin_1772648728.246069.md)
+- [2026-03-04/20260304_183112_Kevin_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-04/20260304_183112_Kevin_1772648728.246069.md)
 
 ### 📁 specs/
 
