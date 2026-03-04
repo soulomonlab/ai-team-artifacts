@@ -11,6 +11,7 @@
 - [global_search_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/global_search_spec.md)
 - [intuitive_experience_ux_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/intuitive_experience_ux_spec.md)
 - [intuitive_experience_ux_spec.mdCreated](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/intuitive_experience_ux_spec.mdCreated)
+- [search_pagination_live_updates_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/search_pagination_live_updates_spec.md)
 
 ### 📁 slack/
 
@@ -18,6 +19,7 @@
 - [2026-03-04/20260304_181500_Maya_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-04/20260304_181500_Maya_1772648003.795029.md)
 - [2026-03-04/20260304_181517_Maya_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-04/20260304_181517_Maya_1772648003.795029.md)
 - [2026-03-04/20260304_181533_Maya_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-04/20260304_181533_Maya_1772648003.795029.md)
+- [2026-03-04/20260304_181543_Maya_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-04/20260304_181543_Maya_1772648003.795029.md)
 
 ### 📁 specs/
 
