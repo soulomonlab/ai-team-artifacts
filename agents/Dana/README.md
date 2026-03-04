@@ -7,12 +7,14 @@
 ### 📁 design/
 
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/)
+- [.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/.)
 - [live_event_topics.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/live_event_topics.md)
 
 ### 📁 reports/
 
 - [test_plan_cursor_pagination.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/test_plan_cursor_pagination.md)
 - [test_plan_cursor_pagination.md,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/test_plan_cursor_pagination.md,)
+- [test_plan_kickoff_template.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/test_plan_kickoff_template.md)
 
 ### 📁 slack/
 
@@ -23,9 +25,11 @@
 - [2026-03-04/20260304_181632_Dana_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-04/20260304_181632_Dana_1772648003.795029.md)
 - [2026-03-04/20260304_181636_Dana_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-04/20260304_181636_Dana_1772648003.795029.md)
 - [2026-03-04/20260304_181638_Dana_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-04/20260304_181638_Dana_1772648003.795029.md)
+- [2026-03-04/20260304_182951_Dana_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-04/20260304_182951_Dana_1772648728.246069.md)
 
 ### 📁 specs/
 
+- [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/specs/)
 - [db_schema_initial.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/specs/db_schema_initial.md.)
 - [feature_intuitive_experience.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/specs/feature_intuitive_experience.md)
 
