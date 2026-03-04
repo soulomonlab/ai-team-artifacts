@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  price-poller:
+    build: ../output/config
+    image: price-poller:local
+    environment:
+      - REDIS_URL=redis://redis:6379/0
+      - TICKERS=BTC,ETH
+      - POLL_INTERVAL=60
+      - ALERT_THRESHOLD_PCT=2.0
+      - PRICE_API_URL=https://api.mock/prices/{ticker}
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
