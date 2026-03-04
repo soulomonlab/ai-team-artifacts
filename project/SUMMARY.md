@@ -11,9 +11,9 @@
 | 🤖 Dependency | Agent | 5 | 4 | 9 |
 | 🔒 Isabella | Security Engineer | 14 | 7 | 21 |
 | ⚡ Kevin | Frontend Engineer | 17 | 13 | 30 |
-| 🔧 Marcus | Backend Engineer | 19 | 11 | 30 |
-| 🎨 Maya | Designer | 10 | 7 | 17 |
-| 🚢 Noah | DevOps Engineer | 0 | 4 | 4 |
+| 🔧 Marcus | Backend Engineer | 19 | 12 | 31 |
+| 🎨 Maya | Designer | 13 | 8 | 21 |
+| 🚢 Noah | DevOps Engineer | 0 | 5 | 5 |
 | 🖥️ Oliver | Backend Engineer | 0 | 4 | 4 |
 | 🏗️ Taylor | Tech Lead | 7 | 7 | 14 |
 
@@ -21,15 +21,15 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 75 |
-| specs | 41 |
+| slack | 78 |
+| specs | 42 |
 | tests | 29 |
-| design | 24 |
+| design | 26 |
 | code | 18 |
 | reports | 9 |
 | docs | 3 |
 
-**총 산출물: 199개**
+**총 산출물: 205개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
