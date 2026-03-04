@@ -24,6 +24,9 @@ agents/
     reports/
     slack/
     specs/
+  Emma/                  📝 Technical Writer
+    docs/
+    slack/
   Isabella/                  🔒 Security Engineer
     code/
     docs/
@@ -62,6 +65,7 @@ project/
 - 📋 **[Alex](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)** — Product Owner · 14개 파일
 - 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA Engineer · 56개 파일
 - 🤖 **[Dependency](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)** — Agent · 9개 파일
+- 📝 **[Emma](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)** — Technical Writer · 3개 파일
 - 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security Engineer · 21개 파일
 - ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 30개 파일
 - 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 31개 파일
@@ -76,6 +80,7 @@ project/
 - 📋 [Alex 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)
 - 🎯 [Dana 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)
 - 🤖 [Dependency 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)
+- 📝 [Emma 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)
 - 🔒 [Isabella 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)
 - ⚡ [Kevin 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)
 - 🔧 [Marcus 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)
