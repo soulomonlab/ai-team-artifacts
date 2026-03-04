@@ -1,6 +1,6 @@
 # 🎯 Dana — QA Engineer
 
-> 🤖 Auto-generated · 2026-03-04 18:29 UTC
+> 🤖 Auto-generated · 2026-03-04 18:30 UTC
 
 ## 산출물 목록
 
@@ -9,6 +9,7 @@
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/)
 - [.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/.)
 - [live_event_topics.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/live_event_topics.md)
+- [onboarding_sketches.pdf](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/onboarding_sketches.pdf)
 
 ### 📁 reports/
 
@@ -26,6 +27,7 @@
 - [2026-03-04/20260304_181636_Dana_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-04/20260304_181636_Dana_1772648003.795029.md)
 - [2026-03-04/20260304_181638_Dana_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-04/20260304_181638_Dana_1772648003.795029.md)
 - [2026-03-04/20260304_182951_Dana_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-04/20260304_182951_Dana_1772648728.246069.md)
+- [2026-03-04/20260304_182954_Dana_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-04/20260304_182954_Dana_1772648728.246069.md)
 
 ### 📁 specs/
 
@@ -51,6 +53,7 @@
 - [test_backend_crud_api_skeleton.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_backend_crud_api_skeleton.py)
 - [test_infinite_live_list.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_infinite_live_list.py)
 - [test_items_pagination.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_items_pagination.py)
+- [test_onboarding.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_onboarding.py)
 - [test_pagination.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_pagination.py)
 - [test_plan_intuitive_experience.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_plan_intuitive_experience.md)
 - [test_plan_template.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_plan_template.md)
