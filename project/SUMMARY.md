@@ -7,7 +7,7 @@
 | 에이전트 | 역할 | 코드/문서 | Slack 아카이브 | 합계 |
 |----------|------|-----------|----------------|------|
 | 📋 Alex | Product Owner | 9 | 5 | 14 |
-| 🎯 Dana | QA Engineer | 42 | 12 | 54 |
+| 🎯 Dana | QA Engineer | 43 | 13 | 56 |
 | 🤖 Dependency | Agent | 3 | 1 | 4 |
 | 🔒 Isabella | Security Engineer | 14 | 6 | 20 |
 | ⚡ Kevin | Frontend Engineer | 13 | 11 | 24 |
@@ -15,21 +15,21 @@
 | 🎨 Maya | Designer | 10 | 7 | 17 |
 | 🚢 Noah | DevOps Engineer | 0 | 2 | 2 |
 | 🖥️ Oliver | Backend Engineer | 0 | 4 | 4 |
-| 🏗️ Taylor | Tech Lead | 7 | 5 | 12 |
+| 🏗️ Taylor | Tech Lead | 7 | 6 | 13 |
 
 ## 파일 유형별 통계
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 63 |
+| slack | 65 |
 | specs | 41 |
-| tests | 28 |
+| tests | 29 |
 | design | 22 |
 | code | 16 |
 | reports | 7 |
 | docs | 3 |
 
-**총 산출물: 180개**
+**총 산출물: 183개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
