@@ -1,0 +1,87 @@
+Onboarding & Core Flow — Mid-fidelity Sketches
+
+Overview
+- Purpose: Mid-fi designs for onboarding (signup → profile → initial tasks) and core post-onboarding dashboard.
+- Deliverable: mid-fi wireframes, component specs, user flow, design decisions.
+- File: output/design/onboarding_sketches.pdf (this document)
+
+Target Platform
+- Primary: Web (responsive). Please confirm mobile native priority (ask: #ai-mobile).
+
+User Flow (linear)
+1. Welcome / Value props + CTA (Sign up / Log in)
+2. Signup options (Email, Google SSO, SSO button if enabled)
+3. Email signup flow (email -> verify -> set password)
+4. Profile setup (name, preferences — optional skip)
+5. Initial tasks / quick tour (3-step checklist to surface value)
+6. Dashboard (core flow)
+
+Screens (mid-fi)
+- Screen A: Welcome
+  [ Top: logo | Help ]
+  [ Big headline: "Get started in minutes" ]
+  [ Two CTAs: Sign up (primary), Log in (link) ]
+  [ Small: "Or continue with" — Google SSO button ]
+
+- Screen B: Email Signup
+  [ Card ]
+  [ Email field ]
+  [ Password field ]
+  [ Re-type password (optional, can be replaced by show-password + strength) ]
+  [ Primary CTA: Create account ]
+  [ Link: Use SSO instead ]
+
+- Screen C: Email Verify (enter code) / Magic link fallback
+  [ Code input (6 boxes) ]
+  [ Resend link / use magic link ]
+
+- Screen D: Profile Setup
+  [ Avatar placeholder ] [ Name ] [ Role (dropdown) ] [ Preferences toggles ]
+  [ Skip for now ] [ Continue ]
+
+- Screen E: First-run Checklist / Initial Tasks
+  [ 3 cards horizontally with progressive completion ]
+  [ Primary: Start guided task ]
+  [ Secondary: Skip tour ]
+
+- Screen F: Dashboard (post-onboarding)
+  [ Left nav ] [ Main content: tasks / summary ]
+  [ Top-right: profile menu ]
+
+Component Specs
+- Card layout: 16px border radius, 24px padding
+- Grid: single column center card max-width 680px on desktop, 16px gutters
+- Buttons: Primary (blue 16px padding), Secondary (ghost)
+- Inputs: 44px height, 12px radius, label above field
+- Progress indicator: step dots + textual step "Step 2 of 4"
+
+Accessibility & microcopy
+- Use clear error states under inputs (red 14px) + success toasts
+- Offer skip options for low-friction onboarding
+- Provide SSO explanation tooltip: "Use your Google account — no password created"
+
+Key Design Decisions (rationale)
+- Single-column centered card: reduces cognitive load and works well responsively.
+- Progressive disclosure for profile info: ask minimal info first to increase completion.
+- Optional tour: lets experienced users skip while ensuring new users see value.
+
+Open Questions / Blockers (need answers to finalize)
+- Auth approach: JWT vs sessions vs SSO — #ai-backend please confirm. This impacts microcopy ("Continue with Google" vs session messaging) and error flows.
+- Primary target breakpoints: responsive web only or mobile-first? #ai-mobile please confirm if native is priority.
+- Any brand color / typography tokens? If not, I used system defaults (will provide style tokens in hi-fi).
+
+Acceptance criteria for frontend mocks
+- All onboarding states represented: empty, loading, success, error, retry.
+- SSO & email flows mocked (if SSO enabled, show SSO button + tooltip).
+- Profile skip path available.
+
+Next steps
+- Once #ai-backend confirms auth and provides example API responses, I will produce hi-fi screens + exported assets (SVGs) within 24h.
+- Handoff to #ai-frontend: implement mid-fi. #ai-qa: prepare acceptance tests based on above criteria.
+
+Files attached
+- (This doc): mid-fi sketches & specs — use as source of truth until hi-fi assets produced.
+
+Design owner
+- Maya (UX/UI) — will follow up after backend auth decision.
+
