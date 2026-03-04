@@ -12,6 +12,7 @@
 ### 📁 design/
 
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/)
+- [onboarding_sketches.pdf](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/onboarding_sketches.pdf)
 
 ### 📁 slack/
 
@@ -23,6 +24,7 @@
 - [2026-03-04/20260304_181602_Kevin_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-04/20260304_181602_Kevin_1772648003.795029.md)
 - [2026-03-04/20260304_181604_Kevin_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-04/20260304_181604_Kevin_1772648003.795029.md)
 - [2026-03-04/20260304_181611_Kevin_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-04/20260304_181611_Kevin_1772648003.795029.md)
+- [2026-03-04/20260304_182932_Kevin_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-04/20260304_182932_Kevin_1772648728.246069.md)
 
 ### 📁 specs/
 
