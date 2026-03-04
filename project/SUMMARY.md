@@ -9,9 +9,9 @@
 | 📋 Alex | Product Owner | 5 | 2 | 7 |
 | 🎯 Dana | QA Engineer | 7 | 2 | 9 |
 | 🔒 Isabella | Security Engineer | 2 | 1 | 3 |
-| ⚡ Kevin | Frontend Engineer | 6 | 3 | 9 |
-| 🔧 Marcus | Backend Engineer | 8 | 5 | 13 |
-| 🎨 Maya | Designer | 7 | 4 | 11 |
+| ⚡ Kevin | Frontend Engineer | 8 | 5 | 13 |
+| 🔧 Marcus | Backend Engineer | 9 | 6 | 15 |
+| 🎨 Maya | Designer | 8 | 5 | 13 |
 | 🖥️ Oliver | Backend Engineer | 0 | 1 | 1 |
 | 🏗️ Taylor | Tech Lead | 4 | 3 | 7 |
 
@@ -19,14 +19,14 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| specs | 24 |
-| slack | 21 |
-| design | 8 |
+| specs | 26 |
+| slack | 25 |
+| design | 9 |
 | tests | 5 |
+| code | 2 |
 | docs | 1 |
-| code | 1 |
 
-**총 산출물: 60개**
+**총 산출물: 68개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
