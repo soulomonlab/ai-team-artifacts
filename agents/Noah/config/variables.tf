@@ -1,0 +1,13 @@
+variable "aws_region" { default = "us-east-1" }
+variable "subnet_ids" { type = list(string) }
+variable "db_security_group_id" { type = string }
+variable "redis_security_group_id" { type = string }
+variable "postgres_version" { default = "15.3" }
+variable "postgres_instance_class" { default = "db.t3.medium" }
+variable "postgres_allocated_storage" { default = 20 }
+variable "db_name" { default = "app_staging" }
+variable "db_username" { default = "staging_user" }
+variable "db_password" { type = string }
+variable "redis_node_type" { default = "cache.t3.small" }
+variable "redis_cluster_size" { default = 1 }
+variable "redis_parameter_group" { default = "default.redis6.x" }
