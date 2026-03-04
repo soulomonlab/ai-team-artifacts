@@ -45,13 +45,13 @@ project/
 ## 에이전트 목록
 
 - 📋 **[Alex](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)** — Product Owner · 7개 파일
-- 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA Engineer · 5개 파일
+- 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA Engineer · 9개 파일
 - 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security Engineer · 3개 파일
 - ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 9개 파일
-- 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 8개 파일
-- 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 7개 파일
+- 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 13개 파일
+- 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 11개 파일
 - 🖥️ **[Oliver](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Oliver)** — Backend Engineer · 1개 파일
-- 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech Lead · 6개 파일
+- 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech Lead · 7개 파일
 
 ## 빠른 링크
 
