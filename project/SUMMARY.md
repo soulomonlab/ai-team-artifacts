@@ -10,26 +10,26 @@
 | 🎯 Dana | QA Engineer | 35 | 9 | 44 |
 | 🤖 Dependency | Agent | 3 | 1 | 4 |
 | 🔒 Isabella | Security Engineer | 14 | 6 | 20 |
-| ⚡ Kevin | Frontend Engineer | 12 | 9 | 21 |
-| 🔧 Marcus | Backend Engineer | 18 | 9 | 27 |
+| ⚡ Kevin | Frontend Engineer | 13 | 10 | 23 |
+| 🔧 Marcus | Backend Engineer | 19 | 10 | 29 |
 | 🎨 Maya | Designer | 8 | 5 | 13 |
 | 🚢 Noah | DevOps Engineer | 0 | 1 | 1 |
 | 🖥️ Oliver | Backend Engineer | 0 | 4 | 4 |
-| 🏗️ Taylor | Tech Lead | 7 | 4 | 11 |
+| 🏗️ Taylor | Tech Lead | 7 | 5 | 12 |
 
 ## 파일 유형별 통계
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 53 |
-| specs | 39 |
+| slack | 56 |
+| specs | 40 |
 | tests | 25 |
 | design | 19 |
-| code | 15 |
+| code | 16 |
 | reports | 5 |
 | docs | 3 |
 
-**총 산출물: 159개**
+**총 산출물: 164개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
