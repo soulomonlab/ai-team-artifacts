@@ -1,12 +1,13 @@
-from sqlalchemy import Column, Integer, String, Numeric, DateTime, func
-from . import Base
+from pydantic import BaseModel
+from typing import Optional
+from datetime import datetime
 
-class TopTicker(Base):
-    __tablename__ = "top_tickers"
+class TopTickerOut(BaseModel):
+    ticker: str
+    name: Optional[str]
+    exchange: Optional[str]
+    market_cap: Optional[float]
+    fetched_at: Optional[datetime]
 
-    id = Column(Integer, primary_key=True, index=True)
-    ticker = Column(String(20), nullable=False, unique=True, index=True)
-    name = Column(String(255))
-    exchange = Column(String(100))
-    market_cap = Column(Numeric(30, 2))
-    fetched_at = Column(DateTime(timezone=True), server_default=func.now())
+    class Config:
+        orm_mode = True
