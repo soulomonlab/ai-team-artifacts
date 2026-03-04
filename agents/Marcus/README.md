@@ -29,6 +29,7 @@
 - [2026-03-04/20260304_181600_Marcus_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-04/20260304_181600_Marcus_1772648003.795029.md)
 - [2026-03-04/20260304_181610_Marcus_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-04/20260304_181610_Marcus_1772648003.795029.md)
 - [2026-03-04/20260304_183012_Marcus_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-04/20260304_183012_Marcus_1772648728.246069.md)
+- [2026-03-04/20260304_183032_Marcus_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-04/20260304_183032_Marcus_1772648728.246069.md)
 
 ### 📁 specs/
 
@@ -41,6 +42,7 @@
 - [db_schema_initial.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/db_schema_initial.md)
 - [feature_intuitive_experience.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/feature_intuitive_experience.md)
 - [issue_backend_crud.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/issue_backend_crud.md)
+- [openapi_v1.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/openapi_v1.yaml)
 - [openapi_v1.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/openapi_v1.yaml)
 
 ---
