@@ -21,6 +21,7 @@ agents/
   Isabella/                  🔒 Security Engineer
     code/
     docs/
+    reports/
     slack/
     specs/
   Kevin/                  ⚡ Frontend Engineer
@@ -29,6 +30,7 @@ agents/
     slack/
     specs/
   Marcus/                  🔧 Backend Engineer
+    code/
     design/
     slack/
     specs/
@@ -36,6 +38,8 @@ agents/
     design/
     slack/
     specs/
+  Noah/                  🚢 DevOps Engineer
+    slack/
   Oliver/                  🖥️ Backend Engineer
     slack/
   Taylor/                  🏗️ Tech Lead
@@ -49,10 +53,11 @@ project/
 
 - 📋 **[Alex](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)** — Product Owner · 7개 파일
 - 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA Engineer · 19개 파일
-- 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security Engineer · 5개 파일
-- ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 18개 파일
-- 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 17개 파일
+- 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security Engineer · 9개 파일
+- ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 19개 파일
+- 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 25개 파일
 - 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 13개 파일
+- 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps Engineer · 1개 파일
 - 🖥️ **[Oliver](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Oliver)** — Backend Engineer · 1개 파일
 - 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech Lead · 7개 파일
 
@@ -65,5 +70,6 @@ project/
 - ⚡ [Kevin 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)
 - 🔧 [Marcus 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)
 - 🎨 [Maya 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)
+- 🚢 [Noah 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)
 - 🖥️ [Oliver 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Oliver)
 - 🏗️ [Taylor 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)
