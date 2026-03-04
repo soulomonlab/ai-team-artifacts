@@ -1,0 +1,39 @@
+# Staging environment placeholders (non-secret)
+# Location: output/config/staging_env.example
+
+# Non-secret connection placeholders (for QA/test config)
+DB_HOST=staging-postgres.internal
+DB_PORT=5432
+REDIS_HOST=staging-redis.internal
+REDIS_PORT=6379
+STAGING_BASE_URL=https://staging-api.example.com
+HEALTH_CHECK_URL=${STAGING_BASE_URL}/health
+
+# k8s / infra info
+K8S_NAMESPACE=staging
+POSTGRES_HELM_RELEASE=staging-postgres
+REDIS_HELM_RELEASE=staging-redis
+
+# Vault path (secrets are stored here)
+VAULT_PATH=secret/data/staging/api
+
+# Keys available under VAULT_PATH
+# - db.username
+# - db.password
+# - db.name
+# - redis.password
+# - jwt.signing_key
+
+# Vault access instructions for QA
+# 1) Request read-only access to path above via #ai-security (Isabella).
+# 2) Once granted, use Vault CLI or UI to retrieve values:
+#    - CLI: `vault login <method>` then `vault kv get ${VAULT_PATH}`
+#    - UI: login at https://vault.example.com -> Secrets -> secret -> staging -> api
+# 3) We will NOT commit any secrets to repo. Use these values only in CI/QA runner.
+
+# Notes / decisions
+# - Staging runs in k8s (namespace: staging). Postgres and Redis provisioned via Helm (Bitnami charts).
+# - Non-secret connection info is provided via ConfigMap; sensitive creds are in Vault.
+# - Health-check endpoint: ${HEALTH_CHECK_URL} (expects 200 and basic DB+Redis checks).
+# - Cache TTL: list endpoints are configured to use Redis TTL=5m; writes trigger cache invalidation.
+# - I can provide short-lived read-only Vault tokens after #ai-security approves the QA policy.
