@@ -16,20 +16,20 @@
 | ⚡ Kevin | Frontend Engineer | 3 | 3 | 6 |
 | 🔧 Marcus | Backend Engineer | 1 | 2 | 3 |
 | 🎨 Maya | Designer | 1 | 1 | 2 |
-| 🚢 Noah | DevOps Engineer | 0 | 1 | 1 |
+| 🚢 Noah | DevOps Engineer | 0 | 2 | 2 |
 | 🏗️ Taylor | Tech Lead | 3 | 3 | 6 |
 
 ## 파일 유형별 통계
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 29 |
+| slack | 30 |
 | specs | 9 |
 | tests | 2 |
 | design | 2 |
 | code | 1 |
 
-**총 산출물: 43개**
+**총 산출물: 44개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
