@@ -1,16 +1,21 @@
-# Architecture Decisions (ADRs)
+ADR Log: LinkedIn Uploader MVP
 
-## 1. Primary DB and Cache
-Decision: Use Postgres as primary relational DB and Redis as cache/session store.
-Rationale: Need strong consistency for user/task data; Redis for low-latency reads and rate limiting.
-Consequences: Operational overhead for Redis; choose managed services in prod.
+1) Use Redis + Celery for scheduling and worker queue
+- Decision: Single Redis instance as broker and short-term scheduler store; Celery for worker orchestration.
+- Status: Accepted
+- Rationale: Low ops overhead; Redis supports sorted sets for time-based scheduling and Celery is mature.
 
-## 2. API
-Decision: REST v1 with OpenAPI spec.
-Rationale: Clear contracts for frontend; easier to iterate MVP.
+2) Single-tenant design
+- Decision: MVP will be single-tenant.
+- Status: Accepted
+- Rationale: Simplifies auth, data model, and reduces scope.
 
-## 3. Auth
-Decision: JWT for session tokens; OAuth2 for third-party (future).
+3) OAuth flow + token storage
+- Decision: Authorization Code flow with PKCE; store refresh tokens encrypted and rotate.
+- Status: Accepted
 
-## 4. CI / Code Quality
-Decision: pre-commit + GitHub Actions CI (lint + unit tests) required on PRs.
+4) Backoff & Rate-limit handling
+- Decision: Exponential backoff with cap, honor Retry-After, persist retry metadata.
+- Status: Accepted
+
+Created: docs/DECISIONS.md
