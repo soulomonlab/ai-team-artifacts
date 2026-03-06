@@ -4,6 +4,10 @@
 
 ## 산출물 목록
 
+### 📁 code/
+
+- [backend/migrations/0001_init.sql](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/code/backend/migrations/0001_init.sql)
+
 ### 📁 design/
 
 - [.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/.)
@@ -37,24 +41,30 @@
 - [2026-03-06/20260306_074146_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074146_Dana_1772782862.480179.md)
 - [2026-03-06/20260306_074204_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074204_Dana_1772782862.480179.md)
 - [2026-03-06/20260306_074212_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074212_Dana_1772782862.480179.md)
+- [2026-03-06/20260306_082024_Dana_1772785140.251239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_082024_Dana_1772785140.251239.md)
+- [2026-03-06/20260306_082037_Dana_1772785140.251239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_082037_Dana_1772785140.251239.md)
 
 ### 📁 specs/
 
 - [auth_test_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/specs/auth_test_plan.md)
 - [initial_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/specs/initial_prd.md)
+- [openapi_diet_calorie_v1.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/specs/openapi_diet_calorie_v1.yaml)
 - [product-crud+search.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/specs/product-crud+search.md)
 
 ### 📁 tests/
 
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/)
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/)
+- [,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/,)
 - [[feature]_qa.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/[feature]_qa.md)
 - [auth_and_core_flows_test_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/auth_and_core_flows_test_plan.md)
+- [conftest.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/conftest.py)
 - [test_auth.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_auth.py,)
 - [test_auth.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_auth.py,)
 - [test_auth_unit.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_auth_unit.py,)
 - [test_core_api_integration.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_core_api_integration.py,)
 - [test_core_api_unit.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_core_api_unit.py)
+- [test_diet_calorie_api.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_diet_calorie_api.py)
 - [test_plan_mvp.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_plan_mvp.md)
 - [test_primary_action.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_primary_action.py)
 - [test_user_profiles.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_user_profiles.py)
