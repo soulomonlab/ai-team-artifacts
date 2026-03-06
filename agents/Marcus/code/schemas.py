@@ -1,39 +1,42 @@
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional
 from datetime import datetime
+from enum import Enum
 
-class ItemBase(BaseModel):
+class PostStatus(str, Enum):
+    draft = "draft"
+    scheduled = "scheduled"
+    published = "published"
+    deleted = "deleted"
+
+class PostBase(BaseModel):
     title: str
-    description: Optional[str] = None
+    content: Optional[str] = None
+    scheduled_at: Optional[datetime] = None
 
-class ItemCreate(ItemBase):
-    pass
+class PostCreate(PostBase):
+    status: Optional[PostStatus] = PostStatus.draft
 
-class ItemUpdate(BaseModel):
-    title: Optional[str]
-    description: Optional[str]
-    is_archived: Optional[bool]
+class PostUpdate(PostBase):
+    status: Optional[PostStatus]
 
-class ItemHistoryOut(BaseModel):
+class PostOut(PostBase):
     id: int
-    item_id: int
-    title: str
-    description: Optional[str]
-    changed_at: datetime
-    version: int
+    author_id: int
+    status: PostStatus
+    published_at: Optional[datetime]
+    created_at: datetime
+    updated_at: Optional[datetime]
 
     class Config:
         orm_mode = True
 
-class ItemOut(BaseModel):
-    id: int
-    title: str
-    description: Optional[str]
-    is_archived: bool
-    created_at: datetime
-    updated_at: datetime
-    version: int
-    history: List[ItemHistoryOut] = []
+class AnalyticsOut(BaseModel):
+    post_id: int
+    views: int
+    likes: int
+    shares: int
+    comments: int
 
     class Config:
         orm_mode = True
