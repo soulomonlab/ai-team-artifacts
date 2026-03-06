@@ -1,6 +1,6 @@
 # 프로젝트 산출물 요약
 
-> 🤖 Auto-generated · 2026-03-06 13:00 UTC
+> 🤖 Auto-generated · 2026-03-06 13:01 UTC
 
 ## 에이전트별 기여도
 
@@ -16,7 +16,7 @@
 | 🔒 Isabella | Security Engineer | 7 | 6 | 13 |
 | 🚀 Jessica | Growth | 3 | 4 | 7 |
 | ⚡ Kevin | Frontend Engineer | 18 | 15 | 33 |
-| 🔧 Marcus | Backend Engineer | 19 | 15 | 34 |
+| 🔧 Marcus | Backend Engineer | 21 | 16 | 37 |
 | 🎨 Maya | Designer | 16 | 13 | 29 |
 | 🚢 Noah | DevOps Engineer | 9 | 10 | 19 |
 | 🤖 RevenueOps | Agent | 0 | 1 | 1 |
@@ -27,16 +27,16 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 168 |
-| specs | 57 |
+| slack | 169 |
+| specs | 58 |
 | design | 27 |
-| docs | 23 |
+| docs | 24 |
 | reports | 17 |
 | tests | 16 |
 | code | 14 |
 | config | 5 |
 
-**총 산출물: 327개**
+**총 산출물: 330개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
