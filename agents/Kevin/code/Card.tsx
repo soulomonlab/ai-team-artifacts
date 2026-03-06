@@ -1,29 +1,16 @@
 import React from 'react';
 
-export interface CardProps {
-  title: string;
-  subtitle?: string;
-  onClick?: () => void;
-  children?: React.ReactNode;
+export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  title?: string;
+  children: React.ReactNode;
 }
 
-export const Card: React.FC<CardProps> = ({ title, subtitle, onClick, children }) => {
+export const Card: React.FC<CardProps> = ({ title, children, className = '', ...rest }) => {
   return (
-    <article
-      role={onClick ? 'button' : 'article'}
-      onClick={onClick}
-      tabIndex={0}
-      className="w-full bg-white rounded-lg shadow-sm p-4 mb-3 focus:outline-none focus:ring-2 focus:ring-blue-300"
-      aria-label={title}
-    >
-      <div className="flex items-start justify-between">
-        <div>
-          <h2 className="text-sm font-medium text-gray-900">{title}</h2>
-          {subtitle && <p className="text-xs text-gray-500 mt-1">{subtitle}</p>}
-        </div>
-      </div>
-      {children && <div className="mt-3">{children}</div>}
-    </article>
+    <div className={`bg-white shadow-md rounded-lg p-6 ${className}`} {...rest}>
+      {title && <h3 className="text-lg font-semibold mb-4">{title}</h3>}
+      <div>{children}</div>
+    </div>
   );
 };
 
