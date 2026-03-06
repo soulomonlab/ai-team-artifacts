@@ -1,6 +1,6 @@
 # 🎯 Dana — QA Engineer
 
-> 🤖 Auto-generated · 2026-03-06 10:17 UTC
+> 🤖 Auto-generated · 2026-03-06 13:00 UTC
 
 ## 산출물 목록
 
@@ -17,6 +17,7 @@
 
 ### 📁 docs/
 
+- [instagram_backend_openapi_snippet.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/docs/instagram_backend_openapi_snippet.yaml)
 - [openapi_auth.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/docs/openapi_auth.yaml)
 - [openapi_auth.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/docs/openapi_auth.yaml)
 
@@ -43,6 +44,7 @@
 - [2026-03-06/20260306_074212_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074212_Dana_1772782862.480179.md)
 - [2026-03-06/20260306_082024_Dana_1772785140.251239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_082024_Dana_1772785140.251239.md)
 - [2026-03-06/20260306_082037_Dana_1772785140.251239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_082037_Dana_1772785140.251239.md)
+- [2026-03-06/20260306_101747_Dana_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_101747_Dana_1772792003.811909.md)
 
 ### 📁 specs/
 
