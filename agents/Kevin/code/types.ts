@@ -1,18 +1,21 @@
-export interface WorklistItem {
+export interface Annotation {
   id: string;
-  title: string;
-  status: 'open' | 'in_progress' | 'closed' | 'on_hold';
-  assignee?: string;
-  createdAt: string; // ISO date
-  priority?: 'low' | 'medium' | 'high';
-  metadata?: Record<string, any>;
+  x: number; // normalized 0-1
+  y: number; // normalized 0-1
+  width: number; // normalized 0-1
+  height: number; // normalized 0-1
+  label?: string;
+  createdAt: number;
 }
 
-export interface WorklistResponse {
-  items: WorklistItem[];
-  total_count: number;
-  page: number;
-  page_size: number;
+export interface FrameMeta {
+  frameIndex: number;
+  timestamp?: number;
 }
 
-// NOTE: These types are provisional — please confirm API shape with backend (Marcus).
+export interface StreamConfig {
+  width?: number; // expected pixel width
+  height?: number; // expected pixel height
+  frameRate?: number; // expected fps
+  transport?: 'webrtc' | 'websocket' | 'rtsp' | 'polling';
+}
