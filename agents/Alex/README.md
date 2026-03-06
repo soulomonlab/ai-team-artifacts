@@ -1,6 +1,6 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-06 13:14 UTC
+> 🤖 Auto-generated · 2026-03-06 13:16 UTC
 
 ## 산출물 목록
 
@@ -80,6 +80,7 @@
 - [instagram_clone.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/instagram_clone.md)
 - [instagram_mvp.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/instagram_mvp.md)
 - [kickoff_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/kickoff_prd.md)
+- [mvp_scope_customer_insights.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/mvp_scope_customer_insights.md)
 - [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/next_feature.md)
 - [onboarding_improvements.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/onboarding_improvements.md)
 - [painting_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/painting_app.md)
