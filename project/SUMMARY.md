@@ -10,10 +10,11 @@
 | 🤖 CEO | Chief-Executive | 3 | 18 | 21 |
 | 🤝 Chris | Customer-Success | 3 | 2 | 5 |
 | 🤖 CustomerInsights | Customer-Insights | 0 | 2 | 2 |
-| 🎯 Dana | QA-Engineer | 33 | 15 | 48 |
+| 🎯 Dana | QA-Engineer | 36 | 16 | 52 |
 | 🤖 Dependency | Dependency-Manager | 8 | 6 | 14 |
+| 📝 Emma | Technical-Writer | 3 | 3 | 6 |
 | 🤖 GrowthContent | Growth-Content | 2 | 4 | 6 |
-| 🔒 Isabella | Security-Engineer | 7 | 6 | 13 |
+| 🔒 Isabella | Security-Engineer | 12 | 8 | 20 |
 | 🚀 Jessica | Growth | 7 | 5 | 12 |
 | ⚡ Kevin | Frontend-Engineer | 37 | 23 | 60 |
 | 🧠 Lisa | ML-Engineer | 5 | 2 | 7 |
@@ -22,22 +23,23 @@
 | 🚢 Noah | DevOps-Engineer | 17 | 11 | 28 |
 | 🤖 RevenueOps | Revenue-Ops | 0 | 1 | 1 |
 | 🏗️ Taylor | Tech-Lead | 14 | 14 | 28 |
+| 🏛️ Victor | Architect | 2 | 1 | 3 |
 | 💰 Yuki | Finance | 0 | 1 | 1 |
 
 ## 파일 유형별 통계
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 224 |
-| specs | 101 |
+| slack | 231 |
+| specs | 107 |
 | design | 47 |
-| docs | 28 |
-| code | 23 |
-| tests | 19 |
-| reports | 18 |
+| docs | 30 |
+| code | 24 |
+| tests | 21 |
+| reports | 20 |
 | config | 9 |
 
-**총 산출물: 469개**
+**총 산출물: 489개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
