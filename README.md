@@ -30,6 +30,7 @@ agents/
     slack/
   Jessica/                  🚀 Growth
     slack/
+    specs/
   Kevin/                  ⚡ Frontend Engineer
     code/
     design/
@@ -43,6 +44,8 @@ agents/
     slack/
     specs/
   Noah/                  🚢 DevOps Engineer
+    config/
+    docs/
     slack/
   RevenueOps/                  🤖 Agent
     slack/
@@ -65,13 +68,13 @@ project/
 - 🤖 **[Dependency](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)** — Agent · 1개 파일
 - 🤖 **[GrowthContent](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/GrowthContent)** — Agent · 4개 파일
 - 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security Engineer · 2개 파일
-- 🚀 **[Jessica](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Jessica)** — Growth · 1개 파일
+- 🚀 **[Jessica](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Jessica)** — Growth · 3개 파일
 - ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 8개 파일
-- 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 5개 파일
+- 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 6개 파일
 - 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 4개 파일
-- 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps Engineer · 4개 파일
+- 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps Engineer · 10개 파일
 - 🤖 **[RevenueOps](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/RevenueOps)** — Agent · 1개 파일
-- 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech Lead · 8개 파일
+- 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech Lead · 10개 파일
 - 💰 **[Yuki](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Yuki)** — Finance · 1개 파일
 
 ## 빠른 링크
