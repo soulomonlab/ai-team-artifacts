@@ -15,10 +15,10 @@
 | 🤖 GrowthContent | Agent | 2 | 4 | 6 |
 | 🔒 Isabella | Security Engineer | 7 | 6 | 13 |
 | 🚀 Jessica | Growth | 3 | 4 | 7 |
-| ⚡ Kevin | Frontend Engineer | 18 | 15 | 33 |
+| ⚡ Kevin | Frontend Engineer | 19 | 16 | 35 |
 | 🔧 Marcus | Backend Engineer | 21 | 16 | 37 |
 | 🎨 Maya | Designer | 17 | 14 | 31 |
-| 🚢 Noah | DevOps Engineer | 9 | 10 | 19 |
+| 🚢 Noah | DevOps Engineer | 10 | 10 | 20 |
 | 🤖 RevenueOps | Agent | 0 | 1 | 1 |
 | 🏗️ Taylor | Tech Lead | 11 | 13 | 24 |
 | 💰 Yuki | Finance | 0 | 1 | 1 |
@@ -27,16 +27,16 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 173 |
+| slack | 174 |
 | specs | 61 |
 | design | 28 |
 | docs | 24 |
 | reports | 17 |
 | tests | 16 |
-| code | 14 |
-| config | 5 |
+| code | 15 |
+| config | 6 |
 
-**총 산출물: 338개**
+**총 산출물: 341개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
