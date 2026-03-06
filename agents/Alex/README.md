@@ -1,6 +1,6 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-06 08:06 UTC
+> 🤖 Auto-generated · 2026-03-06 08:20 UTC
 
 ## 산출물 목록
 
@@ -39,6 +39,8 @@
 - [2026-03-06/20260306_074122_Alex_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_074122_Alex_1772782862.480179.md)
 - [2026-03-06/20260306_074935_Alex_1772783375.343969.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_074935_Alex_1772783375.343969.md)
 - [2026-03-06/20260306_080558_Alex_1772784358.102929.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_080558_Alex_1772784358.102929.md)
+- [2026-03-06/20260306_081822_Alex_1772785102.239619.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_081822_Alex_1772785102.239619.md)
+- [2026-03-06/20260306_081945_Alex_1772785140.251239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_081945_Alex_1772785140.251239.md)
 
 ### 📁 specs/
 
@@ -48,6 +50,7 @@
 - [*.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/*.md)
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/[feature].md)
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/[feature].md)
+- [feature_diet_calorie_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/feature_diet_calorie_app.md)
 - [initial_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/initial_prd.md)
 - [kickoff_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/kickoff_prd.md)
 - [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/next_feature.md)
