@@ -44,6 +44,7 @@
 - [2026-03-06/20260306_083320_Alex_1772785999.995749.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_083320_Alex_1772785999.995749.md)
 - [2026-03-06/20260306_083431_Alex_1772786021.917559.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_083431_Alex_1772786021.917559.md)
 - [2026-03-06/20260306_090024_Alex_1772787623.995789.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_090024_Alex_1772787623.995789.md)
+- [2026-03-06/20260306_090124_Alex_1772787637.093519.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_090124_Alex_1772787637.093519.md)
 
 ### 📁 specs/
 
@@ -62,6 +63,7 @@
 - [recipe_app.md`](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/recipe_app.md`)
 - [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/user_profiles.md)
 - [user_profiles.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/user_profiles.md.)
+- [youtube_channel.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/youtube_channel.md)
 
 ### 📁 tests/
 
