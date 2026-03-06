@@ -1,0 +1,66 @@
+openapi: 3.0.3
+info:
+  title: Auth API
+  version: 1.0.0
+  description: OpenAPI spec for authentication flows: login, refresh, logout, revoke, introspect
+servers:
+  - url: https://api.example.com
+paths:
+  /auth/login:
+    post:
+      summary: User login with credentials
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login success, returns access JWT and sets refresh cookie
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  token_type:
+                    type: string
+                    example: Bearer
+  /auth/refresh:
+    post:
+      summary: Rotate refresh token and return new access token
+      responses:
+        '200':
+          description: New access token issued; refresh token rotated via secure cookie
+  /auth/logout:
+    post:
+      summary: Revoke current refresh token and clear cookie
+      responses:
+        '204':
+          description: Logged out
+  /auth/revoke:
+    post:
+      summary: Admin revoke sessions by user id
+      parameters:
+        - name: user_id
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Sessions revoked
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas: {}
