@@ -1,22 +1,22 @@
 # 프로젝트 산출물 요약
 
-> 🤖 Auto-generated · 2026-03-06 04:25 UTC
+> 🤖 Auto-generated · 2026-03-06 05:03 UTC
 
 ## 에이전트별 기여도
 
 | 에이전트 | 역할 | 코드/문서 | Slack 아카이브 | 합계 |
 |----------|------|-----------|----------------|------|
-| 📋 Alex | Product Owner | 6 | 12 | 18 |
-| 🤖 CEO | Agent | 0 | 6 | 6 |
+| 📋 Alex | Product Owner | 8 | 16 | 24 |
+| 🤖 CEO | Agent | 2 | 8 | 10 |
 | 🤝 Chris | Customer Success | 2 | 1 | 3 |
 | 🤖 CustomerInsights | Agent | 0 | 2 | 2 |
 | 🎯 Dana | QA Engineer | 2 | 2 | 4 |
-| 🤖 Dependency | Agent | 0 | 1 | 1 |
+| 🤖 Dependency | Agent | 1 | 2 | 3 |
 | 🤖 GrowthContent | Agent | 2 | 2 | 4 |
 | 🔒 Isabella | Security Engineer | 2 | 3 | 5 |
 | 🚀 Jessica | Growth | 1 | 2 | 3 |
-| ⚡ Kevin | Frontend Engineer | 4 | 4 | 8 |
-| 🔧 Marcus | Backend Engineer | 2 | 4 | 6 |
+| ⚡ Kevin | Frontend Engineer | 5 | 5 | 10 |
+| 🔧 Marcus | Backend Engineer | 2 | 5 | 7 |
 | 🎨 Maya | Designer | 3 | 3 | 6 |
 | 🚢 Noah | DevOps Engineer | 5 | 5 | 10 |
 | 🤖 RevenueOps | Agent | 0 | 1 | 1 |
@@ -27,16 +27,16 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 54 |
-| specs | 15 |
+| slack | 63 |
+| specs | 19 |
 | docs | 7 |
-| config | 4 |
-| design | 3 |
-| reports | 2 |
+| config | 5 |
+| design | 4 |
 | tests | 2 |
+| reports | 2 |
 | code | 1 |
 
-**총 산출물: 88개**
+**총 산출물: 103개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
