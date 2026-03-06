@@ -1,12 +1,17 @@
 # 🚢 Noah — DevOps Engineer
 
-> 🤖 Auto-generated · 2026-03-06 13:20 UTC
+> 🤖 Auto-generated · 2026-03-06 13:42 UTC
 
 ## 산출물 목록
+
+### 📁 code/
+
+- [run_iac_scans.sh](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/code/run_iac_scans.sh)
 
 ### 📁 config/
 
 - [.github/workflows/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/.github/workflows/)
+- [ci_dependency_checks.yml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/ci_dependency_checks.yml)
 - [infra_creds_instructions.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/infra_creds_instructions.md)
 - [k8s/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/k8s/)
 - [monitoring/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/monitoring/)
@@ -15,6 +20,8 @@
 ### 📁 docs/
 
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/)
+- [README_dependency_ci.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/README_dependency_ci.md)
+- [dependency_audit_report.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/dependency_audit_report.md)
 - [infra_costs.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/infra_costs.md)
 - [openapi_auth.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/openapi_auth.yaml)
 - [rollback_runbook.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/rollback_runbook.md)
