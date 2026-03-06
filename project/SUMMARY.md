@@ -8,11 +8,12 @@
 |----------|------|-----------|----------------|------|
 | 📋 Alex | Product Owner | 6 | 12 | 18 |
 | 🤖 CEO | Agent | 0 | 6 | 6 |
+| 🤝 Chris | Customer Success | 2 | 1 | 3 |
 | 🤖 CustomerInsights | Agent | 0 | 2 | 2 |
 | 🎯 Dana | QA Engineer | 2 | 2 | 4 |
 | 🤖 Dependency | Agent | 0 | 1 | 1 |
 | 🤖 GrowthContent | Agent | 2 | 2 | 4 |
-| 🔒 Isabella | Security Engineer | 0 | 2 | 2 |
+| 🔒 Isabella | Security Engineer | 2 | 3 | 5 |
 | 🚀 Jessica | Growth | 1 | 2 | 3 |
 | ⚡ Kevin | Frontend Engineer | 4 | 4 | 8 |
 | 🔧 Marcus | Backend Engineer | 2 | 4 | 6 |
@@ -26,15 +27,16 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 52 |
+| slack | 54 |
 | specs | 15 |
-| docs | 5 |
+| docs | 7 |
 | config | 4 |
 | design | 3 |
+| reports | 2 |
 | tests | 2 |
 | code | 1 |
 
-**총 산출물: 82개**
+**총 산출물: 88개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
