@@ -1,34 +1,112 @@
 openapi: 3.0.3
 info:
-  title: Auth Service API
-  version: 1.0.0
-  description: >-
-    Authentication API spec describing JWT short-lived access tokens (15m),
-    refresh tokens with rotation (7 days), refresh token reuse detection,
-    cookie and bearer flows, and relevant endpoints.
+  title: Auth API
+  version: "1.0.0"
 servers:
-  - url: /api/v1
+  - url: https://api.example.com/v1
+paths:
+  /v1/auth/login:
+    post:
+      summary: User login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+              required: [email, password]
+      responses:
+        '200':
+          description: Token response and refresh_token cookie is set (HttpOnly)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+      x-cookie-set:
+        name: refresh_token
+        httpOnly: true
+        secure: true
+        sameSite: Lax
+        path: /
+        domain: .example.com
+        ttl_days: 30
+  /v1/auth/refresh:
+    post:
+      summary: Rotate refresh token and return new access token
+      responses:
+        '200':
+          description: New access token JSON; refresh_token cookie rotated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+      security: []
+  /v1/auth/logout:
+    post:
+      summary: Logout — clears refresh token and invalidates server-side token
+      responses:
+        '204':
+          description: Logged out, cookie cleared
+  /v1/auth/signup:
+    post:
+      summary: Create user and login (sets refresh cookie)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+              required: [email, password]
+      responses:
+        '201':
+          description: Created + Token response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+  /v1/users/me:
+    get:
+      summary: Get current authenticated user
+      responses:
+        '200':
+          description: Current user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
 components:
-  securitySchemes:
-    bearerAuth:
-      type: http
-      scheme: bearer
-      bearerFormat: JWT
-    refreshCookie:
-      type: apiKey
-      in: cookie
-      name: refresh_token
   schemas:
-    LoginRequest:
+    User:
       type: object
-      required: [email, password]
       properties:
+        id:
+          type: string
+          format: uuid
         email:
           type: string
-          format: email
-        password:
+        roles:
+          type: array
+          items:
+            type: string
+        created_at:
           type: string
-          minLength: 8
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+      required: [id, email, roles, created_at, updated_at]
     TokenResponse:
       type: object
       properties:
@@ -36,113 +114,28 @@ components:
           type: string
         token_type:
           type: string
-          example: Bearer
+          enum: [Bearer]
         expires_in:
           type: integer
-          example: 900
-    RefreshResponse:
-      type: object
-      properties:
-        access_token:
-          type: string
-        expires_in:
-          type: integer
-    ErrorResponse:
-      type: object
-      properties:
-        code:
-          type: string
-        message:
-          type: string
-paths:
-  /auth/login:
-    post:
-      summary: Login with email+password
-      description: |
-        Returns an access token (JWT, 15m) in body and sets a secure HttpOnly SameSite cookie
-        (refresh_token, 7d) for browser flows. Refresh tokens are rotated and stored hashed.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/LoginRequest'
-      responses:
-        '200':
-          description: OK
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TokenResponse'
-        '401':
-          description: Invalid credentials
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-      security: []
-      x-rate-limit: 10/minute
-  /auth/refresh:
-    post:
-      summary: Rotate refresh token and return new access token
-      description: |
-        Accepts refresh token from cookie (preferred) or Authorization: Bearer <refresh_token>.
-        Implements one-time-use rotation: the presented refresh token is invalidated and replaced
-        with a new one; reuse detection denies and forces re-auth. Response returns a new access token
-        and (for browser) sets a new refresh cookie.
-      responses:
-        '200':
-          description: Refreshed
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/RefreshResponse'
-        '401':
-          description: Invalid/compromised refresh token
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-      x-rate-limit: 100/minute
-  /auth/logout:
-    post:
-      summary: Revoke current session
-      description: |
-        Revokes the current refresh token and clears cookie. Access tokens are short-lived and will expire.
-      security:
-        - bearerAuth: []
-      responses:
-        '204':
-          description: Logged out
-  /auth/sessions:
-    get:
-      summary: List active sessions for current user
-      security:
-        - bearerAuth: []
-      responses:
-        '200':
-          description: sessions list
-  /auth/sessions/{session_id}:
-    delete:
-      summary: Revoke a specific session
-      security:
-        - bearerAuth: []
-      parameters:
-        - name: session_id
-          in: path
-          required: true
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Revoked
-
-x-notes:
-  - Access token TTL: 15 minutes
-  - Refresh token TTL: 7 days
-  - Password hashing: bcrypt, cost >= 12
-  - Refresh tokens must be stored hashed (e.g., sha256 + salt) in Postgres/Redis
-  - Token reuse detection: if a rotated but already-used token is presented, mark session compromised
-  - Rate limits: strict for auth endpoints (login 10/min/IP; refresh 100/min/user)
-  - Cookies (browser): Secure, HttpOnly, SameSite=Lax, Path=/, Max-Age=7d
-  - Audit events: login, refresh, revoke, failed_refresh_reuse -> append-only audit log
+      required: [access_token, token_type, expires_in]
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+x-cookie-policy:
+  name: refresh_token
+  domain: .example.com
+  path: /
+  httpOnly: true
+  secure: true
+  sameSite: Lax
+  ttl_days: 30
+x-cors:
+  allowed_origins:
+    - https://app.example.com
+    - https://staging.example.com
+  allow_credentials: true
+  enforce_origin_check: true
+x-error-format: |
+  RFC7807 + {"code": "string", "field_errors": [{"field":"string","message":"string"}]}
