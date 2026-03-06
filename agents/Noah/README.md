@@ -7,6 +7,7 @@
 ### 📁 config/
 
 - [.github/workflows/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/.github/workflows/)
+- [infra_creds_instructions.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/infra_creds_instructions.md)
 - [k8s/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/k8s/)
 - [monitoring/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/monitoring/)
 - [terraform/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/config/terraform/)
