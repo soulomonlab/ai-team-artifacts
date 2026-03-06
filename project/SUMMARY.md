@@ -1,12 +1,12 @@
 # 프로젝트 산출물 요약
 
-> 🤖 Auto-generated · 2026-03-06 13:42 UTC
+> 🤖 Auto-generated · 2026-03-06 13:43 UTC
 
 ## 에이전트별 기여도
 
 | 에이전트 | 역할 | 코드/문서 | Slack 아카이브 | 합계 |
 |----------|------|-----------|----------------|------|
-| 📋 Alex | Product Owner | 34 | 50 | 84 |
+| 📋 Alex | Product Owner | 37 | 52 | 89 |
 | 🤖 CEO | Agent | 3 | 18 | 21 |
 | 🤝 Chris | Customer Success | 2 | 1 | 3 |
 | 🤖 CustomerInsights | Agent | 0 | 2 | 2 |
@@ -27,16 +27,16 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 183 |
-| specs | 70 |
+| slack | 185 |
+| specs | 73 |
 | design | 35 |
 | docs | 26 |
-| code | 18 |
 | reports | 18 |
+| code | 18 |
 | tests | 17 |
 | config | 7 |
 
-**총 산출물: 374개**
+**총 산출물: 379개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
