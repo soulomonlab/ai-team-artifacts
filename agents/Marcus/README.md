@@ -4,6 +4,14 @@
 
 ## 산출물 목록
 
+### 📁 code/
+
+- [backend/,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/backend/,)
+
+### 📁 docs/
+
+- [openapi_v1.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/docs/openapi_v1.yaml)
+
 ### 📁 slack/
 
 - [2026-03-05/20260305_012419_Marcus_1772649191.591039.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-05/20260305_012419_Marcus_1772649191.591039.md)
@@ -12,11 +20,13 @@
 - [2026-03-06/20260306_042526_Marcus_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_042526_Marcus_1772771047.094479.md)
 - [2026-03-06/20260306_042546_Marcus_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_042546_Marcus_1772771047.094479.md)
 - [2026-03-06/20260306_050351_Marcus_1772773394.643989.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_050351_Marcus_1772773394.643989.md)
+- [2026-03-06/20260306_053445_Marcus_1772775247.233539.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_053445_Marcus_1772775247.233539.md)
 
 ### 📁 specs/
 
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/[feature].md)
 - [bookmarks.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/bookmarks.md)
+- [initial_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/initial_prd.md)
 - [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/next_feature.md)
 
 ---
