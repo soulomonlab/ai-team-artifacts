@@ -1,0 +1,327 @@
+openapi: 3.0.3
+info:
+  title: Core API
+  version: v1
+  description: |
+    Core service API (items). Auth: Bearer JWT access token (15m) + Refresh token (7d, HttpOnly cookie, rotation).
+servers:
+  - url: /api/v1
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+    refreshCookie:
+      type: apiKey
+      in: cookie
+      name: refresh_token
+  schemas:
+    Item:
+      type: object
+      required: [id, title, status, created_at, updated_at]
+      properties:
+        id:
+          type: string
+          format: uuid
+        title:
+          type: string
+          maxLength: 512
+        description:
+          type: string
+          nullable: true
+        status:
+          type: string
+          enum: [draft, published, archived]
+        owner_id:
+          type: string
+          format: uuid
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+    ItemCreate:
+      type: object
+      required: [title]
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        status:
+          type: string
+          enum: [draft, published]
+    ItemUpdate:
+      type: object
+      properties:
+        title:
+          type: string
+        description:
+          type: string
+        status:
+          type: string
+          enum: [draft, published, archived]
+    ListResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+        next_cursor:
+          type: string
+          nullable: true
+        total_count:
+          type: integer
+          nullable: true
+          description: "Present only if include_total=true. Expensive for large datasets."
+    Error:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+          example: invalid_auth
+        message:
+          type: string
+          example: "Authentication failed"
+        details:
+          type: array
+          items:
+            type: object
+    ValidationError:
+      allOf:
+        - $ref: '#/components/schemas/Error'
+        - type: object
+          properties:
+            field_errors:
+              type: array
+              items:
+                type: object
+                properties:
+                  field:
+                    type: string
+                  message:
+                    type: string
+security:
+  - bearerAuth: []
+paths:
+  /auth/login:
+    post:
+      summary: Exchange credentials for access + refresh tokens
+      tags: [auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [username, password]
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+      responses:
+        '200':
+          description: Login successful. Access token returned in body; refresh token set as HttpOnly secure cookie.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  token_type:
+                    type: string
+                    example: Bearer
+                  expires_in:
+                    type: integer
+                    example: 900
+        '401':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /auth/refresh:
+    post:
+      summary: Rotate refresh token and issue new access token
+      tags: [auth]
+      security: []
+      responses:
+        '200':
+          description: Returns new access token. Sets rotated refresh token cookie.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  access_token:
+                    type: string
+                  expires_in:
+                    type: integer
+        '401':
+          description: Invalid/expired refresh token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /items:
+    post:
+      summary: Create item
+      tags: [items]
+      security: [ { bearerAuth: ["items:write"] } ]
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          description: Client-supplied idempotency key for safe retries
+          required: false
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ItemCreate'
+      responses:
+        '201':
+          description: Item created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+        '400':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+    get:
+      summary: List items (cursor pagination)
+      tags: [items]
+      security: [ { bearerAuth: ["items:read"] } ]
+      parameters:
+        - in: query
+          name: limit
+          schema:
+            type: integer
+            maximum: 100
+            default: 20
+        - in: query
+          name: cursor
+          schema:
+            type: string
+          description: Cursor token (opaque) returned from previous call
+        - in: query
+          name: include_total
+          schema:
+            type: boolean
+          description: If true, returns total_count (expensive)
+      responses:
+        '200':
+          description: List of items
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListResponse'
+        '400':
+          description: Bad request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+  /items/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+          format: uuid
+    get:
+      summary: Get item by id
+      tags: [items]
+      security: [ { bearerAuth: ["items:read"] } ]
+      responses:
+        '200':
+          description: Item
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    patch:
+      summary: Update item (partial)
+      tags: [items]
+      security: [ { bearerAuth: ["items:write"] } ]
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: false
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ItemUpdate'
+      responses:
+        '200':
+          description: Updated item
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+        '400':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+    delete:
+      summary: Delete item
+      tags: [items]
+      security: [ { bearerAuth: ["items:write"] } ]
+      responses:
+        '204':
+          description: Deleted
+        '404':
+          description: Not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+x-notes:
+  - auth:
+      access_token: 15 minutes (JWT)
+      refresh_token: 7 days (HttpOnly, Secure cookie, rotating)
+  - pagination:
+      type: cursor-by-default for scalability. Offset supported via admin endpoints if needed.
+      include_total: optional via include_total=true. Avoid by default to keep queries fast.
+  - item_shape: id (uuid), title, description, status enum, owner_id, created_at, updated_at
+  - error_format: { code, message, details? } and validation errors include field_errors array
+  - realtime: None required for v1. If needed later, we will add Server-Sent Events or WebSocket channels (events: item.created, item.updated).
+  - rate_limits:
+      recommend: per-user 1000 req/min default; stricter for public endpoints. Implement via API gateway/redis.
+  - auth_scopes:
+      roles: user, admin
+      scopes: items:read, items:write
+  - observability:
+      include traceparent header for distributed tracing. All endpoints instrumented with OpenTelemetry from day one.
