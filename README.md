@@ -23,6 +23,7 @@ agents/
     slack/
   Dana/                  🎯 QA Engineer
     design/
+    docs/
     reports/
     slack/
     specs/
@@ -76,15 +77,15 @@ project/
 - 🤖 **[CEO](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/CEO)** — Agent · 15개 파일
 - 🤝 **[Chris](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Chris)** — Customer Success · 3개 파일
 - 🤖 **[CustomerInsights](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/CustomerInsights)** — Agent · 2개 파일
-- 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA Engineer · 11개 파일
+- 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA Engineer · 16개 파일
 - 🤖 **[Dependency](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)** — Agent · 4개 파일
 - 🤖 **[GrowthContent](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/GrowthContent)** — Agent · 4개 파일
 - 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security Engineer · 5개 파일
 - 🚀 **[Jessica](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Jessica)** — Growth · 3개 파일
-- ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 13개 파일
+- ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 16개 파일
 - 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 18개 파일
 - 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 8개 파일
-- 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps Engineer · 13개 파일
+- 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps Engineer · 14개 파일
 - 🤖 **[RevenueOps](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/RevenueOps)** — Agent · 1개 파일
 - 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech Lead · 18개 파일
 - 💰 **[Yuki](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Yuki)** — Finance · 1개 파일
