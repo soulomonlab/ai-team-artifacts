@@ -1,28 +1,37 @@
-from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, ForeignKey
-from sqlalchemy.orm import relationship, declarative_base
-from datetime import datetime
+from sqlalchemy import Column, Integer, String, Text, DateTime, Boolean, Enum, ForeignKey
+from sqlalchemy.sql import func
+from sqlalchemy.orm import relationship
+from .database import Base
+import enum
 
-Base = declarative_base()
+class PostStatus(enum.Enum):
+    DRAFT = "draft"
+    SCHEDULED = "scheduled"
+    PUBLISHED = "published"
+    DELETED = "deleted"
 
-class Item(Base):
-    __tablename__ = "items"
+class Post(Base):
+    __tablename__ = "posts"
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String(255), nullable=False, index=True)
-    description = Column(Text, nullable=True)
-    is_archived = Column(Boolean, default=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
-    version = Column(Integer, default=1)
-    # simple change history relationship
-    history = relationship("ItemHistory", back_populates="item", cascade="all, delete-orphan")
-
-class ItemHistory(Base):
-    __tablename__ = "item_history"
-    id = Column(Integer, primary_key=True, index=True)
-    item_id = Column(Integer, ForeignKey("items.id"), nullable=False, index=True)
+    author_id = Column(Integer, nullable=False, index=True)
     title = Column(String(255), nullable=False)
-    description = Column(Text, nullable=True)
-    changed_at = Column(DateTime, default=datetime.utcnow)
-    version = Column(Integer, nullable=False)
+    content = Column(Text, nullable=True)
+    status = Column(Enum(PostStatus), default=PostStatus.DRAFT, index=True)
+    scheduled_at = Column(DateTime, nullable=True, index=True)
+    published_at = Column(DateTime, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
+    is_deleted = Column(Boolean, default=False)
 
-    item = relationship("Item", back_populates="history")
+    analytics = relationship("PostAnalytics", back_populates="post", uselist=False)
+
+class PostAnalytics(Base):
+    __tablename__ = "post_analytics"
+    id = Column(Integer, primary_key=True, index=True)
+    post_id = Column(Integer, ForeignKey("posts.id", ondelete="CASCADE"), unique=True)
+    views = Column(Integer, default=0)
+    likes = Column(Integer, default=0)
+    shares = Column(Integer, default=0)
+    comments = Column(Integer, default=0)
+
+    post = relationship("Post", back_populates="analytics")
