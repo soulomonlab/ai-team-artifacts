@@ -9,6 +9,7 @@
 - [.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/.)
 - [.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/.)
 - [core_flow_v1.*](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/core_flow_v1.*)
+- [core_flow_v1.*](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/design/core_flow_v1.*)
 
 ### 📁 docs/
 
@@ -20,6 +21,7 @@
 - [acceptance_and_load_test_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/acceptance_and_load_test_plan.md)
 - [qa_core_flow_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/qa_core_flow_plan.md)
 - [qa_report_](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/qa_report_)
+- [qa_unblockers_core_flow.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/qa_unblockers_core_flow.md)
 - [user_profiles_test_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/user_profiles_test_plan.md)
 
 ### 📁 slack/
@@ -34,6 +36,7 @@
 - [2026-03-06/20260306_060139_Dana_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_060139_Dana_1772776762.185889.md)
 - [2026-03-06/20260306_074146_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074146_Dana_1772782862.480179.md)
 - [2026-03-06/20260306_074204_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074204_Dana_1772782862.480179.md)
+- [2026-03-06/20260306_074212_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074212_Dana_1772782862.480179.md)
 
 ### 📁 specs/
 
@@ -50,6 +53,8 @@
 - [test_auth.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_auth.py,)
 - [test_auth.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_auth.py,)
 - [test_auth_unit.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_auth_unit.py,)
+- [test_core_api_integration.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_core_api_integration.py,)
+- [test_core_api_unit.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_core_api_unit.py)
 - [test_plan_mvp.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_plan_mvp.md)
 - [test_primary_action.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_primary_action.py)
 - [test_user_profiles.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/tests/test_user_profiles.py)
