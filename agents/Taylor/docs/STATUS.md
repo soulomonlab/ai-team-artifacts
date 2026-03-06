@@ -1,3 +1,3 @@
-# Status
+# Project Status
 
-Kickoff created. Repo skeleton and CI workflow added. Next: backend OpenAPI spec + design screens.
+Initial repository created. Labels seeded. Waiting for PRD creation and design wireframes.
