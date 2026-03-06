@@ -1,6 +1,6 @@
 # ⚡ Kevin — Frontend Engineer
 
-> 🤖 Auto-generated · 2026-03-06 13:21 UTC
+> 🤖 Auto-generated · 2026-03-06 13:42 UTC
 
 ## 산출물 목록
 
@@ -62,6 +62,7 @@
 ### 📁 specs/
 
 - [global_typeahead_search.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/global_typeahead_search.md)
+- [global_typeahead_search_frontend_fields.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/global_typeahead_search_frontend_fields.md)
 - [product-crud+search.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/product-crud+search.md)
 - [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/user_profiles.md)
 - [visual_inspection_frontend_request.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/visual_inspection_frontend_request.md)
