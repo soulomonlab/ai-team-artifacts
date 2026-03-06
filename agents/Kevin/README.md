@@ -7,6 +7,7 @@
 ### 📁 code/
 
 - [frontend/AuthProvider.tsx,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/AuthProvider.tsx,)
+- [frontend/UserList.tsx](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/UserList.tsx)
 - [frontend/[Feature]](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/[Feature])
 - [frontend/api-client.ts](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/api-client.ts)
 
@@ -29,11 +30,13 @@
 - [2026-03-06/20260306_042546_Kevin_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_042546_Kevin_1772771047.094479.md)
 - [2026-03-06/20260306_053512_Kevin_1772775247.233539.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_053512_Kevin_1772775247.233539.md)
 - [2026-03-06/20260306_060020_Kevin_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_060020_Kevin_1772776762.185889.md)
+- [2026-03-06/20260306_060114_Kevin_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_060114_Kevin_1772776762.185889.md)
 
 ### 📁 specs/
 
 - [global_typeahead_search.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/global_typeahead_search.md)
 - [product-crud+search.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/product-crud+search.md)
+- [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/user_profiles.md)
 
 ---
 [← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
