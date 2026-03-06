@@ -1,6 +1,6 @@
 # ⚡ Kevin — Frontend Engineer
 
-> 🤖 Auto-generated · 2026-03-06 13:18 UTC
+> 🤖 Auto-generated · 2026-03-06 13:20 UTC
 
 ## 산출물 목록
 
@@ -20,10 +20,12 @@
 
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/[feature].md)
 - [assets/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/assets/)
+- [assets/,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/assets/,)
 - [cat_meme_app_design.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/cat_meme_app_design.md)
 - [core_flow_v1.*](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/core_flow_v1.*)
 - [instagram_mvp_design_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/instagram_mvp_design_spec.md)
 - [landing/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/landing/)
+- [visual_inspection_assets_spec.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/visual_inspection_assets_spec.md.)
 
 ### 📁 docs/
 
@@ -55,6 +57,7 @@
 - [2026-03-06/20260306_131624_Kevin_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_131624_Kevin_1772802782.930239.md)
 - [2026-03-06/20260306_131750_Kevin_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_131750_Kevin_1772802782.930239.md)
 - [2026-03-06/20260306_131822_Kevin_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_131822_Kevin_1772802782.930239.md)
+- [2026-03-06/20260306_131839_Kevin_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_131839_Kevin_1772802782.930239.md)
 
 ### 📁 specs/
 
