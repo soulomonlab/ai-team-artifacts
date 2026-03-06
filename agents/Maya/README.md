@@ -1,6 +1,6 @@
 # 🎨 Maya — Designer
 
-> 🤖 Auto-generated · 2026-03-06 10:14 UTC
+> 🤖 Auto-generated · 2026-03-06 10:15 UTC
 
 ## 산출물 목록
 
@@ -12,6 +12,7 @@
 - [core_flow_v1.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/core_flow_v1.md)
 - [core_flow_v1.md`](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/core_flow_v1.md`)
 - [core_flows_and_design_tokens.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/core_flows_and_design_tokens.md)
+- [instagram_mvp_design_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/instagram_mvp_design_spec.md)
 - [maya_q1_mvp_spec.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/maya_q1_mvp_spec.md.)
 - [maya_q1_mvp_spec.md`](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/maya_q1_mvp_spec.md`)
 - [painting_app_components.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/painting_app_components.md)
@@ -33,6 +34,7 @@
 - [2026-03-06/20260306_090311_Maya_1772787637.093519.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_090311_Maya_1772787637.093519.md)
 - [2026-03-06/20260306_094329_Maya_1772790089.171139.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_094329_Maya_1772790089.171139.md)
 - [2026-03-06/20260306_094404_Maya_1772790124.961469.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_094404_Maya_1772790124.961469.md)
+- [2026-03-06/20260306_101500_Maya_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_101500_Maya_1772792003.811909.md)
 
 ### 📁 specs/
 
