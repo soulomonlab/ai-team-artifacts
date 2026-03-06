@@ -1,47 +1,57 @@
 # Feature: Recipe App (MVP)
-**Goal:** Let users discover, save, and share recipes with a fast, beautiful UX and a scalable backend.
-**North Star Impact:** Increase weekly active users (WAU) and time-on-site by providing sticky content and social-shareable recipes.
-**Users:** Home cooks (primary), food bloggers (secondary), casual browsers
+**Goal:** Enable users to discover, save, and follow step-by-step recipes with an intuitive mobile-first experience and scalable backend.
+
+**North Star Impact:** Increase DAU and time-in-app by providing sticky recipe discovery and saving flows.
+
+**Users:**
+- Home cooks (primary): discover recipes, filter by diet/allergies, save favorites, follow steps
+- Casual browsers: search for quick recipes, view ingredients and nutrition
 
 **RICE Score:**
-- Reach = 25,000 users / quarter
-- Impact = 2 (meaningful improvement in engagement)
-- Confidence = 80%
+- Reach = 10,000 users / quarter
+- Impact = 2 (Performance)
+- Confidence = 70%
 - Effort = 6 person-weeks
-RICE = (25,000 × 2 × 0.8) / 6 ≈ 6,666
+- RICE = (10,000 × 2 × 0.7) / 6 ≈ 2,333
 
-**Kano Category:** Performance (core product feature)
+**Kano Category:** Performance
 
 **Acceptance Criteria:**
-- [ ] Users can view a feed of recipes with images, tags, cook time, and ratings
-- [ ] Users can search recipes by name, ingredient, or tag with results < 300ms
-- [ ] Authenticated users can save recipes to their profile and create collections
-- [ ] Authenticated users can create and edit recipes (title, ingredients, steps, images, tags)
-- [ ] Users can share a recipe via URL and social share metadata (Open Graph)
-- [ ] Rate-limiting and pagination are in place for feeds and search
-- [ ] Backend scales to 10k concurrent reads with response p95 < 500ms
+- [ ] Users can browse recipe feed with images, cook time, and tags
+- [ ] Users can search and filter by keyword, ingredient, diet, cook time
+- [ ] Users can view full recipe details: ingredients, steps, nutrition, servings
+- [ ] Users can save/unsave recipes to personal favorites
+- [ ] Users can create and edit their own recipes (auth required)
+- [ ] API responses < 300ms p95 under load of 500 RPS
+- [ ] Basic input validation + XSS protection for user-submitted content
 
-**Out of Scope:**
-- Advanced personalization / recommendations (ML)
-- Mobile-native apps (initially web-first)
-- Payments and premium features
+**Out of Scope (MVP):**
+- Social features (comments, follows) beyond favorites
+- Video step-by-step walkthroughs
+- Advanced personalization / recommendation ML
 
 **Success Metrics:**
-- 60% feature adoption (saved recipe at least once) among new signups in 30 days
-- WAU +20% in first quarter after launch
-- p95 API latency < 500ms, error rate < 1%
+- Adoption: 30% of new users save ≥1 recipe within 7 days
+- Engagement: DAU for recipe flows increases by 20% in 90 days
+- Performance: API error rate < 1% and p95 latency < 300ms
 
-**Initial API Surface (MVP):**
-- GET /recipes (feed, filters, pagination)
-- GET /recipes/:id
-- POST /recipes (auth)
-- PUT /recipes/:id (auth, owner)
-- POST /users/:id/saved (save/unsave)
-- GET /users/:id/collections
+**Key Decisions (initial):**
+- Backend: Postgres with JSONB for recipe steps/ingredients to balance relational queries + flexibility
+- API: REST v1 for MVP; design OpenAPI after initial endpoints
+- Auth: JWT for mobile/web sessions
 
-**Tech Decisions (initial):**
-- DB: Postgres (JSONB for flexible ingredients & tags)
-- Search: Postgres full-text + indexes; Redis for caching hot reads
-- Hosting: Kubernetes on cloud provider (Taylor to confirm infra)
+**Minimum Viable API Endpoints (v1):**
+- GET /v1/recipes — list + filters
+- GET /v1/recipes/{id} — recipe details
+- POST /v1/recipes — create (auth)
+- PUT /v1/recipes/{id} — update (auth/ownership)
+- POST /v1/recipes/{id}/favorite — toggle favorite (auth)
+- GET /v1/users/{id}/favorites — list user favorites
 
-**GitHub Issue:** TBD
+**Next Steps:**
+1. Tech lead: repo + initial infra scaffolding
+2. Design: create mobile + web wireframes (browse, recipe detail, create)
+3. Backend: implement DB schema + REST endpoints + tests
+4. Frontend: implement feed, detail, save flows
+
+**Spec file:** output/specs/recipe_app.md
