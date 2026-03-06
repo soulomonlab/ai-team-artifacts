@@ -1,6 +1,6 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-05 07:40 UTC
+> 🤖 Auto-generated · 2026-03-06 04:24 UTC
 
 ## 산출물 목록
 
@@ -15,10 +15,15 @@
 - [2026-03-05/20260305_061209_Alex_1772691113.758929.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-05/20260305_061209_Alex_1772691113.758929.md)
 - [2026-03-05/20260305_061216_Alex_1772691113.758929.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-05/20260305_061216_Alex_1772691113.758929.md)
 - [2026-03-05/20260305_073851_Alex_1772696331.680789.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-05/20260305_073851_Alex_1772696331.680789.md)
+- [2026-03-06/20260306_042254_Alex_1772770974.895579.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_042254_Alex_1772770974.895579.md)
+- [2026-03-06/20260306_042422_Alex_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_042422_Alex_1772771047.094479.md)
+- [2026-03-06/20260306_042425_Alex_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_042425_Alex_1772771047.094479.md)
 
 ### 📁 specs/
 
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/)
+- [*.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/*.md)
+- [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/[feature].md)
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/[feature].md)
 - [onboarding_improvements.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/onboarding_improvements.md)
 
