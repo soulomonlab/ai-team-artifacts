@@ -7,6 +7,11 @@
 ### 📁 slack/
 
 - [2026-03-05/20260305_074028_Jessica_1772696372.994279.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Jessica/slack/2026-03-05/20260305_074028_Jessica_1772696372.994279.md)
+- [2026-03-06/20260306_042522_Jessica_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Jessica/slack/2026-03-06/20260306_042522_Jessica_1772771047.094479.md)
+
+### 📁 specs/
+
+- [prelaunch_acquisition_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Jessica/specs/prelaunch_acquisition_plan.md)
 
 ---
 [← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
