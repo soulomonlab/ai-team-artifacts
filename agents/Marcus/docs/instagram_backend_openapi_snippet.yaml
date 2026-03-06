@@ -1,0 +1,158 @@
+openapi: 3.0.3
+info:
+  title: Instagram MVP - Backend API (snippet)
+  version: 0.1.0
+servers:
+  - url: https://api.example.com
+paths:
+  /api/v1/feed:
+    get:
+      summary: List feed items (cursor pagination)
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: cursor
+          in: query
+          schema:
+            type: string
+          description: Opaque cursor for pagination
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+            maximum: 50
+      responses:
+        '200':
+          description: Feed page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FeedResponse'
+  /api/v1/uploads/presign:
+    post:
+      summary: Request a presigned upload URL for a new asset
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filename:
+                  type: string
+                contentType:
+                  type: string
+                size:
+                  type: integer
+                purpose:
+                  type: string
+              required: [filename, contentType]
+      responses:
+        '200':
+          description: Presign result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PresignResponse'
+  /api/v1/posts:
+    post:
+      summary: Create a post (with uploaded assets)
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreatePostRequest'
+      responses:
+        '201':
+          description: Created
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    MediaVariant:
+      type: object
+      properties:
+        url:
+          type: string
+        mime_type:
+          type: string
+        width:
+          type: integer
+        height:
+          type: integer
+        scale:
+          type: string
+          description: '"1x" | "2x" | "3x"'
+        lqip:
+          type: string
+          description: 'base64 WebP tiny preview'
+        aspect_ratio:
+          type: number
+        alt_text_required:
+          type: boolean
+      required: [url, mime_type, width, height]
+    FeedItem:
+      type: object
+      properties:
+        id:
+          type: string
+        author_id:
+          type: string
+        text:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+        media:
+          type: array
+          items:
+            $ref: '#/components/schemas/MediaVariant'
+    FeedResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/FeedItem'
+        next_cursor:
+          type: string
+          nullable: true
+    PresignResponse:
+      type: object
+      properties:
+        uploadUrl:
+          type: string
+        assetId:
+          type: string
+        fields:
+          type: object
+          additionalProperties: true
+        expiresAt:
+          type: string
+          format: date-time
+      required: [uploadUrl, assetId]
+    CreatePostRequest:
+      type: object
+      properties:
+        text:
+          type: string
+        media:
+          type: array
+          items:
+            type: object
+            properties:
+              assetId:
+                type: string
+              alt_text:
+                type: string
+            required: [assetId]
+      required: [media]
