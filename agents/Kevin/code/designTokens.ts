@@ -1,30 +1,36 @@
-// designTokens.ts
-// Lightweight token bridge between design and Tailwind/CSS variables.
-// Source of truth: output/design/core_flows_and_design_tokens.md (Maya)
+// Design tokens for the MVP (mobile-first)
+// Used by frontend components. Keep tokens simple and framework-agnostic.
 
-export type ThemeTokens = {
-  colorPrimary: string;
-  colorOnPrimary: string;
-  colorSurface: string;
-  colorText: string;
-  spacingBase: string; // e.g., "8px"
-  radiusBase: string;
-  fontFamilyBase: string;
+export const tokens = {
+  colors: {
+    primary: '#2563EB', // blue-600
+    primaryHover: '#1D4ED8',
+    background: '#F9FAFB', // gray-50
+    surface: '#FFFFFF', // card background
+    muted: '#6B7280',
+    danger: '#DC2626',
+  },
+  spacing: {
+    xs: 4,
+    sm: 8,
+    md: 16,
+    lg: 24,
+    xl: 32,
+  },
+  radius: {
+    sm: 6,
+    md: 10,
+    lg: 14,
+  },
+  typography: {
+    fontFamily: "Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+    base: 16,
+    scale: {
+      xs: 12,
+      sm: 14,
+      md: 16,
+      lg: 20,
+      xl: 24,
+    },
+  },
 };
-
-// Implementation prefers CSS variables so designers can tweak tokens at runtime.
-// Keep values minimal here; final values must be synced with design file.
-export const tokens: ThemeTokens = {
-  colorPrimary: "var(--color-primary, #2563EB)",
-  colorOnPrimary: "var(--color-on-primary, #ffffff)",
-  colorSurface: "var(--color-surface, #ffffff)",
-  colorText: "var(--color-text, #0f172a)",
-  spacingBase: "var(--spacing-base, 8px)",
-  radiusBase: "var(--radius-base, 8px)",
-  fontFamilyBase: "Inter, Roboto, system-ui, -apple-system, 'Helvetica Neue'",
-};
-
-// Decision: Use CSS variables for theming + Tailwind utility classes for layout.
-// Pros: runtime theming, small bundle impact. Con: requires agreement with design tokens file.
-
-export default tokens;
