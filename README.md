@@ -38,10 +38,15 @@ agents/
     reports/
     slack/
     specs/
+  Emma-Technical-Writer/          📝
+    docs/
+    slack/
+    specs/
   GrowthContent-Growth-Content/          🤖
     docs/
     slack/
   Isabella-Security-Engineer/          🔒
+    code/
     reports/
     slack/
     specs/
@@ -86,6 +91,9 @@ agents/
     reports/
     slack/
     specs/
+  Victor-Architect/          🏛️
+    slack/
+    specs/
   Yuki-Finance/          💰
     slack/
 project/
@@ -98,10 +106,11 @@ project/
 - 🤖 **[CEO](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/CEO)** — Chief-Executive · 21개 파일
 - 🤝 **[Chris](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Chris)** — Customer-Success · 5개 파일
 - 🤖 **[CustomerInsights](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/CustomerInsights)** — Customer-Insights · 2개 파일
-- 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA-Engineer · 48개 파일
+- 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA-Engineer · 52개 파일
 - 🤖 **[Dependency](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)** — Dependency-Manager · 14개 파일
+- 📝 **[Emma](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)** — Technical-Writer · 6개 파일
 - 🤖 **[GrowthContent](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/GrowthContent)** — Growth-Content · 6개 파일
-- 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security-Engineer · 13개 파일
+- 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security-Engineer · 20개 파일
 - 🚀 **[Jessica](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Jessica)** — Growth · 12개 파일
 - ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend-Engineer · 60개 파일
 - 🧠 **[Lisa](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Lisa)** — ML-Engineer · 7개 파일
@@ -110,6 +119,7 @@ project/
 - 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps-Engineer · 28개 파일
 - 🤖 **[RevenueOps](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/RevenueOps)** — Revenue-Ops · 1개 파일
 - 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech-Lead · 28개 파일
+- 🏛️ **[Victor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Victor)** — Architect · 3개 파일
 - 💰 **[Yuki](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Yuki)** — Finance · 1개 파일
 
 ## 빠른 링크
@@ -121,6 +131,7 @@ project/
 - 🤖 [CustomerInsights 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/CustomerInsights)
 - 🎯 [Dana 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)
 - 🤖 [Dependency 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)
+- 📝 [Emma 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)
 - 🤖 [GrowthContent 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/GrowthContent)
 - 🔒 [Isabella 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)
 - 🚀 [Jessica 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Jessica)
@@ -131,4 +142,5 @@ project/
 - 🚢 [Noah 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)
 - 🤖 [RevenueOps 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/RevenueOps)
 - 🏗️ [Taylor 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)
+- 🏛️ [Victor 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Victor)
 - 💰 [Yuki 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Yuki)
