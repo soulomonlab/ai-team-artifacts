@@ -1,8 +1,12 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-06 06:01 UTC
+> 🤖 Auto-generated · 2026-03-06 07:41 UTC
 
 ## 산출물 목록
+
+### 📁 design/
+
+- [core_flow_v1.*](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/design/core_flow_v1.*)
 
 ### 📁 slack/
 
@@ -29,6 +33,10 @@
 - [2026-03-06/20260306_055933_Alex_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_055933_Alex_1772776762.185889.md)
 - [2026-03-06/20260306_055938_Alex_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_055938_Alex_1772776762.185889.md)
 - [2026-03-06/20260306_060044_Alex_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_060044_Alex_1772776762.185889.md)
+- [2026-03-06/20260306_064105_Alex_1772779265.905149.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_064105_Alex_1772779265.905149.md)
+- [2026-03-06/20260306_073926_Alex_1772782766.518379.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_073926_Alex_1772782766.518379.md)
+- [2026-03-06/20260306_074116_Alex_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_074116_Alex_1772782862.480179.md)
+- [2026-03-06/20260306_074122_Alex_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_074122_Alex_1772782862.480179.md)
 
 ### 📁 specs/
 
