@@ -1,6 +1,6 @@
 # 🏗️ Taylor — Tech Lead
 
-> 🤖 Auto-generated · 2026-03-06 13:16 UTC
+> 🤖 Auto-generated · 2026-03-06 13:17 UTC
 
 ## 산출물 목록
 
@@ -39,6 +39,7 @@
 - [product-crud+search.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/specs/product-crud+search.md)
 - [product-crud+search.md,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/specs/product-crud+search.md,)
 - [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/specs/user_profiles.md)
+- [visual_inspection_tech_kickoff.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/specs/visual_inspection_tech_kickoff.md)
 
 ---
 [← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
