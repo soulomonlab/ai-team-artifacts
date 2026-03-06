@@ -1,6 +1,6 @@
 # ⚡ Kevin — Frontend Engineer
 
-> 🤖 Auto-generated · 2026-03-06 13:17 UTC
+> 🤖 Auto-generated · 2026-03-06 13:18 UTC
 
 ## 산출물 목록
 
@@ -8,15 +8,18 @@
 
 - [frontend/AuthProvider.tsx,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/AuthProvider.tsx,)
 - [frontend/Feed.tsx,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/Feed.tsx,)
+- [frontend/UploadStatus.tsx,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/UploadStatus.tsx,)
 - [frontend/UserList.tsx](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/UserList.tsx)
 - [frontend/[Feature]](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/[Feature])
 - [frontend/api-client.ts](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/api-client.ts)
 - [frontend/component_list.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/component_list.md)
+- [frontend/hooks/useUploader.ts,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/hooks/useUploader.ts,)
 - [visual_inspection_README.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/visual_inspection_README.md.)
 
 ### 📁 design/
 
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/[feature].md)
+- [assets/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/assets/)
 - [cat_meme_app_design.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/cat_meme_app_design.md)
 - [core_flow_v1.*](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/core_flow_v1.*)
 - [instagram_mvp_design_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/instagram_mvp_design_spec.md)
@@ -50,12 +53,19 @@
 - [2026-03-06/20260306_101558_Kevin_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_101558_Kevin_1772792003.811909.md)
 - [2026-03-06/20260306_101720_Kevin_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_101720_Kevin_1772792003.811909.md)
 - [2026-03-06/20260306_131624_Kevin_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_131624_Kevin_1772802782.930239.md)
+- [2026-03-06/20260306_131750_Kevin_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_131750_Kevin_1772802782.930239.md)
+- [2026-03-06/20260306_131822_Kevin_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_131822_Kevin_1772802782.930239.md)
 
 ### 📁 specs/
 
 - [global_typeahead_search.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/global_typeahead_search.md)
 - [product-crud+search.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/product-crud+search.md)
 - [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/user_profiles.md)
+- [visual_inspection_frontend_request.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/specs/visual_inspection_frontend_request.md)
+
+### 📁 tests/
+
+- [UploadStatus.test.tsx.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/tests/UploadStatus.test.tsx.)
 
 ---
 [← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
