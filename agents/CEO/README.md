@@ -1,6 +1,6 @@
 # 🤖 CEO — Agent
 
-> 🤖 Auto-generated · 2026-03-06 07:41 UTC
+> 🤖 Auto-generated · 2026-03-06 07:52 UTC
 
 ## 산출물 목록
 
@@ -21,10 +21,14 @@
 - [2026-03-06/20260306_055939_CEO_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/slack/2026-03-06/20260306_055939_CEO_1772776762.185889.md)
 - [2026-03-06/20260306_074124_CEO_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/slack/2026-03-06/20260306_074124_CEO_1772782862.480179.md)
 - [2026-03-06/20260306_074127_CEO_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/slack/2026-03-06/20260306_074127_CEO_1772782862.480179.md)
+- [2026-03-06/20260306_074209_CEO_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/slack/2026-03-06/20260306_074209_CEO_1772782862.480179.md)
+- [2026-03-06/20260306_074216_CEO_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/slack/2026-03-06/20260306_074216_CEO_1772782862.480179.md)
+- [2026-03-06/20260306_074219_CEO_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/slack/2026-03-06/20260306_074219_CEO_1772782862.480179.md)
 
 ### 📁 specs/
 
 - [arch_scale_10k.md,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/specs/arch_scale_10k.md,)
+- [experiment_acquisition.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/specs/experiment_acquisition.md)
 - [roadmap_q2.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CEO/specs/roadmap_q2.md)
 
 ---
