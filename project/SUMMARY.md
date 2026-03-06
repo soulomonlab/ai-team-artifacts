@@ -10,15 +10,15 @@
 | 🤖 CEO | Agent | 2 | 13 | 15 |
 | 🤝 Chris | Customer Success | 2 | 1 | 3 |
 | 🤖 CustomerInsights | Agent | 0 | 2 | 2 |
-| 🎯 Dana | QA Engineer | 7 | 4 | 11 |
+| 🎯 Dana | QA Engineer | 11 | 5 | 16 |
 | 🤖 Dependency | Agent | 1 | 3 | 4 |
 | 🤖 GrowthContent | Agent | 2 | 2 | 4 |
 | 🔒 Isabella | Security Engineer | 2 | 3 | 5 |
 | 🚀 Jessica | Growth | 1 | 2 | 3 |
-| ⚡ Kevin | Frontend Engineer | 7 | 6 | 13 |
+| ⚡ Kevin | Frontend Engineer | 9 | 7 | 16 |
 | 🔧 Marcus | Backend Engineer | 8 | 10 | 18 |
 | 🎨 Maya | Designer | 4 | 4 | 8 |
-| 🚢 Noah | DevOps Engineer | 7 | 6 | 13 |
+| 🚢 Noah | DevOps Engineer | 7 | 7 | 14 |
 | 🤖 RevenueOps | Agent | 0 | 1 | 1 |
 | 🏗️ Taylor | Tech Lead | 9 | 9 | 18 |
 | 💰 Yuki | Finance | 0 | 1 | 1 |
@@ -27,16 +27,16 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 89 |
-| specs | 30 |
-| docs | 12 |
+| slack | 92 |
+| specs | 31 |
+| docs | 14 |
 | design | 6 |
+| tests | 6 |
 | config | 5 |
-| tests | 4 |
-| code | 3 |
+| code | 4 |
 | reports | 3 |
 
-**총 산출물: 152개**
+**총 산출물: 161개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
