@@ -1,47 +1,59 @@
-# Feature: Visual Inspection App (Factory)
-**Goal:** Build an intuitive, scalable visual inspection application to detect manufacturing defects in real-time and surface them to operators for immediate action.
+# Feature: Visual Inspection App
+**Goal:** Provide factory operators an intuitive app to capture, annotate, and manage visual inspection (defect detection) workflows that scales to multiple factories and maintains high code quality.
 
-**North Star Impact:** Reduce defect escape rate and rework costs; improve production throughput and QA efficiency.
+**North Star Impact:** Reduce manual inspection time by 50% and increase defect detection rate by 30% within 6 months of deployment.
 
 **Users:**
-- Primary: Line Operators — use camera UI to inspect parts and confirm/reject defects.
-- Secondary: Quality Engineers — analyze defect trends, tune models, and review edge cases.
-- Stakeholders: Plant Manager / Ops — monitor KPIs and compliance reports.
+- Primary: Line operators doing visual inspection on assembly lines (capture images, mark defects, submit reports).
+- Secondary: QA engineers and supervisors (review reports, analytics, audit trail).
+- Admin: Dev/Ops for deployment, model ops for ML improvements.
 
-**RICE Score:** Reach=500 (operator sessions per quarter) × Impact=2 (moderate) × Confidence=70% / Effort=8w = 87.5
+**RICE Score:** Reach=[200 factories × 50 lines ≈ 10,000 operators/quarter] × Impact=[1.5 (meaningful improvement)] × Confidence=[70%] / Effort=[8w] = (10,000 × 1.5 × 0.7) / 8 ≈ 1,312.5
 
-**Kano Category:** Performance (high ROI when accurate and fast)
+**Kano Category:** Performance / Must-have for large customers
 
-**Scope & Key Capabilities:**
-- Live camera ingestion (RT or near-RT) with overlay of detections
-- Snapshot capture + manual labeling workflow for false positives/negatives
-- Inference: run ML model (edge or cloud) and return per-item classification + confidence
-- Dashboard: defect counts, trend charts, sample images, operator actions
-- Integration: export defects to factory MES via REST webhook
-- Auth & audit logs: user actions, image retention policy
+**Core Capabilities (MVP):**
+- Real-time image capture from a web/mobile client (camera integration)
+- Guided inspection workflow: step list per product, pass/fail + defect type tagging
+- Annotation tools: bounding boxes, freehand marks, severity tag
+- Report submission with metadata (line, SKU, operator, timestamp)
+- Secure storage of images + metadata with scalable object storage
+- Admin dashboard: recent inspections, defect counts, filter/search
+- Exportable audit logs and CSV reports
 
 **Acceptance Criteria:**
-- [ ] Operator can view a live camera feed and receive bounding-box / label overlays for detected defects.
-- [ ] System returns inference result for each captured item in <200ms (p99) for edge deployment; <500ms for cloud inference.
-- [ ] Base ML model achieves >=90% precision and >=85% recall on validation set (initial target).
-- [ ] Operator can mark detection as true/false positive; labeled images are stored for retraining.
-- [ ] System supports 10 concurrent camera streams per backend instance (scalability target) and horizontal scale.
-- [ ] Audit trail records user decisions and model version for each inspected item.
-- [ ] Secure access: SSO or company LDAP integration (or token-based auth) for operator access.
+- [ ] Operator can capture or upload an image and attach it to an inspection record.
+- [ ] Operator can annotate image (bounding box + label) and submit inspection.
+- [ ] System stores image in scalable object storage and returns a stable URL within 2s.
+- [ ] Submitted inspection appears in QA dashboard within 5s; searchable by SKU, line, operator.
+- [ ] API responds <200ms for metadata endpoints under 100 RPS; image upload throughput scalable (S3 presigned URLs).
+- [ ] Audit log records user, action, timestamp for every inspection event.
+- [ ] Role-based access control: operators vs QA vs admin.
+- [ ] End-to-end tests for happy paths + edge cases present in tests/ directory.
 
-**Out of Scope:**
-- Automated continuous model retraining & deployment pipeline (MVP will collect labeled data for offline retraining).
-- Deep MES integration beyond a webhook export.
+**Out of Scope (MVP):**
+- Automated ML-based defect classification (optional for v1; will be introduced as an integration in v2).
+- Offline-first mobile operation (v1 requires network connectivity).
 
-**Success Metrics (post-launch):**
-- Precision >=90% and Recall >=85% on production validation within 6 weeks.
-- Defect escape rate reduced by 40% in 3 months.
-- Operator adoption: >60% of shifts using the app daily.
-- Mean time to acknowledge a defect <5 minutes.
+**Non-functional Requirements / Constraints:**
+- Scalability: object storage (S3-compatible), stateless API instances behind load balancer.
+- Security: images encrypted at rest, RBAC, audit logs retained 1 year.
+- Code quality: 80% unit test coverage for backend, linting, CI gating.
 
-**Risks & Mitigations:**
-- Model drift → mitigate by collecting operator-labeled samples and scheduled model reviews.
-- Bandwidth/latency constraints → support edge inference and adaptive frame sampling.
-- Operator trust → provide easy override + audit logs + confidence scores.
+**Success Metrics:**
+- Adoption: >60% of lines using the app within 3 months.
+- Accuracy: manual QC shows 30% higher defect detection vs baseline.
+- Performance: metadata API p95 < 200ms under target load.
+- Reliability: 99.9% uptime for API layer.
 
-**GitHub Issue:** TBD
+**Dependencies:**
+- Camera hardware + browser/mobile support (product to validate supported devices)
+- Object storage (S3)
+- Auth service (SSO) or initial internal user DB
+
+**Next Steps / Deliverables:**
+- Backend architecture & API spec (owner: Marcus)
+- Frontend wireframes and interaction spec (owner: Maya)
+- QA test plan and acceptance tests (owner: Dana)
+
+**GitHub Issue:** (created by PO) #
