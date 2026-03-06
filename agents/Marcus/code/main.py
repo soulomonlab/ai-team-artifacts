@@ -1,30 +1,17 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
-from datetime import datetime
-import time
+from fastapi.middleware.cors import CORSMiddleware
+from backend.routers import auth
 
-app = FastAPI(title="Healthcheck")
+app = FastAPI()
 
-class HealthResponse(BaseModel):
-    status: str
-    timestamp: str
-    uptime_seconds: float
+origins = ["http://localhost:3000"]  # update with frontend origins
 
-START_TIME = time.time()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-@app.get("/health", response_model=HealthResponse, tags=["health"])
-def health():
-    """Simple health endpoint.
-
-    Returns status, UTC timestamp and process uptime in seconds.
-    p99 target: <200ms (keeps logic minimal and sync).
-    """
-    return HealthResponse(
-        status="ok",
-        timestamp=datetime.utcnow().isoformat() + "Z",
-        uptime_seconds=round(time.time() - START_TIME, 3),
-    )
-
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=8000)
+app.include_router(auth.router, prefix="/api/v1")
