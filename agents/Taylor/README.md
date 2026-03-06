@@ -9,6 +9,10 @@
 - [DECISIONS.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/docs/DECISIONS.md)
 - [DECISIONS.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/docs/DECISIONS.md)
 
+### 📁 reports/
+
+- [dependency_audit.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/reports/dependency_audit.md)
+
 ### 📁 slack/
 
 - [2026-03-05/20260305_012413_Taylor_1772649191.591039.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/slack/2026-03-05/20260305_012413_Taylor_1772649191.591039.md)
@@ -22,6 +26,7 @@
 - [2026-03-06/20260306_055953_Taylor_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/slack/2026-03-06/20260306_055953_Taylor_1772776762.185889.md)
 - [2026-03-06/20260306_060028_Taylor_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/slack/2026-03-06/20260306_060028_Taylor_1772776762.185889.md)
 - [2026-03-06/20260306_060056_Taylor_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/slack/2026-03-06/20260306_060056_Taylor_1772776762.185889.md)
+- [2026-03-06/20260306_060116_Taylor_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Taylor/slack/2026-03-06/20260306_060116_Taylor_1772776762.185889.md)
 
 ### 📁 specs/
 
