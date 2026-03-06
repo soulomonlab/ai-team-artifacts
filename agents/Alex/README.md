@@ -1,6 +1,6 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-06 08:20 UTC
+> 🤖 Auto-generated · 2026-03-06 09:01 UTC
 
 ## 산출물 목록
 
@@ -41,6 +41,9 @@
 - [2026-03-06/20260306_080558_Alex_1772784358.102929.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_080558_Alex_1772784358.102929.md)
 - [2026-03-06/20260306_081822_Alex_1772785102.239619.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_081822_Alex_1772785102.239619.md)
 - [2026-03-06/20260306_081945_Alex_1772785140.251239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_081945_Alex_1772785140.251239.md)
+- [2026-03-06/20260306_083320_Alex_1772785999.995749.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_083320_Alex_1772785999.995749.md)
+- [2026-03-06/20260306_083431_Alex_1772786021.917559.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_083431_Alex_1772786021.917559.md)
+- [2026-03-06/20260306_090024_Alex_1772787623.995789.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_090024_Alex_1772787623.995789.md)
 
 ### 📁 specs/
 
@@ -55,6 +58,8 @@
 - [kickoff_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/kickoff_prd.md)
 - [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/next_feature.md)
 - [onboarding_improvements.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/onboarding_improvements.md)
+- [recipe_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/recipe_app.md)
+- [recipe_app.md`](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/recipe_app.md`)
 - [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/user_profiles.md)
 - [user_profiles.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/user_profiles.md.)
 
