@@ -1,6 +1,6 @@
 # 🚢 Noah — DevOps Engineer
 
-> 🤖 Auto-generated · 2026-03-06 06:01 UTC
+> 🤖 Auto-generated · 2026-03-06 07:41 UTC
 
 ## 산출물 목록
 
@@ -15,6 +15,7 @@
 
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/)
 - [infra_costs.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/infra_costs.md)
+- [openapi_auth.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/openapi_auth.yaml)
 - [rollback_runbook.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/docs/rollback_runbook.md)
 
 ### 📁 reports/
@@ -31,6 +32,7 @@
 - [2026-03-06/20260306_053448_Noah_1772775247.233539.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/slack/2026-03-06/20260306_053448_Noah_1772775247.233539.md)
 - [2026-03-06/20260306_060018_Noah_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/slack/2026-03-06/20260306_060018_Noah_1772776762.185889.md)
 - [2026-03-06/20260306_060108_Noah_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/slack/2026-03-06/20260306_060108_Noah_1772776762.185889.md)
+- [2026-03-06/20260306_060140_Noah_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah/slack/2026-03-06/20260306_060140_Noah_1772776762.185889.md)
 
 ---
 [← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
