@@ -1,48 +1,56 @@
 from fastapi import FastAPI, Depends, HTTPException, status
-from typing import List, Optional
+from fastapi.middleware.cors import CORSMiddleware
+from typing import List
 from sqlalchemy.orm import Session
 
-from .db import Base, engine, get_db
-from . import models, schemas, crud_items
+from . import models, schemas, crud
+from .database import engine, get_db
 
-# create tables
-Base.metadata.create_all(bind=engine)
+models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI(title="Items Service", version="1.0.0")
+app = FastAPI(title="Items API", version="1.0")
 
-
-@app.post("/api/v1/items", response_model=schemas.ItemSchema, status_code=status.HTTP_201_CREATED)
-def create_item(item: schemas.ItemCreate, db: Session = Depends(get_db)):
-    db_item = crud_items.create_item(db, item)
-    return db_item
-
-
-@app.get("/api/v1/items", response_model=List[schemas.ItemSchema])
-def list_items(page: int = 1, size: int = 20, search: Optional[str] = None, db: Session = Depends(get_db)):
-    skip = (page - 1) * size
-    items = crud_items.list_items(db, skip=skip, limit=size, search=search)
-    return items
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
-@app.get("/api/v1/items/{item_id}", response_model=schemas.ItemSchema)
-def get_item(item_id: int, db: Session = Depends(get_db)):
-    item = crud_items.get_item(db, item_id)
+@app.post("/api/v1/items", response_model=schemas.ItemOut, status_code=status.HTTP_201_CREATED)
+def create_item_endpoint(item_in: schemas.ItemCreate, db: Session = Depends(get_db)):
+    item = crud.create_item(db, item_in)
+    return item
+
+
+@app.get("/api/v1/items", response_model=List[schemas.ItemOut])
+def list_items_endpoint(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
+    return crud.list_items(db, skip=skip, limit=limit)
+
+
+@app.get("/api/v1/items/{item_id}", response_model=schemas.ItemOut)
+def get_item_endpoint(item_id: int, db: Session = Depends(get_db)):
+    item = crud.get_item(db, item_id)
     if not item:
         raise HTTPException(status_code=404, detail="Item not found")
     return item
 
 
-@app.patch("/api/v1/items/{item_id}", response_model=schemas.ItemSchema)
-def update_item(item_id: int, item: schemas.ItemUpdate, db: Session = Depends(get_db)):
-    updated = crud_items.update_item(db, item_id, item)
-    if not updated:
+@app.patch("/api/v1/items/{item_id}", response_model=schemas.ItemOut)
+def update_item_endpoint(item_id: int, item_upd: schemas.ItemUpdate, db: Session = Depends(get_db)):
+    item = crud.get_item(db, item_id)
+    if not item:
         raise HTTPException(status_code=404, detail="Item not found")
+    updated = crud.update_item(db, item, item_upd)
     return updated
 
 
 @app.delete("/api/v1/items/{item_id}")
-def delete_item(item_id: int, db: Session = Depends(get_db)):
-    ok = crud_items.delete_item(db, item_id)
-    if not ok:
+def delete_item_endpoint(item_id: int, db: Session = Depends(get_db)):
+    item = crud.get_item(db, item_id)
+    if not item:
         raise HTTPException(status_code=404, detail="Item not found")
-    return {"deleted": True}
+    crud.delete_item(db, item)
+    return {"ok": True}
