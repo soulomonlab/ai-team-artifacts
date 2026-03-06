@@ -1,150 +1,210 @@
-# Meme Editor & Feed 디자인 스펙
+# 밈 에디터 및 피드 디자인 스펙
 
-요약
-- 산출물: 하이파이 목업 기준의 디자인 스펙(편집기 + 피드)
-- 파일: output/design/meme_editor_feed_spec.md
-- 목적: upload, 텍스트 오버레이, 드래그/포지셔닝, 스타일 옵션, 피드(무한스크롤, 좋아요/댓글/공유) 구현을 위한 디자인 가이드
+요약(결론):
+- 고충해결: 밈 생성(업로드, 텍스트 오버레이, 드래그/포지셔닝, 스타일 옵션)과 피드(무한 스크롤, 좋아요/댓글/공유) UI의 하이파이 디자인 스펙과 구현용 자산/컴포넌트 사양을 작성했습니다.
+- 위치: output/design/meme_editor_feed_spec.md
+- 다음 단계: #ai-frontend (Kevin) 에게 UI 컴포넌트 구현 요청
 
-대상 유저 & 사용 맥락
-- 대상: SNS 성격의 가볍고 빠른 밈 생성/공유를 원하는 18-35세 사용자
-- 사용 맥락: 모바일 우선(대부분 사용), 데스크톱에서도 편집 가능. 짧은 작업(30s 내) 목표.
+상황(Situation)
+- 목표: 직관적인 밈 편집기와 참여 중심의 피드 경험을 제공해 사용자 생성 컨텐츠를 늘리고 체류 시간을 늘림.
 
-주요 결정(요약)
-- 모바일 우선 설계: 편집 컨트롤을 하단 고정 바에 배치하여 엄지 사용 최적화
-- 카드형 피드: 이미지 중심의 카드 레이아웃으로 시각적 우선순위 확보
-- 텍스트 오버레이는 레이어 기반(포지션+스타일), 드래그로 이동, 이중 탭으로 편집
-- 스타일 옵션은 ‘프리셋’ + ‘세부 조정’으로 나눠 초보자/고급자 모두 지원
+문제(Complication)
+- 다양한 이미지 비율과 화면 크기에서 텍스트 오버레이와 드래그 인터랙션이 깨질 수 있음
+- 피드는 성능(무한 스크롤)과 반응성(이미지 로드, 좋아요 애니메이션)을 함께 만족해야 함
 
-User Flow
-1. 홈(피드) 진입 → 무한 스크롤로 카드 로드
-2. 상단 + 버튼/플로팅 FAB → 새 밈 생성(이미지 업로드/카메라/템플릿)
-3. 편집 화면: 캔버스 중앙, 하단 툴바(텍스트, 스티커, 필터, 스타일, undo/redo, 저장/공유)
-4. 텍스트 추가 → 편집 모드(키보드) → 완료하면 텍스트 레이어로 전환 가능
-5. 텍스트 선택 → 드래그로 위치 조정, 하단에서 폰트/색/크기/정렬 옵션 노출
-6. 저장/공유 → 업로드/피드로 포스트
+해결(Resolution)
+- 아래 문서: 사용자 흐름, 컴포넌트 사양, 와이어프레임(ASCII), 스타일 가이드(타이포그래피/컬러/스페이싱), 반응형 브레이크포인트, 접근성·성능 고려사항을 포함.
 
-핵심 화면(ASCII 와이어프레임)
-- 모바일 편집 화면 (세로)
+---
 
-[ 상단: 뒤로 | 제목(편집) | 미리보기 ]
--------------------------------------
-|                                   |
-|            캔버스(이미지)         |
-|   (텍스트 레이어/터치로 선택)    |
-|                                   |
--------------------------------------
-| 툴바: 텍스트  스티커  필터  스타일 |
-|(프리셋) (폰트) (색상) (정렬) ...  |
--------------------------------------
-| 하단 액션: 취소  저장/공유(프라이머리) |
--------------------------------------
+목차
+1. 사용자(페르소나)와 사용 시나리오
+2. 사용자 흐름 (flow)
+3. 에디터 화면 와이어프레임 및 상호작용
+4. 피드 화면 와이어프레임 및 상호작용
+5. 컴포넌트 사양
+6. 스타일 가이드 (타이포/컬러/스페이싱)
+7. 반응형 브레이크포인트
+8. 접근성 및 성능 고려사항
+9. 구현 노트 / 개발자에게 남기는 메모
 
-- 데스크톱 편집 화면 (가로)
-[ 사이드바(옵션) ] [ 캔버스(중앙) ] [ 속성패널(오른쪽) ]
 
-피드 화면(모바일)
--------------------------------------
-| 탐색바: 로고 | 검색 | 새 포스트(+)       |
--------------------------------------
-| 카드 1: 이미지                      |
-|      밈 텍스트(오버레이)            |
-|      바: 좋아요 댓글 공유  작성자     |
--------------------------------------
-| 카드 2: ...                         |
--------------------------------------
-(무한스크롤)
+1) 사용자와 사용 시나리오
+- 페르소나 A: 18-30대 소셜 사용성 높음. 빠르게 이미지에 텍스트를 올리고 공유.
+- 페르소나 B: 크리에이터. 텍스트 스타일, 정렬, 복수 레이어 필요.
 
-컴포넌트 스펙
-- Canvas
-  - 동작: 이미지 렌더링, 터치/마우스로 텍스트/스티커 선택 및 이동
-  - 제약: 최대 2048px 축소/확대 허용, 초기 fit-to-screen
-  - 핀치 줌 지원(모바일)
+주요 시나리오
+- S1: 이미지 업로드 → 텍스트 추가 → 위치/크기 조정 → 스타일 적용 → 저장/공유
+- S2: 피드 브라우징 → 무한 스크롤 로드 → 포스트 좋아요/댓글/공유 → 프로필/댓글 진입
 
-- Text Layer
-  - 기본 동작: 더블탭/이중탭 = 편집 모드, 단일 탭 = 선택/이동
-  - 프로퍼티: content, fontFamily, fontSize(px), color(hex), stroke(boolean + color), alignment(left/center/right), shadow, rotation(deg), zIndex
-  - 최소/최대 폰트 사이즈: 12px - 200px (반응형)
 
-- Toolbar (mobile bottom)
-  - 높이: 64px, 아이콘 크기 24px
-  - 버튼: 텍스트, 스티커, 필터, 스타일, undo, redo, export
-  - 상태: 선택된 툴 하이라이트(#FF6B6B, 2px 상단 보더)
+2) 사용자 흐름
+- 에디터 플로우
+  1. 시작: + 버튼 또는 "새 밈 만들기" 선택
+  2. 이미지 선택: 업로드 / 카메라 촬영 / 템플릿 선택
+  3. 에디팅 캔버스: 텍스트 레이어 추가, 드래그/핀치(모바일), 레이어 순서 변경
+  4. 스타일 패널: 폰트, 색상, 그림자, 테두리, 정렬, 자동 맞춤
+  5. 미리보기/저장: 해상도 선택(낮음/중간/고화질) → 공개범위/캡션 추가 → 게시
 
-- Feed Card
-  - Width: 100% (mobile), Max-width: 720px(centred on desktop)
-  - Image aspect: variable, cover behavior
-  - Metadata row: avatar(40px) + author + timestamp
-  - Action row: like(아이콘 + count), comment(count), share
-  - Tap image → 상세 모달(확대 + 댓글)
+- 피드 플로우
+  1. 앱 오픈 또는 피드 탭 선택
+  2. 초기 페이지 로드: 최신/추천 탭
+  3. 스크롤: 무한 로드(로딩 인디케이터) → 각 포스트에서 액션(좋아요, 댓글, 공유)
+  4. 상호작용: 액션 후 미세 애니메이션(하트 튕김), 오프라인 캐시 고려
 
-Spacing, Grid, Typography
-- Grid: 4px base spacing
-- Spacing tokens: xs=4, s=8, m=16, l=24, xl=32
-- Typography
-  - H1: 28px / 34px line-height / 700 (desktop headline)
-  - Body: 16px / 24px / 400
-  - Small: 12px / 16px
-  - Caption (meta): 13px
-- Font family: Inter (default), fallback: system-ui, -apple-system, 'Segoe UI'
 
-Color & Tokens
-- Primary: #FF6B6B (action, primary buttons)
-- Secondary: #2F80ED (links, accents)
-- Neutral-900: #0B1320 (text)
-- Neutral-700: #475569 (muted text)
-- Surface: #FFFFFF (cards)
-- Overlay (modal backdrop): rgba(11,19,32,0.6)
-- Success: #22C55E, Danger: #EF4444
-- Use CSS variables: --color-primary, --color-neutral-900, etc.
+3) 에디터 화면 와이어프레임 (데스크탑/모바일 공통 구조)
 
-Responsive Breakpoints
-- Mobile (default): 0 - 599px — 앱모드, 툴바 하단 고정
-- Tablet: 600 - 1023px — 캔버스 비중 증가, 옵션 팝오버
-- Desktop: 1024px+ — 좌/우 패널 활성화, 캔버스 중앙
-- Canvas padding: mobile 12px, tablet 24px, desktop 48px
+데스크탑 (상단 툴바 + 좌측 툴 + 중앙 캔버스 + 우측 속성 패널)
 
-Interactions & Microcopy
-- 텍스트 드래그: 즉시 따라옴 (no easing), 드래그 끝나면 snap grid 8px 단계
-- 선택된 레이어에 1px stroke outline (#FF6B6B 12% alpha)
-- Undo/Redo 10단계 지원
-- Autosave draft: 5초 inactivity or onBlur
-- 이미지 업로드: progress bar + optimistic preview
+[상단] ----------------- 툴바(뒤로/저장/공유/해상도 선택) -----------------
+[좌측] 툴 아이콘(업로드, 템플릿, 레이어 목록)
+[CENTER CANVAS]
+[우측] 속성 패널(선택된 레이어 속성: 폰트, 색, 크기, 불투명도, 레이어 순서)
 
-Accessibility
-- Contrast ratios: ensure text over image uses adaptive stroke or contrast check (min 4.5:1 for body)
-- Tap targets >= 44x44px
-- Keyboard: tab to select layers, arrows to nudge 1px, shift+arrow 8px
+ASCII 와이어프레임 (데스크탑)
 
-Assets to deliver
-- SVG icons: upload, text, sticker, filter, undo, redo, like, comment, share (24px + 48px variants)
-- Template images: 10 starter templates (PNG/JPG) — filenames: template_01.jpg ... template_10.jpg
-- Fonts: Inter variable webfont links + local fallbacks
++------------------------------------------------------------------------------+
+| Top Bar: ←   (undo)   Save   Share   Export ▼                                 |
++----------------+-------------------------------------------------------------+
+| Tools (L)      |                         Canvas (Center)                           |
+| - Upload       |  +-----------------------------+    Properties (R)                |
+| - Templates    |  |                           |   |  - Font family               |
+| - Layers       |  |   이미지/캔버스 미리보기   |   |  - Font size                |
+|                |  |   (드래그하여 텍스트 이동)  |   |  - Color picker             |
++----------------+  +-----------------------------+   |  - Shadow / Stroke          |
+|                |                                      |  - Align / Arrange         |
++----------------+--------------------------------------+-----------------------------+
 
-Implementation notes / Backend expectations
-- Upload API: POST /v1/uploads -> returns imageUrl, width, height
-- Feed API: GET /v1/posts?pageToken=... (cursor-based) returns author, counts, imageUrl, overlay metadata
-- Post API: POST /v1/posts payload includes layers array with type,text,props
-- Signal needed for optimistic like toggles (toggle endpoint)
+모바일 (하단 툴바 + 전체 캔버스, 우측/오버레이 속성)
 
-Design decisions (세부 설명)
-- 모바일 하단 툴바: 이유 — 한 손 조작 최적화. 상단 툴바는 복잡성을 줄이기 위해 최소화.
-- 프리셋 + 세부 조정: 초보자는 프리셋 빠른 적용, 고급자는 세부 컨트롤로 정밀 편집 가능.
-- 카드형 피드: 이미지가 핵심 콘텐츠이므로 카드 레이아웃으로 가독성 확보.
+[상단] Title / Back / Save
+[CANVAS] 핀치 줌, 드래그로 텍스트 위치 조정
+[하단 툴바] 업로드 | 텍스트 추가 | 스타일 | 레이어 | 공유
 
-Acceptance criteria for handoff
-- 컴포넌트별 Storybook 스토리(혹은 샘플 페이지)로 재현 가능
-- 텍스트 레이어의 드래그/편집/스타일 기능 테스트 가능한 상태
-- 피드에서 무한스콜과 좋아요/댓글/공유 액션 동작
 
-파일/아트워크 위치
-- SVG 아이콘: output/design/assets/icons/
-- 템플릿 이미지: output/design/assets/templates/
+상호작용 상세 (에디터)
+- 텍스트 추가: 탭하면 기본 텍스트 박스가 중앙에 추가. 더블탭으로 편집 모드 진입.
+- 드래그: 텍스트 혹은 스티커 레이어 드래그로 위치 변경 (데스크탑: 마우스, 모바일: 터치)
+- 크기 조정: 레이어 선택 시 바운딩 박스의 핸들로 드래그(모바일은 핀치)
+- 회전: 레이어 회전 핸들 제공(옵션)
+- 레이어 순서: 속성 패널에서 드래그 해서 위/아래 이동
+- 스냅 가이드: 캔버스 중앙 및 레이어 간 가장자리에 스냅 안내선 표시
+- undo/redo: 상단 툴바
+- 텍스트 자동 맞춤 옵션: 텍스트를 캔버스 폭에 맞춤, 줄바꿈 자동조정
 
-결론 / 다음 단계
-- 개발: #ai-frontend(Kevin)에게 컴포넌트 구현 요청
-- 백엔드 연동 협의: Marcus와 업로드/포스트 API 스펙 확인
-- QA: 기본 시나리오 및 접근성 체크리스트 제공
 
-문제가 되거나 제약이 있으면 즉시 피드백 주세요.
+4) 피드 화면 와이어프레임
 
-Maya (Designer)
+레이아웃 (모바일 우선)
+- 각 포스트 카드: 이미지(가운데, 최대폭), 상단에 작성자 정보(아바타 + 이름 + 시간), 하단에 인터랙션 바(좋아요, 댓글, 공유), 캡션/태그
+- 카드 높이는 이미지 비율에 따라 변동. 최대 높이 제한(예: 화면 높이의 80%)
+
+ASCII (모바일 카드)
+
++------------------------------------------------+
+| Avatar  Name                • 2h              |
++------------------------------------------------+
+|               [이미지(비율 유지)]              |
+|                                                |
++------------------------------------------------+
+| ❤️ 123   댓글 45   ↗ 공유                         |
+| Caption text... #tag                             |
++------------------------------------------------+
+
+피드 상호작용
+- 무한 스크롤: 엔드에 도달하면 로더 노출 → API 호출 → 항목 추가
+- 좋아요: 더블탭(이미지 영역) 또는 버튼 탭으로 좋아요. 더블탭 시 하트 애니메이션(짧은 페이드+스케일)
+- 댓글: 모달/하단 시트로 댓글 목록과 입력창 오픈
+- 공유: OS 공유시트 호출 + 내부 링크 복사
+- 로드 최적화: 이미지 lazy-load + progressive image(저해상도 프리뷰 → 고해상도 로드)
+
+
+5) 컴포넌트 사양
+- Canvas (에디터)
+  - 기능: 렌더 이미지, 레이어 관리, 터치/마우스 입력, 스냅 가이드
+  - 입력: 이미지 URL/blob, 레이어 배열
+  - 이벤트: onSelectLayer(id), onChangeLayerProps(id, props), onExport()
+
+- LayerItem (텍스트 / 이미지 / 스티커)
+  - props: id, type, content, x,y,width,height,rotation,zIndex,style
+  - gestures: drag, resize, rotate
+
+- Toolbar / ToolButton
+  - 버튼 크기(데스크탑): 36px; 모바일: 44px 터치 대상 권장
+  - 아이콘: 24px
+
+- PropertyPanel
+  - 폰트 패밀리 드롭다운, 폰트 사이즈 슬라이더(1px 단위), 컬러 피커(HEX), 불투명도 슬라이더
+
+- FeedCard
+  - 이미지: width: 100% container, object-fit: cover; max-height: 80vh
+  - Interaction bar: 버튼 터치 목표 44x44px
+
+
+6) 스타일 가이드
+- 컬러 팔레트
+  - Primary: #FF4D6D (Accent - CTA)
+  - Neutral 900 (dark text): #111827
+  - Neutral 700: #4B5563
+  - Surface / Card: #FFFFFF
+  - Border / Divider: #E5E7EB
+  - Success: #10B981, Error: #EF4444
+
+- 타이포그래피
+  - 기본 폰트 패밀리: Inter, fallbacks: system-ui, -apple-system, 'Segoe UI', Roboto
+  - Heading (H1): 28px / 32px line-height / 600
+  - Heading (H2): 22px / 28px / 600
+  - Body large: 16px / 24px / 400
+  - Body small: 14px / 20px / 400
+  - Caption: 12px / 16px / 400
+
+- 스페이싱 시스템 (8pt 그리드)
+  - XS: 4px, S: 8px, M: 16px, L: 24px, XL: 32px
+  - 컨테이너 패딩(모바일): 16px; 데스크탑 좌우: 24-32px
+
+- 아이콘 / 버튼
+  - Primary CTA: 배경 Primary(#FF4D6D), 텍스트 #FFFFFF, border-radius: 8px, padding: 12px 16px
+  - Secondary: 투명 배경 + border 1px #E5E7EB
+
+
+7) 반응형 브레이크포인트
+- Mobile (<= 600px)
+  - UI: 단일 컬럼, 하단 툴바, 캔버스 전체 사용
+  - 터치 우선 제스처(핀치, 롱프레스)
+- Tablet (601px - 1024px)
+  - UI: 캔버스 중심, 속성 패널 오버레이/사이드
+- Desktop (>1024px)
+  - UI: 좌측 툴바 + 중앙 캔버스 + 우측 패널
+
+이미지와 텍스트 레이어 동작: 캔버스 크기 변경 시 레이어 위치는 % 기반 포지셔닝을 사용하여 상대적으로 유지(픽셀 고정 아님).
+
+
+8) 접근성 및 성능 고려사항
+- 접근성
+  - 버튼은 44x44px 이상, 키보드 포커스 스타일 제공
+  - 컬러 대비: 모든 텍스트는 WCAG AA(최소 4.5:1) 준수 권장
+  - 이미지에 alt 속성(게시 시 요구)
+- 성능
+  - 에디터: 레이어 수가 많을 경우(>20) 성능 저하 방지 위해 가상화와 레스터화 옵션 제공
+  - 피드: intersection observer로 lazy-load, 페이지네이션이 아닌 cursor-based 무한스크롤 권장
+
+
+9) 구현 노트 / 개발자에게 남기는 메모
+- 캔버스는 DOM 기반보다는 WebGL(또는 canvas) 기반 렌더러(예: Konva.js / Fabric.js / custom WebGL) 고려 권장 — 텍스트/이미지의 빠른 드래그/렌더링과 회전/스케일 애니메이션 성능 때문에.
+- 텍스트는 벡터 정보(폰트, 사이즈, 컬러)를 저장하고 export 시 서버/클라이언트에서 rasterize 하길 권장. Export 옵션: PNG/JPEG, 투명 배경
+- 언어: 한글과 영문 모두 폰트Fallback 테스트 필요(특수문자/이모지 렌더링 체크)
+- 에러 상태: 이미지 업로드 실패, 저장 실패 시 헬프 모달/재시도 버튼 제공
+
+
+첨부 자산 및 파일 목록(구현 시 필요)
+- 아이콘 세트(24px/32px), SVG
+- 버튼/토글/컬러 변수 파일 (tokens)
+- 캔버스 레이아웃 예제 이미지(데모용)
+
+디자인 결정 요약 (왜 이렇게 설계했는가)
+- 카드 레이아웃(피드)은 이미지 중심 경험을 강조하기 위해 간결한 액션바만 유지했습니다. 시각적 분산을 줄이고 참여(좋아요/댓글)에 집중시키기 위함입니다.
+- 에디터는 좌/우 패널 구조를 채택해 툴 접근성과 캔버스 시야를 동시에 확보했습니다. 모바일은 오버레이로 전환해 화면을 최대로 활용합니다.
+- 캔버스 좌표를 % 기반으로 설계하여 다양한 화면/이미지 비율에서 레이어가 깨지지 않도록 했습니다.
+
+끝.
