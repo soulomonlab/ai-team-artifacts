@@ -7,6 +7,7 @@
 ### 📁 slack/
 
 - [2026-03-05/20260305_061236_Isabella_1772691113.758929.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Isabella/slack/2026-03-05/20260305_061236_Isabella_1772691113.758929.md)
+- [2026-03-06/20260306_042511_Isabella_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Isabella/slack/2026-03-06/20260306_042511_Isabella_1772771047.094479.md)
 
 ---
 [← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
