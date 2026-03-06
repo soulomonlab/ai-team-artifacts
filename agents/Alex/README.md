@@ -28,6 +28,7 @@
 - [2026-03-06/20260306_055853_Alex_1772776732.558969.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_055853_Alex_1772776732.558969.md)
 - [2026-03-06/20260306_055933_Alex_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_055933_Alex_1772776762.185889.md)
 - [2026-03-06/20260306_055938_Alex_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_055938_Alex_1772776762.185889.md)
+- [2026-03-06/20260306_060044_Alex_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_060044_Alex_1772776762.185889.md)
 
 ### 📁 specs/
 
@@ -41,6 +42,8 @@
 - [kickoff_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/kickoff_prd.md)
 - [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/next_feature.md)
 - [onboarding_improvements.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/onboarding_improvements.md)
+- [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/user_profiles.md)
+- [user_profiles.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/user_profiles.md.)
 
 ### 📁 tests/
 
