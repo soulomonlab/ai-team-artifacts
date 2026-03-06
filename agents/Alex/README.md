@@ -1,6 +1,6 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-06 09:43 UTC
+> 🤖 Auto-generated · 2026-03-06 10:14 UTC
 
 ## 산출물 목록
 
@@ -52,6 +52,9 @@
 - [2026-03-06/20260306_094212_Alex_1772790089.171139.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_094212_Alex_1772790089.171139.md)
 - [2026-03-06/20260306_094244_Alex_1772790124.961469.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_094244_Alex_1772790124.961469.md)
 - [2026-03-06/20260306_094311_Alex_1772790124.961469.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_094311_Alex_1772790124.961469.md)
+- [2026-03-06/20260306_101301_Alex_1772791980.745529.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_101301_Alex_1772791980.745529.md)
+- [2026-03-06/20260306_101402_Alex_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_101402_Alex_1772792003.811909.md)
+- [2026-03-06/20260306_101419_Alex_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_101419_Alex_1772792003.811909.md)
 
 ### 📁 specs/
 
@@ -66,6 +69,8 @@
 - [event_tracking_backend.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/event_tracking_backend.md)
 - [feature_diet_calorie_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/feature_diet_calorie_app.md)
 - [initial_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/initial_prd.md)
+- [instagram_clone.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/instagram_clone.md)
+- [instagram_mvp.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/instagram_mvp.md)
 - [kickoff_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/kickoff_prd.md)
 - [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/next_feature.md)
 - [onboarding_improvements.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/onboarding_improvements.md)
