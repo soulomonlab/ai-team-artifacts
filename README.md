@@ -87,7 +87,7 @@ project/
 - 🤖 **[CustomerInsights](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/CustomerInsights)** — Agent · 2개 파일
 - 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA Engineer · 30개 파일
 - 🤖 **[Dependency](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)** — Agent · 14개 파일
-- 🤖 **[GrowthContent](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/GrowthContent)** — Agent · 4개 파일
+- 🤖 **[GrowthContent](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/GrowthContent)** — Agent · 5개 파일
 - 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security Engineer · 13개 파일
 - 🚀 **[Jessica](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Jessica)** — Growth · 5개 파일
 - ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 23개 파일
