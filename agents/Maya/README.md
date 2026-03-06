@@ -1,6 +1,6 @@
 # 🎨 Maya — Designer
 
-> 🤖 Auto-generated · 2026-03-06 13:16 UTC
+> 🤖 Auto-generated · 2026-03-06 13:17 UTC
 
 ## 산출물 목록
 
@@ -8,6 +8,7 @@
 
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/)
 - [[feature]_handoff.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/[feature]_handoff.md)
+- [assets/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/assets/)
 - [cat_meme_app_design.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/cat_meme_app_design.md)
 - [core_flow_v1.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/core_flow_v1.md)
 - [core_flow_v1.md`](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/core_flow_v1.md`)
@@ -21,6 +22,7 @@
 - [signup_dashboard_flows.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/signup_dashboard_flows.md)
 - [signup_dashboard_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/signup_dashboard_spec.md)
 - [visual_inspection_design_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/visual_inspection_design_spec.md)
+- [visual_inspection_tablet_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/visual_inspection_tablet_spec.md)
 - [youtube_channel_design_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/youtube_channel_design_spec.md)
 
 ### 📁 slack/
@@ -39,6 +41,7 @@
 - [2026-03-06/20260306_101500_Maya_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_101500_Maya_1772792003.811909.md)
 - [2026-03-06/20260306_101524_Maya_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_101524_Maya_1772792003.811909.md)
 - [2026-03-06/20260306_131530_Maya_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_131530_Maya_1772802782.930239.md)
+- [2026-03-06/20260306_131704_Maya_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_131704_Maya_1772802782.930239.md)
 
 ### 📁 specs/
 
