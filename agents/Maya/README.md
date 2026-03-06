@@ -1,6 +1,6 @@
 # 🎨 Maya — Designer
 
-> 🤖 Auto-generated · 2026-03-06 13:14 UTC
+> 🤖 Auto-generated · 2026-03-06 13:15 UTC
 
 ## 산출물 목록
 
@@ -20,6 +20,7 @@
 - [persona_and_constraints.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/persona_and_constraints.md)
 - [signup_dashboard_flows.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/signup_dashboard_flows.md)
 - [signup_dashboard_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/signup_dashboard_spec.md)
+- [visual_inspection_design_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/visual_inspection_design_spec.md)
 - [youtube_channel_design_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/design/youtube_channel_design_spec.md)
 
 ### 📁 slack/
@@ -37,6 +38,7 @@
 - [2026-03-06/20260306_094404_Maya_1772790124.961469.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_094404_Maya_1772790124.961469.md)
 - [2026-03-06/20260306_101500_Maya_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_101500_Maya_1772792003.811909.md)
 - [2026-03-06/20260306_101524_Maya_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_101524_Maya_1772792003.811909.md)
+- [2026-03-06/20260306_131530_Maya_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Maya/slack/2026-03-06/20260306_131530_Maya_1772802782.930239.md)
 
 ### 📁 specs/
 
