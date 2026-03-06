@@ -1,17 +1,27 @@
 import React from 'react';
+import type { ReactNode } from 'react';
+import { tokens } from './designTokens';
 
-export interface AppShellProps {
-  header?: React.ReactNode;
-  footer?: React.ReactNode;
-  children: React.ReactNode;
+interface AppShellProps {
+  children: ReactNode;
+  header?: ReactNode;
 }
 
-export const AppShell: React.FC<AppShellProps> = ({ header, footer, children }) => {
+export const AppShell: React.FC<AppShellProps> = ({ children, header }) => {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900">
-      {header}
-      <main className="max-w-3xl mx-auto px-4 py-6">{children}</main>
-      {footer}
+    <div style={{
+      fontFamily: tokens.typography.fontFamily,
+      background: tokens.colors.background,
+      minHeight: '100vh',
+      padding: tokens.spacing.md,
+      boxSizing: 'border-box',
+    }}>
+      <header style={{ marginBottom: tokens.spacing.md }}>
+        {header}
+      </header>
+      <main>
+        {children}
+      </main>
     </div>
   );
 };
