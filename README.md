@@ -93,7 +93,7 @@ project/
 - 🚀 **[Jessica](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Jessica)** — Growth · 7개 파일
 - ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend Engineer · 24개 파일
 - 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend Engineer · 32개 파일
-- 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 21개 파일
+- 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 23개 파일
 - 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps Engineer · 19개 파일
 - 🤖 **[RevenueOps](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/RevenueOps)** — Agent · 1개 파일
 - 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech Lead · 24개 파일
