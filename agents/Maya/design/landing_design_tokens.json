@@ -1,0 +1,128 @@
+{
+  "meta": {
+    "project": "Landing Variants",
+    "version": "1.0",
+    "author": "Maya (Designer)",
+    "date": "2026-03-06",
+    "description": "Design tokens for 3 landing-copy variants (A, B, C). Use these tokens in CSS-in-JS / Tailwind config / tokens system."
+  },
+  "global": {
+    "color": {
+      "bg": "#FFFFFF",
+      "surface": "#F7F8FA",
+      "text": "#0F172A",
+      "muted": "#6B7280",
+      "success": "#10B981",
+      "danger": "#EF4444"
+    },
+    "font": {
+      "family": "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial",
+      "weights": {
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      }
+    },
+    "radius": {
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "round": "9999px"
+    },
+    "shadow": {
+      "card": "0 4px 14px rgba(16,24,40,0.06)",
+      "dropdown": "0 10px 30px rgba(2,6,23,0.08)"
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "40px",
+      "xxl": "64px"
+    },
+    "typescale": {
+      "h1": "40px",
+      "h2": "32px",
+      "h3": "24px",
+      "body-lg": "18px",
+      "body": "16px",
+      "caption": "14px"
+    }
+  },
+  "variants": {
+    "variant_a": {
+      "name": "Variant A - Clear & Trust",
+      "primary": "#0EA5A4", 
+      "accent": "#06B6D4",
+      "bg": "#FFFFFF",
+      "text": "#021124",
+      "cta": {
+        "primary_bg": "#0EA5A4",
+        "primary_text": "#FFFFFF",
+        "secondary_bg": "transparent",
+        "secondary_text": "#0EA5A4",
+        "shadow": "0 8px 20px rgba(14,165,164,0.16)"
+      }
+    },
+    "variant_b": {
+      "name": "Variant B - Premium",
+      "primary": "#7C3AED",
+      "accent": "#A78BFA",
+      "bg": "#0F172A",
+      "text": "#F8FAFC",
+      "cta": {
+        "primary_bg": "#7C3AED",
+        "primary_text": "#FFFFFF",
+        "secondary_bg": "transparent",
+        "secondary_text": "#A78BFA",
+        "shadow": "0 8px 20px rgba(124,58,237,0.18)"
+      }
+    },
+    "variant_c": {
+      "name": "Variant C - Promotional",
+      "primary": "#F59E0B",
+      "accent": "#FB923C",
+      "bg": "#FFF7ED",
+      "text": "#09203F",
+      "cta": {
+        "primary_bg": "#F59E0B",
+        "primary_text": "#08121A",
+        "secondary_bg": "transparent",
+        "secondary_text": "#F97316",
+        "shadow": "0 8px 20px rgba(245,158,11,0.12)"
+      }
+    }
+  },
+  "components": {
+    "button": {
+      "height": {
+        "sm": "36px",
+        "md": "44px",
+        "lg": "56px"
+      },
+      "radius": "8px",
+      "font": "16px",
+      "cta_data_attribute": "data-qa-cta"
+    },
+    "hero": {
+      "max_width": "1100px",
+      "padding_mobile": "24px",
+      "padding_desktop": "64px"
+    },
+    "form": {
+      "input_height": "48px",
+      "input_radius": "8px",
+      "label_size": "14px"
+    }
+  },
+  "tracking": {
+    "cta_attribute_template": "cta-<variant>-<position>
+",
+    "recommended_placement": {
+      "hero_cta": "Top fold primary CTA. attribute: data-qa-cta=\"cta-{variant}-hero\"",
+      "secondary_cta": "Below-hero link/button. attribute: data-qa-cta=\"cta-{variant}-secondary\""
+    }
+  }
+}
