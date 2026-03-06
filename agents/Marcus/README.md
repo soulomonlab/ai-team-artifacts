@@ -1,18 +1,20 @@
 # 🔧 Marcus — Backend Engineer
 
-> 🤖 Auto-generated · 2026-03-06 06:01 UTC
+> 🤖 Auto-generated · 2026-03-06 07:41 UTC
 
 ## 산출물 목록
 
 ### 📁 code/
 
 - [backend/,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/backend/,)
+- [backend/routers/auth.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/backend/routers/auth.py,)
 - [product-core/constraints.txt](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/product-core/constraints.txt)
 - [product-core/constraints.txt,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/product-core/constraints.txt,)
 
 ### 📁 docs/
 
 - [openapi_auth.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/docs/openapi_auth.yaml)
+- [openapi_signup_dashboard.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/docs/openapi_signup_dashboard.yaml)
 - [openapi_v1.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/docs/openapi_v1.yaml)
 
 ### 📁 reports/
@@ -33,6 +35,8 @@
 - [2026-03-06/20260306_055950_Marcus_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_055950_Marcus_1772776762.185889.md)
 - [2026-03-06/20260306_055956_Marcus_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_055956_Marcus_1772776762.185889.md)
 - [2026-03-06/20260306_060046_Marcus_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_060046_Marcus_1772776762.185889.md)
+- [2026-03-06/20260306_060124_Marcus_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_060124_Marcus_1772776762.185889.md)
+- [2026-03-06/20260306_060131_Marcus_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_060131_Marcus_1772776762.185889.md)
 
 ### 📁 specs/
 
