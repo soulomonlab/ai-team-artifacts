@@ -1,50 +1,70 @@
-from fastapi import APIRouter, Depends, HTTPException, status, BackgroundTasks
+from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from typing import List
 from datetime import datetime
 
-from .. import models, schemas, deps, crud
+from ..models import Post, PostStatus
+from ..schemas import PostCreate, PostUpdate, PostOut
+from ..database import get_db
+from ..tasks import enqueue_publish_job
 
 router = APIRouter(prefix="/api/v1/posts", tags=["posts"])
 
+@router.post("/", response_model=PostOut, status_code=status.HTTP_201_CREATED)
+def create_post(payload: PostCreate, db: Session = Depends(get_db), current_user=Depends(...)):
+    post = Post(
+        title=payload.title,
+        body=payload.body,
+        author_id=current_user.id,
+        is_public=payload.is_public,
+    )
+    if payload.scheduled_at:
+        post.status = PostStatus.SCHEDULED
+        post.scheduled_at = payload.scheduled_at
+    db.add(post)
+    db.commit()
+    db.refresh(post)
 
-@router.post("/", response_model=schemas.PostOut, status_code=status.HTTP_201_CREATED)
-def create_post(payload: schemas.PostCreate, db: Session = Depends(deps.get_db), current_user=Depends(deps.get_current_user)):
-    post = crud.create_post(db, author_id=current_user.id, payload=payload)
+    if post.status == PostStatus.SCHEDULED:
+        enqueue_publish_job(db, post.id, post.scheduled_at)
+
     return post
 
-
-@router.get("/", response_model=List[schemas.PostOut])
-def list_posts(status: str = None, skip: int = 0, limit: int = 20, db: Session = Depends(deps.get_db), current_user=Depends(deps.get_current_user)):
-    posts = crud.list_posts(db, author_id=current_user.id, status=status, skip=skip, limit=limit)
+@router.get("/", response_model=List[PostOut])
+def list_posts(status: PostStatus = None, limit: int = 20, offset: int = 0, db: Session = Depends(get_db), current_user=Depends(...)):
+    q = db.query(Post).filter(Post.author_id == current_user.id)
+    if status:
+        q = q.filter(Post.status == status)
+    posts = q.order_by(Post.created_at.desc()).limit(limit).offset(offset).all()
     return posts
 
-
-@router.get("/{post_id}", response_model=schemas.PostOut)
-def get_post(post_id: int, db: Session = Depends(deps.get_db), current_user=Depends(deps.get_current_user)):
-    post = crud.get_post(db, post_id=post_id)
-    if not post or post.author_id != current_user.id:
+@router.get("/{post_id}", response_model=PostOut)
+def get_post(post_id: int, db: Session = Depends(get_db), current_user=Depends(...)):
+    post = db.query(Post).filter(Post.id == post_id, Post.author_id == current_user.id).first()
+    if not post:
         raise HTTPException(status_code=404, detail="Post not found")
     return post
 
-
-@router.patch("/{post_id}", response_model=schemas.PostOut)
-def update_post(post_id: int, payload: schemas.PostUpdate, db: Session = Depends(deps.get_db), current_user=Depends(deps.get_current_user), background_tasks: BackgroundTasks = Depends()):
-    post = crud.get_post(db, post_id=post_id)
-    if not post or post.author_id != current_user.id:
+@router.patch("/{post_id}", response_model=PostOut)
+def update_post(post_id: int, payload: PostUpdate, db: Session = Depends(get_db), current_user=Depends(...)):
+    post = db.query(Post).filter(Post.id == post_id, Post.author_id == current_user.id).first()
+    if not post:
         raise HTTPException(status_code=404, detail="Post not found")
-    post = crud.update_post(db, post, payload)
-    # if scheduled -> enqueue background job
-    if post.status == models.PostStatus.scheduled and post.scheduled_at:
-        from ..tasks import enqueue_publish
-        enqueue_publish(db, post.id, post.scheduled_at)
+    for field, value in payload.dict(exclude_none=True).items():
+        setattr(post, field, value)
+    # handle scheduling
+    if payload.scheduled_at:
+        post.status = PostStatus.SCHEDULED
+        enqueue_publish_job(db, post.id, post.scheduled_at)
+    db.commit()
+    db.refresh(post)
     return post
-
 
 @router.delete("/{post_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_post(post_id: int, db: Session = Depends(deps.get_db), current_user=Depends(deps.get_current_user)):
-    post = crud.get_post(db, post_id=post_id)
-    if not post or post.author_id != current_user.id:
+def delete_post(post_id: int, db: Session = Depends(get_db), current_user=Depends(...)):
+    post = db.query(Post).filter(Post.id == post_id, Post.author_id == current_user.id).first()
+    if not post:
         raise HTTPException(status_code=404, detail="Post not found")
-    crud.delete_post(db, post)
+    post.status = PostStatus.DELETED
+    db.commit()
     return None
