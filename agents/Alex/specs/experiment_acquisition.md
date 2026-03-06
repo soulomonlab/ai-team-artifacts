@@ -1,75 +1,94 @@
-# Feature: Acquisition Experiments CTA + Tracking
+# Feature: Acquisition Experiments - CTA Hook & Tracking
+**Goal:** Enable three low-budget acquisition experiments by providing frontend CTA hooks, design variants, and Mixpanel-ready tracking so Jessica can run tests and hit her acquisition targets.
 
-**Goal:** Enable quick frontend CTA hooks and backend event ingestion so Jessica's 3 acquisition experiments can run and be measured in Mixpanel. Launch target: Mon EOD.
+**North Star Impact:** Increase new-user signups from acquisition channels (target uplift per experiment defined by Jessica).
 
-**North Star Impact:** Improve top-of-funnel signups and referral conversions; directly supports acquisition experiments target metrics.
+**Users:** Marketing (Jessica) running experiments to acquire new users via referral micro-credit, gated demo (SEO), and retargeted onboarding ads with 1-step signup.
 
-**Experiments (Jessica):**
-1. Referral micro-credit — CTA invites users to refer friends for micro-credit. (Variant A/B: inline CTA vs modal)
-2. Gated demo + SEO — Gated demo that asks for email; CTA placed on SEO landing pages. (Variant A/B: single-field modal vs multi-step flow)
-3. Retargeted onboarding ad + 1-step signup — Ad-driven users see a 1-step signup CTA. (Variant A/B: prefill email vs manual)
+**Experiments (provided by Jessica):**
+- Referral micro-credit: incentivize invites with small credit applied on signup.
+- Gated demo + SEO: require email to access demo content (lead capture) with SEO-driven landing pages.
+- Retargeted onboarding ad + 1-step signup: retarget users who saw ads into a simplified signup flow.
 
-**Frontend Hook Requirements (to expose to JS and backend):**
-- New event: acquisition.cta_click
-  - Properties:
-    - experiment_id (string) e.g. referral_microcredit
-    - variant (string) e.g. A | B
-    - cta_location (string) e.g. hero_banner, modal, footer
-    - cta_text (string)
-    - page_path (string)
-    - user_id (nullable string)
-    - anonymous_id (string)
-    - session_id (string)
-    - utm_source / utm_campaign (optional strings)
-    - referral_code (optional string)
-    - ad_id (optional string)
-    - timestamp (ISO8601)
+**Requirements Summary:**
+- Frontend: CTA components/hooks to render experiment-specific copy and A/B variants, fire tracking events on impressions and clicks, and call signup flow.
+- Design: Provide CTA copy, visual variants (A/B), placement recommendations for hero, content pages, and modal/inline flows.
+- Backend: /api/events ingestion endpoint must accept Mixpanel-ready event payloads (defined below).
+- Analytics: Mixpanel events wired for impression, click, and signup conversion with experiment_id and variant labels.
 
-- Secondary event: acquisition.conversion
-  - Properties:
-    - experiment_id, variant, conversion_type (signup|referral_completed|demo_requested)
-    - value (number, optional)
-    - user_id, anonymous_id, session_id
-    - timestamp
+**RICE Score:**
+- Reach = 3,000 users/quarter (estimate of users exposed via SEO & ads)
+- Impact = 2 (performance)
+- Confidence = 70% (estimates from marketing)
+- Effort = 1 person-week
+RICE = (3000 × 2 × 0.7) / 1 = 4200
 
-- Implementation notes for frontend:
-  - Expose a single JS hook window.trackAcquisitionEvent(eventName, props) that internally calls analytics.track(...) and POSTs to /api/events ingestion endpoint as fallback.
-  - Ensure variant is attached from A/B experiment flag (client-side flagging or query param).
-  - Fire acquisition.cta_click on CTA interaction; acquisition.conversion when user completes the target action.
-
-**Backend /api/events ingestion:**
-- Endpoint: POST /api/events
-  - Accepts event_name and properties JSON.
-  - Validate required properties (experiment_id, variant, anonymous_id, timestamp).
-  - Immediately forward to Mixpanel with server-side token.
-  - Store raw events (for debugging) in events_raw table (TTL 30 days).
+**Kano Category:** Performance
 
 **Acceptance Criteria:**
-- [ ] Design assets (3 CTA copy + 2 variants each + placements) delivered by Maya: Mon, 12:00pm
-- [ ] Frontend exposes window.trackAcquisitionEvent and fires acquisition.cta_click with required properties: Kevin implements by Mon, 5:00pm
-- [ ] Backend ingestion POST /api/events validates and forwards to Mixpanel: Marcus implements by Mon, 6:00pm
-- [ ] Mixpanel dashboards receive events and show experiment_id and variant breakdowns within 1 hour of test: Jessica verifies
-- [ ] QA smoke test (Dana): basic flows pass by Mon, 8:00pm
+- [ ] Design assets delivered: CTA copy + 2 variants per experiment + placement spec (output/design/...) by Mon EOD
+- [ ] Frontend implements CTA hook that:
+  - Renders experiment-specific CTA and variant
+  - Emits impression event when visible and click event on user action
+  - Attaches experiment_id and variant to signup request
+  - Integrates with existing signup endpoint (1-step or standard) without regressions
+- [ ] Analytics: Events delivered to backend /api/events matching Mixpanel schema and visible in Mixpanel dashboard
+- [ ] QA: End-to-end smoke test shows impression → click → signup conversion with correct experiment metadata
+- [ ] Performance: Added JS for experiment feature should not increase TTI by >150ms or bundle size by >10KB gzipped
 
-**Tracking / Mixpanel Keys:**
-- Distinct ID: user_id || anonymous_id
-- Event names: acquisition.cta_click, acquisition.conversion
-- Recommended properties for dashboards: experiment_id, variant, cta_location, conversion_type, utm_source, referral_code
+**Tracking (Mixpanel + Backend /api/events) — REQUIRED fields:**
+Event names:
+- experiment_impression
+- experiment_cta_click
+- experiment_signup
+Common properties (each event):
+- experiment_id: string ("referral_credit", "gated_demo", "retarget_onboarding")
+- variant: string ("A" | "B" | "control")
+- page: string (page or placement id)
+- user_id: string|null (if known)
+- anonymous_id: string (session or cookie id)
+- campaign_source: string|null (utm_source, ad network)
+- timestamp: ISO8601
+- session_id: string
+- referrer: string
+- test_group_id: string (optional grouping id)
+
+Example payload (POST /api/events):
+{
+  "event": "experiment_cta_click",
+  "properties": {
+    "experiment_id": "referral_credit",
+    "variant": "B",
+    "page": "landing_v2",
+    "user_id": "12345",
+    "anonymous_id": "anon_abcdef",
+    "campaign_source": "facebook_ads",
+    "timestamp": "2026-03-06T12:00:00Z"
+  }
+}
 
 **Out of Scope:**
-- Full analytics UI or experiment assignment engine (we rely on client flag or query param)
-- Long-term event storage beyond 30 days
+- Backend attribution logic & crediting (handled by billing team) — only event ingestion and schema required.
+- Full analytics funnels & dashboards (Marketing will build in Mixpanel after events are available).
 
-**Success Metrics:**
-- Events tracked for >95% of CTA interactions
-- Mixpanel dashboards show variant-specific conversion rate within 1 hour
-- Experiment adoption: 3 experiments live and traffic routed
+**Success Metrics (how Jessica measures success):**
+- CTR on experiment CTAs (clicks / impressions) by variant
+- Conversion rate (signups / clicks) by variant
+- New-user acquisition uplift vs baseline per experiment
+- Time-to-launch: design+frontend+backend tracking implemented by Mon EOD
 
-**Deadlines:**
-- Design assets: Mon 12:00pm
-- Frontend implement: Mon 5:00pm
-- Backend ingestion: Mon 6:00pm
-- QA smoke: Mon 8:00pm
-- Launch target: Mon EOD
+**Deadlines & Owners:**
+- Alex (Product Owner): spec + tickets created (this file) — DONE
+- Maya (Design): CTA copy + 2 variants/experiment + placements — due Mon EOD
+- Kevin (Frontend): implement CTA hook, variant rendering, tracking events, integration with signup — due Mon EOD
+- Marcus (Backend): ensure /api/events accepts event schema and forwards to Mixpanel — due Mon EOD
+- Dana (QA): smoke tests and acceptance — due Mon EOD + 1 day
 
-**Owner:** Alex (coordination). Contact: #ai-growth (Jessica), #ai-frontend (Kevin), #ai-design (Maya), #ai-backend (Marcus), #ai-qa (Dana)
+**Notes / Constraints:**
+- Low budget: prefer front-end A/B via client-side variant selection; no heavy backend experimentation platform.
+- Keep payloads minimal to avoid extra ingestion costs.
+
+**GitHub Issues:**
+- Design ticket created: see issue link in Slack message
+- Frontend ticket created: see issue link in Slack message
+
