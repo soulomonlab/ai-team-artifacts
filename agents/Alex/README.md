@@ -1,6 +1,6 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-06 04:25 UTC
+> 🤖 Auto-generated · 2026-03-06 05:03 UTC
 
 ## 산출물 목록
 
@@ -18,13 +18,19 @@
 - [2026-03-06/20260306_042254_Alex_1772770974.895579.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_042254_Alex_1772770974.895579.md)
 - [2026-03-06/20260306_042422_Alex_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_042422_Alex_1772771047.094479.md)
 - [2026-03-06/20260306_042425_Alex_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_042425_Alex_1772771047.094479.md)
+- [2026-03-06/20260306_042549_Alex_1772771047.094479.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_042549_Alex_1772771047.094479.md)
+- [2026-03-06/20260306_050255_Alex_1772773375.369489.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_050255_Alex_1772773375.369489.md)
+- [2026-03-06/20260306_050328_Alex_1772773394.643989.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_050328_Alex_1772773394.643989.md)
+- [2026-03-06/20260306_050333_Alex_1772773394.643989.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_050333_Alex_1772773394.643989.md)
 
 ### 📁 specs/
 
 - [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/)
+- [](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/)
 - [*.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/*.md)
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/[feature].md)
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/[feature].md)
+- [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/next_feature.md)
 - [onboarding_improvements.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/onboarding_improvements.md)
 
 ### 📁 tests/
