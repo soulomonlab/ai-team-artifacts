@@ -1,29 +1,27 @@
-# Feature: Cat Meme App (MVP)
-**Goal:** Provide a simple, delightful web app for creating and sharing cat memes quickly.
-**North Star Impact:** Increase user engagement and share rate; serve as an easy viral acquisition channel.
-**Users:** Casual social users who want to create & share cat memes quickly (mobile & desktop web)
-
-**RICE Score:** Reach=5,000 × Impact=1 × Confidence=60% / Effort=4w = 750
-**Kano Category:** Delighter → Performance
+# Feature: Cat Meme App
+**Goal:** Let users quickly create, save, and share cat memes with an intuitive UX and scalable backend.
+**North Star Impact:** Increase daily active engagement by giving users a fast, fun content-creation flow.
+**Users:** Casual social users who want to create/share memes quickly; power users who save templates and galleries.
+**RICE Score:** Reach=5,000 × Impact=1.0 × Confidence=80% / Effort=3w = 1,333
+**Kano Category:** Delighter -> high share/virality potential
 
 **Acceptance Criteria:**
-- [ ] User can create a new meme by uploading an image or choosing from 10 cat templates.
-- [ ] User can add, move, resize, and style (font, color, outline) top and bottom captions.
-- [ ] User can download the final meme (PNG) and share via native Web Share / copy link.
-- [ ] App persists a short user gallery (no auth) for the session; optional save to account is out of scope.
-- [ ] Performance: editor loads <1.5s on 3G simulated mobile; export <500ms for 1MP image.
-- [ ] Accessibility: basic keyboard navigation and alt text for templates.
+- [ ] User can upload an image or choose from built-in cat image library.
+- [ ] User can add/edit top and bottom captions (font size, color, alignment) and preview in real-time.
+- [ ] User can save meme to personal gallery and download as PNG.
+- [ ] User can share meme via a share link (short URL) and social share buttons (Twitter, Facebook, WhatsApp).
+- [ ] Backend persists templates and generated images; images served via CDN.
+- [ ] API responds <200ms for template fetch, <500ms for image generation under normal load.
+- [ ] System supports 1,000 concurrent users initially; autoscaling rules defined in infra (DevOps).
+- [ ] Security: uploaded files scanned for malware; size limit 10MB; rate limit 10 creations/user/hour.
 
 **Out of Scope:**
-- Native mobile apps, user accounts and long-term storage, advanced image filters or multi-layer compositing.
+- AI image generation/stylization
+- Native mobile app (mobile web only initially)
 
 **Success Metrics:**
-- DAU for the app > 1,000 within first quarter after launch.
-- Share rate (share/download per session) ≥ 20%.
-- Time-to-first-meme (from load to export) < 90s for 75% of users.
+- 7-day retention for creators >= 20%
+- Average memes created per DAU >= 0.5
+- Share rate (meme shared / memes created) >= 25%
 
-**Technical Notes / Constraints:**
-- Backend must support scalable image processing; start with serverless functions + S3 for storage.
-- Keep first release simple: single-region deployment, CDN for static assets.
-
-**GitHub Issue:** TBD (created by PO)
+**GitHub Issue:** TBD
