@@ -1,41 +1,39 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from typing import Optional, List
 from datetime import datetime
 
-
 class ItemBase(BaseModel):
-    title: str = Field(..., max_length=255)
+    title: str
     description: Optional[str] = None
-
 
 class ItemCreate(ItemBase):
     pass
 
-
 class ItemUpdate(BaseModel):
-    title: Optional[str] = Field(None, max_length=255)
-    description: Optional[str] = None
-    is_archived: Optional[bool] = None
+    title: Optional[str]
+    description: Optional[str]
+    is_archived: Optional[bool]
 
-
-class ItemVersionSchema(BaseModel):
+class ItemHistoryOut(BaseModel):
     id: int
     item_id: int
     title: str
     description: Optional[str]
-    version_number: int
-    created_at: datetime
+    changed_at: datetime
+    version: int
 
     class Config:
         orm_mode = True
 
-
-class ItemSchema(ItemBase):
+class ItemOut(BaseModel):
     id: int
+    title: str
+    description: Optional[str]
     is_archived: bool
     created_at: datetime
     updated_at: datetime
-    versions: List[ItemVersionSchema] = []
+    version: int
+    history: List[ItemHistoryOut] = []
 
     class Config:
         orm_mode = True
