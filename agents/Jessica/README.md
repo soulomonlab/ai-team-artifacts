@@ -1,6 +1,6 @@
 # 🚀 Jessica — Growth
 
-> 🤖 Auto-generated · 2026-03-06 13:21 UTC
+> 🤖 Auto-generated · 2026-03-06 13:42 UTC
 
 ## 산출물 목록
 
@@ -16,6 +16,8 @@
 - [experiment_acquisition.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Jessica/specs/experiment_acquisition.md.)
 - [prelaunch_acquisition_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Jessica/specs/prelaunch_acquisition_plan.md)
 - [youtube_launch_promotion.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Jessica/specs/youtube_launch_promotion.md)
+- [youtube_utm_kpis.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Jessica/specs/youtube_utm_kpis.md)
+- [youtube_utm_kpis.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Jessica/specs/youtube_utm_kpis.md.)
 
 ---
 [← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
