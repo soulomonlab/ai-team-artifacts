@@ -1,6 +1,6 @@
 # 🎯 Dana — QA Engineer
 
-> 🤖 Auto-generated · 2026-03-06 07:41 UTC
+> 🤖 Auto-generated · 2026-03-06 07:42 UTC
 
 ## 산출물 목록
 
@@ -17,6 +17,7 @@
 
 ### 📁 reports/
 
+- [acceptance_and_load_test_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/acceptance_and_load_test_plan.md)
 - [qa_core_flow_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/qa_core_flow_plan.md)
 - [qa_report_](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/qa_report_)
 - [user_profiles_test_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/reports/user_profiles_test_plan.md)
@@ -32,6 +33,7 @@
 - [2026-03-06/20260306_060043_Dana_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_060043_Dana_1772776762.185889.md)
 - [2026-03-06/20260306_060139_Dana_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_060139_Dana_1772776762.185889.md)
 - [2026-03-06/20260306_074146_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074146_Dana_1772782862.480179.md)
+- [2026-03-06/20260306_074204_Dana_1772782862.480179.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana/slack/2026-03-06/20260306_074204_Dana_1772782862.480179.md)
 
 ### 📁 specs/
 
