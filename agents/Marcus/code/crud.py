@@ -1,52 +1,70 @@
 from sqlalchemy.orm import Session
 from . import models, schemas
 from datetime import datetime
+from sqlalchemy import select
 
+def get_post(db: Session, post_id: int):
+    return db.query(models.Post).filter(models.Post.id == post_id, models.Post.is_deleted == False).first()
 
-def create_item(db: Session, item_in: schemas.ItemCreate):
-    item = models.Item(title=item_in.title, description=item_in.description)
-    db.add(item)
+def list_posts(db: Session, skip: int = 0, limit: int = 20, status: str = None):
+    q = db.query(models.Post).filter(models.Post.is_deleted == False)
+    if status:
+        q = q.filter(models.Post.status == models.PostStatus(status))
+    return q.order_by(models.Post.created_at.desc()).offset(skip).limit(limit).all()
+
+def create_post(db: Session, author_id: int, post_in: schemas.PostCreate):
+    db_post = models.Post(
+        author_id=author_id,
+        title=post_in.title,
+        content=post_in.content,
+        status=models.PostStatus(post_in.status),
+        scheduled_at=post_in.scheduled_at,
+    )
+    db.add(db_post)
     db.commit()
-    db.refresh(item)
-    # create history entry
-    hist = models.ItemHistory(item_id=item.id, title=item.title, description=item.description, version=item.version)
-    db.add(hist)
+    db.refresh(db_post)
+    # create analytics row
+    analytics = models.PostAnalytics(post_id=db_post.id)
+    db.add(analytics)
     db.commit()
-    return item
+    return db_post
 
-
-def get_item(db: Session, item_id: int):
-    return db.query(models.Item).filter(models.Item.id == item_id).first()
-
-
-def list_items(db: Session, skip: int = 0, limit: int = 100):
-    return db.query(models.Item).offset(skip).limit(limit).all()
-
-
-def update_item(db: Session, item: models.Item, updates: schemas.ItemUpdate):
-    changed = False
-    if updates.title is not None and updates.title != item.title:
-        item.title = updates.title
-        changed = True
-    if updates.description is not None and updates.description != item.description:
-        item.description = updates.description
-        changed = True
-    if updates.is_archived is not None and updates.is_archived != item.is_archived:
-        item.is_archived = updates.is_archived
-        changed = True
-    if changed:
-        item.version = item.version + 1 if item.version else 1
-        item.updated_at = datetime.utcnow()
-        db.add(item)
-        db.commit()
-        db.refresh(item)
-        hist = models.ItemHistory(item_id=item.id, title=item.title, description=item.description, version=item.version)
-        db.add(hist)
-        db.commit()
-    return item
-
-
-def delete_item(db: Session, item: models.Item):
-    db.delete(item)
+def update_post(db: Session, post_id: int, post_in: schemas.PostUpdate):
+    post = db.query(models.Post).filter(models.Post.id == post_id, models.Post.is_deleted == False).first()
+    if not post:
+        return None
+    if post_in.title is not None:
+        post.title = post_in.title
+    if post_in.content is not None:
+        post.content = post_in.content
+    if post_in.status is not None:
+        post.status = models.PostStatus(post_in.status)
+        if post.status == models.PostStatus.PUBLISHED:
+            post.published_at = datetime.utcnow()
+    if post_in.scheduled_at is not None:
+        post.scheduled_at = post_in.scheduled_at
+    db.add(post)
     db.commit()
-    return True
+    db.refresh(post)
+    return post
+
+def soft_delete_post(db: Session, post_id: int):
+    post = db.query(models.Post).filter(models.Post.id == post_id, models.Post.is_deleted == False).first()
+    if not post:
+        return None
+    post.is_deleted = True
+    post.status = models.PostStatus.DELETED
+    db.add(post)
+    db.commit()
+    return post
+
+def increment_analytics(db: Session, post_id: int, views: int = 0, likes: int = 0):
+    analytics = db.query(models.PostAnalytics).filter(models.PostAnalytics.post_id == post_id).first()
+    if not analytics:
+        analytics = models.PostAnalytics(post_id=post_id, views=views, likes=likes)
+        db.add(analytics)
+    else:
+        analytics.views += views
+        analytics.likes += likes
+    db.commit()
+    return analytics
