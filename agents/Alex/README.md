@@ -1,6 +1,6 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-06 10:17 UTC
+> 🤖 Auto-generated · 2026-03-06 13:00 UTC
 
 ## 산출물 목록
 
@@ -55,6 +55,8 @@
 - [2026-03-06/20260306_101301_Alex_1772791980.745529.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_101301_Alex_1772791980.745529.md)
 - [2026-03-06/20260306_101402_Alex_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_101402_Alex_1772792003.811909.md)
 - [2026-03-06/20260306_101419_Alex_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_101419_Alex_1772792003.811909.md)
+- [2026-03-06/20260306_125723_Alex_1772801843.577249.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_125723_Alex_1772801843.577249.md)
+- [2026-03-06/20260306_125858_Alex_1772801862.816439.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_125858_Alex_1772801862.816439.md)
 
 ### 📁 specs/
 
@@ -67,6 +69,8 @@
 - [cat_meme_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/cat_meme_app.md)
 - [cat_meme_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/cat_meme_app.md)
 - [event_tracking_backend.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/event_tracking_backend.md)
+- [factory_operation_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/factory_operation_app.md)
+- [factory_operation_app.md`](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/factory_operation_app.md`)
 - [feature_diet_calorie_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/feature_diet_calorie_app.md)
 - [initial_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/initial_prd.md)
 - [instagram_clone.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/instagram_clone.md)
