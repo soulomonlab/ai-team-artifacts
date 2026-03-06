@@ -1,13 +1,8 @@
-variable "aws_region" { default = "us-east-1" }
-variable "subnet_ids" { type = list(string) }
-variable "db_security_group_id" { type = string }
-variable "redis_security_group_id" { type = string }
-variable "postgres_version" { default = "15.3" }
-variable "postgres_instance_class" { default = "db.t3.medium" }
-variable "postgres_allocated_storage" { default = 20 }
-variable "db_name" { default = "app_staging" }
-variable "db_username" { default = "staging_user" }
-variable "db_password" { type = string }
-variable "redis_node_type" { default = "cache.t3.small" }
-variable "redis_cluster_size" { default = 1 }
-variable "redis_parameter_group" { default = "default.redis6.x" }
+variable "aws_region" { type = string default = "us-east-1" }
+variable "vault_addr" { type = string default = "http://127.0.0.1:8200" }
+variable "vault_root_token" { type = string default = "REPLACE_ROOT_TOKEN" }
+variable "postgres_master_user" { type = string default = "postgres" }
+variable "postgres_master_password" { type = string default = "REPLACE_MASTER_PW" }
+variable "ci_runner_cidr" { type = string default = "10.20.0.0/16" }
+variable "dev_app_cidr" { type = string default = "10.10.0.0/16" }
+variable "vault_ami" { type = string default = "ami-0c94855ba95c71c99" }
