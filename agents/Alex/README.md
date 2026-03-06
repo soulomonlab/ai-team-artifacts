@@ -1,6 +1,6 @@
 # 📋 Alex — Product Owner
 
-> 🤖 Auto-generated · 2026-03-06 09:02 UTC
+> 🤖 Auto-generated · 2026-03-06 09:04 UTC
 
 ## 산출물 목록
 
@@ -45,6 +45,7 @@
 - [2026-03-06/20260306_083431_Alex_1772786021.917559.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_083431_Alex_1772786021.917559.md)
 - [2026-03-06/20260306_090024_Alex_1772787623.995789.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_090024_Alex_1772787623.995789.md)
 - [2026-03-06/20260306_090124_Alex_1772787637.093519.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_090124_Alex_1772787637.093519.md)
+- [2026-03-06/20260306_090311_Alex_1772787637.093519.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/slack/2026-03-06/20260306_090311_Alex_1772787637.093519.md)
 
 ### 📁 specs/
 
@@ -54,6 +55,7 @@
 - [*.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/*.md)
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/[feature].md)
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/[feature].md)
+- [event_tracking_backend.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/event_tracking_backend.md)
 - [feature_diet_calorie_app.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/feature_diet_calorie_app.md)
 - [initial_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/initial_prd.md)
 - [kickoff_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/kickoff_prd.md)
@@ -64,6 +66,7 @@
 - [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/user_profiles.md)
 - [user_profiles.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/user_profiles.md.)
 - [youtube_channel.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/youtube_channel.md)
+- [youtube_launch_promotion.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Alex/specs/youtube_launch_promotion.md)
 
 ### 📁 tests/
 
