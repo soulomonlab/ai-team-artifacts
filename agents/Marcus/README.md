@@ -1,6 +1,6 @@
 # 🔧 Marcus — Backend Engineer
 
-> 🤖 Auto-generated · 2026-03-06 13:18 UTC
+> 🤖 Auto-generated · 2026-03-06 13:20 UTC
 
 ## 산출물 목록
 
@@ -46,6 +46,7 @@
 - [2026-03-06/20260306_101659_Marcus_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_101659_Marcus_1772792003.811909.md)
 - [2026-03-06/20260306_130035_Marcus_1772801862.816439.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_130035_Marcus_1772801862.816439.md)
 - [2026-03-06/20260306_131757_Marcus_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_131757_Marcus_1772802782.930239.md)
+- [2026-03-06/20260306_131855_Marcus_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_131855_Marcus_1772802782.930239.md)
 
 ### 📁 specs/
 
@@ -55,6 +56,8 @@
 - [initial_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/initial_prd.md)
 - [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/next_feature.md)
 - [openapi_diet_calorie_v1.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/openapi_diet_calorie_v1.yaml)
+- [signed_url_batch_upload_api.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/signed_url_batch_upload_api.md)
+- [signed_url_batch_upload_api.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/signed_url_batch_upload_api.md.)
 - [upload_signed_url_batch.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/upload_signed_url_batch.md)
 - [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/user_profiles.md)
 
