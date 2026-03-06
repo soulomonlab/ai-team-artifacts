@@ -1,0 +1,235 @@
+openapi: 3.0.3
+info:
+  title: Auth API
+  version: 1.0.0
+  description: OpenAPI for authentication endpoints (login/refresh/logout/signup) and /v1/users/me
+servers:
+  - url: https://api.example.com
+    description: Production
+  - url: http://localhost:8000
+    description: Local
+paths:
+  /v1/auth/login:
+    post:
+      summary: Login and issue access + refresh token (refresh set as HttpOnly cookie)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Access token issued; refresh token set as HttpOnly cookie
+          headers:
+            Set-Cookie:
+              description: "Set refresh token cookie: refresh_token=...; HttpOnly; Secure; SameSite=Lax; Path=/; Max-Age=604800"
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+        '400':
+          description: Invalid credentials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /v1/auth/signup:
+    post:
+      summary: Create user and login (issues tokens)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignupRequest'
+      responses:
+        '201':
+          description: User created and logged in (access token + refresh cookie)
+          headers:
+            Set-Cookie:
+              description: "Refresh token cookie set as HttpOnly Secure"
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+        '400':
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /v1/auth/refresh:
+    post:
+      summary: Rotate refresh token and return new access token. Requires refresh cookie.
+      description: |
+        - Refresh token is sent by browser as HttpOnly cookie named 'refresh_token'.
+        - Endpoint rotates the refresh token (single-use). Previous refresh token is invalidated.
+        - On reuse detection, all sessions for the user are revoked and client must reauthenticate.
+      responses:
+        '200':
+          description: New access token issued; refresh cookie rotated
+          headers:
+            Set-Cookie:
+              description: "New refresh cookie set (rotated)"
+              schema:
+                type: string
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TokenResponse'
+        '401':
+          description: Invalid/expired refresh token
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /v1/auth/logout:
+    post:
+      summary: Logout and revoke refresh token (clears cookie)
+      responses:
+        '204':
+          description: Logged out. Server invalidated refresh token and returns Set-Cookie to clear it.
+        '401':
+          description: Not authenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /v1/users/me:
+    get:
+      summary: Get current user
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Current user
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          description: Unauthenticated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    LoginRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+    SignupRequest:
+      type: object
+      required: [email, password]
+      properties:
+        email:
+          type: string
+          format: email
+        password:
+          type: string
+        name:
+          type: string
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+        roles:
+          type: array
+          items:
+            type: string
+      required: [id, email, roles]
+    TokenResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+        token_type:
+          type: string
+          example: bearer
+        expires_in:
+          type: integer
+          description: seconds until access token expiry (e.g., 900)
+        user:
+          $ref: '#/components/schemas/User'
+      required: [access_token, token_type, expires_in, user]
+    ErrorResponse:
+      type: object
+      properties:
+        type:
+          type: string
+          description: RFC7807 problem type URI
+        title:
+          type: string
+        status:
+          type: integer
+        detail:
+          type: string
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/FieldError'
+      required: [title, status]
+    FieldError:
+      type: object
+      properties:
+        field:
+          type: string
+        message:
+          type: string
+    PaginationMeta:
+      type: object
+      properties:
+        total_count:
+          type: integer
+        page:
+          type: integer
+        size:
+          type: integer
+security: []
+
+x-notes:
+  cookie:
+    name: refresh_token
+    domain: .example.com # replace with env value (e.g., ${COOKIE_DOMAIN})
+    path: / # cookie path set to / to support refresh from multiple endpoints
+    samesite: Lax
+    secure: true
+    httponly: true
+    ttl_seconds: 604800 # 7 days
+    rotation: rotate-on-refresh
+    reuse_detection: revoke-on-reuse (single-use tokens + server-side detection)
+    set_by_backend: true
+  cors:
+    allowed_origins: ["https://app.example.com", "http://localhost:3000"]
+    allow_credentials: true
+  tokens:
+    access_ttl_seconds: 900 # 15 minutes
+    refresh_ttl_seconds: 604800 # 7 days
+    refresh_in_body: false # refresh token is not returned in response body; only set as cookie
+  errors:
+    format: "RFC7807 + field errors array (errors)",
+  pagination:
+    meta_field: total_count
