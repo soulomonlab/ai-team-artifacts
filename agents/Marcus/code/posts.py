@@ -1,70 +1,88 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from typing import List
+from typing import List, Optional
+from ..database import SessionLocal, engine
+from .. import models, schemas, crud
 from datetime import datetime
-
-from ..models import Post, PostStatus
-from ..schemas import PostCreate, PostUpdate, PostOut
-from ..database import get_db
-from ..tasks import enqueue_publish_job
+import uuid
 
 router = APIRouter(prefix="/api/v1/posts", tags=["posts"])
 
-@router.post("/", response_model=PostOut, status_code=status.HTTP_201_CREATED)
-def create_post(payload: PostCreate, db: Session = Depends(get_db), current_user=Depends(...)):
-    post = Post(
-        title=payload.title,
-        body=payload.body,
-        author_id=current_user.id,
-        is_public=payload.is_public,
-    )
-    if payload.scheduled_at:
-        post.status = PostStatus.SCHEDULED
-        post.scheduled_at = payload.scheduled_at
-    db.add(post)
-    db.commit()
-    db.refresh(post)
+# Dependency
 
-    if post.status == PostStatus.SCHEDULED:
-        enqueue_publish_job(db, post.id, post.scheduled_at)
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
+# Simple auth stub: in real system replace with JWT dependency
+
+def get_current_user_id():
+    # For now return fixed user id
+    return 1
+
+@router.post("/", response_model=schemas.PostOut, status_code=status.HTTP_201_CREATED)
+def create_post(post_in: schemas.PostCreate, db: Session = Depends(get_db)):
+    author_id = get_current_user_id()
+    post = crud.create_post(db, author_id, post_in)
+    # If scheduled, enqueue job (stub: return job id)
+    if post.status == models.PostStatus.SCHEDULED and post.scheduled_at:
+        # In real implementation, enqueue via Celery/RQ. Return scheduling id.
+        job_id = str(uuid.uuid4())
+        # Save job_id somewhere or create schedule record (omitted)
+        return post
     return post
 
-@router.get("/", response_model=List[PostOut])
-def list_posts(status: PostStatus = None, limit: int = 20, offset: int = 0, db: Session = Depends(get_db), current_user=Depends(...)):
-    q = db.query(Post).filter(Post.author_id == current_user.id)
-    if status:
-        q = q.filter(Post.status == status)
-    posts = q.order_by(Post.created_at.desc()).limit(limit).offset(offset).all()
+@router.get("/", response_model=List[schemas.PostOut])
+def list_posts(page: int = 1, size: int = 20, status: Optional[schemas.PostStatus] = None, db: Session = Depends(get_db)):
+    skip = (page - 1) * size
+    status_filter = status.value if status else None
+    posts = crud.list_posts(db, skip=skip, limit=size, status=status_filter)
     return posts
 
-@router.get("/{post_id}", response_model=PostOut)
-def get_post(post_id: int, db: Session = Depends(get_db), current_user=Depends(...)):
-    post = db.query(Post).filter(Post.id == post_id, Post.author_id == current_user.id).first()
+@router.get("/{post_id}", response_model=schemas.PostOut)
+def get_post(post_id: int, db: Session = Depends(get_db)):
+    post = crud.get_post(db, post_id)
     if not post:
         raise HTTPException(status_code=404, detail="Post not found")
     return post
 
-@router.patch("/{post_id}", response_model=PostOut)
-def update_post(post_id: int, payload: PostUpdate, db: Session = Depends(get_db), current_user=Depends(...)):
-    post = db.query(Post).filter(Post.id == post_id, Post.author_id == current_user.id).first()
+@router.put("/{post_id}", response_model=schemas.PostOut)
+def update_post(post_id: int, post_in: schemas.PostUpdate, db: Session = Depends(get_db)):
+    post = crud.update_post(db, post_id, post_in)
     if not post:
         raise HTTPException(status_code=404, detail="Post not found")
-    for field, value in payload.dict(exclude_none=True).items():
-        setattr(post, field, value)
-    # handle scheduling
-    if payload.scheduled_at:
-        post.status = PostStatus.SCHEDULED
-        enqueue_publish_job(db, post.id, post.scheduled_at)
-    db.commit()
-    db.refresh(post)
+    # If changed to scheduled, return job id stub
+    if post.status == models.PostStatus.SCHEDULED and post.scheduled_at:
+        job_id = str(uuid.uuid4())
     return post
 
-@router.delete("/{post_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_post(post_id: int, db: Session = Depends(get_db), current_user=Depends(...)):
-    post = db.query(Post).filter(Post.id == post_id, Post.author_id == current_user.id).first()
+@router.delete("/{post_id}")
+def delete_post(post_id: int, db: Session = Depends(get_db)):
+    post = crud.soft_delete_post(db, post_id)
     if not post:
         raise HTTPException(status_code=404, detail="Post not found")
-    post.status = PostStatus.DELETED
+    return {"detail": "deleted"}
+
+@router.get("/{post_id}/analytics", response_model=schemas.AnalyticsOut)
+def get_analytics(post_id: int, db: Session = Depends(get_db)):
+    analytics = db.query(models.PostAnalytics).filter(models.PostAnalytics.post_id == post_id).first()
+    if not analytics:
+        raise HTTPException(status_code=404, detail="Analytics not found")
+    return analytics
+
+# Scheduling endpoint: enqueue a publish job
+@router.post("/{post_id}/schedule")
+def schedule_post(post_id: int, when: datetime, db: Session = Depends(get_db)):
+    post = crud.get_post(db, post_id)
+    if not post:
+        raise HTTPException(status_code=404, detail="Post not found")
+    post.scheduled_at = when
+    post.status = models.PostStatus.SCHEDULED
+    db.add(post)
     db.commit()
-    return None
+    # In production, enqueue Celery job to publish at `when`.
+    job_id = str(uuid.uuid4())
+    return {"job_id": job_id, "scheduled_at": when}
