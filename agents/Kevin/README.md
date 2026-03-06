@@ -1,12 +1,13 @@
 # ⚡ Kevin — Frontend Engineer
 
-> 🤖 Auto-generated · 2026-03-06 10:15 UTC
+> 🤖 Auto-generated · 2026-03-06 10:17 UTC
 
 ## 산출물 목록
 
 ### 📁 code/
 
 - [frontend/AuthProvider.tsx,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/AuthProvider.tsx,)
+- [frontend/Feed.tsx,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/Feed.tsx,)
 - [frontend/UserList.tsx](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/UserList.tsx)
 - [frontend/[Feature]](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/[Feature])
 - [frontend/api-client.ts](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/api-client.ts)
@@ -17,10 +18,12 @@
 - [[feature].md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/[feature].md)
 - [cat_meme_app_design.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/cat_meme_app_design.md)
 - [core_flow_v1.*](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/core_flow_v1.*)
+- [instagram_mvp_design_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/instagram_mvp_design_spec.md)
 - [landing/](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/design/landing/)
 
 ### 📁 docs/
 
+- [instagram_backend_openapi_snippet.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/docs/instagram_backend_openapi_snippet.yaml)
 - [openapi_auth.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/docs/openapi_auth.yaml)
 - [openapi_v1.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/docs/openapi_v1.yaml)
 
@@ -44,6 +47,7 @@
 - [2026-03-06/20260306_094431_Kevin_1772790089.171139.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_094431_Kevin_1772790089.171139.md)
 - [2026-03-06/20260306_094450_Kevin_1772790124.961469.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_094450_Kevin_1772790124.961469.md)
 - [2026-03-06/20260306_101558_Kevin_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_101558_Kevin_1772792003.811909.md)
+- [2026-03-06/20260306_101720_Kevin_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_101720_Kevin_1772792003.811909.md)
 
 ### 📁 specs/
 
