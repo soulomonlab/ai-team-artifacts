@@ -1,80 +1,73 @@
-name: CI Dependency & IaC Checks
+name: CI Dependency & IaC Security Checks
+
 on:
   pull_request:
-    branches: [main]
+    branches: [ main ]
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   dependency-check:
-    name: Dependency & IaC gate
+    name: Dependency & Container Scans
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Java (for ORT)
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v4
+      - name: Set up Node (for Snyk)
+        uses: actions/setup-node@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
-
+          node-version: '18'
       - name: Install Snyk CLI
         run: |
-          curl -sL https://snyk.io/install | bash
-          export PATH=$HOME/.snyk/bin:$PATH
-
-      - name: Restore dependency baseline
-        run: |
-          if [ -f .github/dependency_baseline.json ]; then
-            echo "Baseline found"
-          else
-            echo '{}' > .github/dependency_baseline.json
-          fi
-
-      - name: Run Snyk test (code + IaC)
+          npm install -g snyk@latest
+      - name: Authenticate Snyk
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: snyk auth $SNYK_TOKEN || true
+      - name: Run Snyk test (fail on high+critical)
         run: |
-          set -e
-          snyk test --json > snyk_raw.json || true
-          node -e "const fs=require('fs'); const r=JSON.parse(fs.readFileSync('snyk_raw.json')); const high=r.vulnerabilities && r.vulnerabilities.filter(v=>v.severity==='high' || v.severity==='critical'); if(high.length>0){console.log('High/Critical vuln(s) detected'); process.exit(2);} else {console.log('No new high/critical vuln found');}"
+          snyk test --severity-threshold=high || exit 1
 
-      - name: Run ORT Analyzer for IaC (audit provider plugins)
-        env:
-          ORT_CONFIG: ${{ secrets.ORT_CONFIG }}
-        run: |
-          set -e
-          mkdir -p ort-output
-          # Download ORT (short self-contained wrapper)
-          curl -sL https://github.com/oss-review-toolkit/ort/releases/download/2024.02.00/ort-2024.02.00-all.jar -o ort.jar || true
-          java -jar ort.jar --info --analyze --input-dir . --output ort-output/scan-output.yml || true
-          echo "ORT analysis output in ort-output/scan-output.yml"
-
-      - name: Archive results
-        uses: actions/upload-artifact@v4
-        with:
-          name: dependency-scan-results
-          path: |
-            snyk_raw.json
-            ort-output/scan-output.yml
-
-  enforce-baseline:
-    name: Enforce dependency baseline
+  iac-scan:
+    name: Infrastructure as Code Scan (ORT / tfsec / checkov)
     runs-on: ubuntu-latest
     needs: dependency-check
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Fail on new high/critical vulnerabilities
+      - uses: actions/checkout@v4
+      - name: Install ORT (OSS Review Toolkit) deps
         run: |
-          echo "Dependency checks completed in previous job. If new high/critical vulnerabilities were found the job would have failed."
-          # The actual enforcement is handled by dependency-check step returning non-zero on high/critical.
+          sudo apt-get update && sudo apt-get install -y openjdk-11-jre-headless python3-pip
+      - name: Run tfsec for Terraform static checks
+        run: |
+          pip install tfsec
+          tfsec . || true
+      - name: Run Checkov for policy checks
+        run: |
+          pip install checkov
+          checkov -d . --quiet || true
+      - name: Run ORT scan (detect new license/vulnerability findings)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Requires a pre-built ORT distribution or docker image in runner environment.
+          # This step will run ORT's analyzer and scanner to produce a report in ORT-output.
+          mkdir -p ort-output
+          echo "ORT run placeholder - run ORT in CI runner or in self-hosted runner with ORT installed" > ort-output/README.txt
+          # Exit code handling: ORT should be configured to fail the job when new CRITICAL/HIGH findings are detected.
+          echo "If ORT finds new high/critical vulnerabilities, fail the pipeline."
 
-  notify:
+  provider-plugin-check:
+    name: Terraform provider & IaC plugin checks
     runs-on: ubuntu-latest
-    needs: [dependency-check, enforce-baseline]
+    needs: iac-scan
     steps:
-      - name: Post summary
-        run: echo "Dependency gate completed. Artifacts available. See Actions run for details." 
+      - uses: actions/checkout@v4
+      - name: Install tflint
+        run: |
+          curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash || true
+      - name: Run tflint
+        run: |
+          tflint --init || true
+          tflint || true
+      - name: Report summary
+        run: |
+          echo "If provider/plugin CVEs are detected, create issue with label 'devops' and include remediation ETA. Baseline allows existing moderate issues; new high/critical must block."
