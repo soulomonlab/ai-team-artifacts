@@ -1,6 +1,6 @@
 # 프로젝트 산출물 요약
 
-> 🤖 Auto-generated · 2026-03-06 16:01 UTC
+> 🤖 Auto-generated · 2026-03-06 16:02 UTC
 
 ## 에이전트별 기여도
 
@@ -10,19 +10,21 @@
 | 🤖 CEO | Chief-Executive | 3 | 18 | 21 |
 | 🤝 Chris | Customer-Success | 3 | 2 | 5 |
 | 🤖 CustomerInsights | Customer-Insights | 0 | 2 | 2 |
-| 🎯 Dana | QA-Engineer | 36 | 16 | 52 |
+| 🎯 Dana | QA-Engineer | 38 | 17 | 55 |
 | 🤖 Dependency | Dependency-Manager | 8 | 6 | 14 |
-| 📝 Emma | Technical-Writer | 3 | 3 | 6 |
+| 📝 Emma | Technical-Writer | 5 | 4 | 9 |
 | 🤖 Experiment | Agent | 4 | 1 | 5 |
 | 🤖 GrowthContent | Growth-Content | 2 | 4 | 6 |
-| 🔒 Isabella | Security-Engineer | 15 | 10 | 25 |
+| 🤖 Incident | Incident-Response | 0 | 1 | 1 |
+| 🔒 Isabella | Security-Engineer | 16 | 11 | 27 |
 | 🚀 Jessica | Growth | 7 | 5 | 12 |
-| ⚡ Kevin | Frontend-Engineer | 38 | 24 | 62 |
-| 🧠 Lisa | ML-Engineer | 6 | 3 | 9 |
-| 🔧 Marcus | Backend-Engineer | 30 | 23 | 53 |
+| ⚡ Kevin | Frontend-Engineer | 40 | 26 | 66 |
+| 🧠 Lisa | ML-Engineer | 7 | 4 | 11 |
+| ⚙️ Lucas | DevOps-Engineer | 0 | 1 | 1 |
+| 🔧 Marcus | Backend-Engineer | 31 | 24 | 55 |
 | 🎨 Maya | Designer | 36 | 22 | 58 |
 | 🚢 Noah | DevOps-Engineer | 17 | 11 | 28 |
-| 🖥️ Oliver | Backend-Engineer | 0 | 1 | 1 |
+| 🖥️ Oliver | Backend-Engineer | 0 | 2 | 2 |
 | 🤖 RevenueOps | Revenue-Ops | 0 | 1 | 1 |
 | 🏗️ Taylor | Tech-Lead | 14 | 14 | 28 |
 | 🏛️ Victor | Architect | 2 | 1 | 3 |
@@ -32,16 +34,16 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 240 |
-| specs | 116 |
+| slack | 250 |
+| specs | 119 |
 | design | 51 |
-| docs | 30 |
-| code | 24 |
-| reports | 22 |
-| tests | 21 |
+| docs | 33 |
+| code | 25 |
+| reports | 23 |
+| tests | 22 |
 | config | 9 |
 
-**총 산출물: 513개**
+**총 산출물: 532개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
