@@ -1,51 +1,80 @@
-# Feature: MVP Scope — Intuitive UX + Scalable Backend
-**Goal:** Deliver an intuitive MVP that validates core user value while ensuring backend scalability and baseline code quality.
+# Feature: MVP Scope & Acceptance Criteria (Q2)
+**Goal:** Deliver a usable MVP with excellent UX, scalable backend, and high code quality within ~8 weeks.
+
+**North Star Impact:** Launch a functional product that drives 60% feature adoption among trial users and meets p95 latency <200ms.
 
 **Users:**
-- New users completing onboarding
-- Returning users using core product flow
-- Admin/internal (support & monitoring)
+- Primary: Early adopters (power users) who need to create, share, and find content quickly.
+- Secondary: Team admins managing users and access.
+
+**Top 5 Features (Must-have):**
+1. Authentication & Account Management
+   - Email/password signup, OAuth (Google) optional for MVP.
+   - Email verification, password reset.
+2. Core Item CRUD (Create / Read / Update / Delete)
+   - Users can create, edit, delete core content ("items" / "projects").
+   - Versioning or simple change history.
+3. Sharing & Permissions
+   - Share items with users or teams (read / write roles).
+   - Invite flow and access control checks.
+4. Search & Filter
+   - Full-text search across items, basic filters (owner, date, tag).
+   - Results ranked by relevance, pagination.
+5. Activity Feed & Notifications
+   - In-app feed for item activity (create/update/share).
+   - Optional email notifications for invites and important events.
+
+**RICE Score (overall MVP):**
+- Reach = 10,000 users/quarter
+- Impact = 2 (substantial) 
+- Confidence = 75% 
+- Effort = 6 person-weeks
+- RICE = (10,000 × 2 × 0.75) / 6 ≈ 2,500
+
+**Kano Category:** Must-have (minimum viable experience)
 
 **Acceptance Criteria:**
-- [ ] Onboarding flow (signup, email verify, first-time walkthrough) completed in <2 minutes for 95% of users.
-- [ ] Core product task (primary value prop) can be completed end-to-end in 3 steps or fewer.
-- [ ] API latency: p95 < 300ms under target load (TBD by architecture).
-- [ ] Uptime: 99.9% for production (SLA monitoring + alerting).
-- [ ] Automated test coverage >= 70% (unit + integration for backend critical paths).
-- [ ] CI runs on PRs, blocking merge on failing tests and lint.
-- [ ] Basic observability: metrics (latency, error rate), structured logs, and SLO alerts.
-- [ ] Security: minimal controls (auth, input validation, rate limiting) per Isabella's MVP threat assessment.
-- [ ] Documentation: onboarding flows and runbook for deploy/rollback.
+- Authentication & Account Management:
+  - [ ] User can sign up, verify email, log in, log out, and reset password.
+  - [ ] SSO via Google works end-to-end if enabled.
+- Core Item CRUD:
+  - [ ] User can create, edit, delete items; changes persist in Postgres.
+  - [ ] API responses for CRUD ops return <= 200ms p95 under staging load (baseline).
+- Sharing & Permissions:
+  - [ ] Owner can invite another user and grant read/write; invited user gains access immediately.
+  - [ ] Unauthorized requests return 403 and are logged.
+- Search & Filter:
+  - [ ] Search returns relevant results; first page latency p95 <200ms.
+  - [ ] Pagination and basic filters function and are reflected in URLs for shareability.
+- Activity Feed & Notifications:
+  - [ ] Actions create feed entries visible to participants within 5s.
+  - [ ] Email notifications send reliably (retry logic) for invite events.
+- Quality & Reliability:
+  - [ ] Test coverage >= 80% for core backend services (auth, CRUD, permissions, search).
+  - [ ] CI pipeline runs unit tests, linting, and basic integration tests on PRs.
+  - [ ] Performance: staging p95 latency across core APIs <200ms; error rate <1%.
+- Security & Compliance:
+  - [ ] Basic OWASP top-10 mitigations in place (input validation, CSRF, XSS protection).
+  - [ ] Secrets stored in vault; DB credentials rotated per policy.
 
-**MVP Surface (in-scope):**
-- Web signup + email verification + first-time onboarding UI
-- Core product feature (read/write minimal flow delivering primary value)
-- User settings: profile + basic preferences
-- Backend: REST API, Postgres (or managed DB), caching layer for hot reads
-- CI pipeline, staging environment, automated tests
+**Out of Scope for MVP:**
+- Fine-grained RBAC beyond owner/read/write roles.
+- Advanced analytics dashboards.
+- Multi-region deployment and hard geo-redundancy (deferred next phase).
 
-**Out of Scope (launch-phase):**
-- Advanced personalization and recommendations
-- Full analytics dashboard
-- Mobile native apps
-- Multi-tenant enterprise features
-- Billing & metered usage (defer unless required for launch)
+**Success Metrics (post-launch):**
+- Feature adoption: 60% of active users use Core Item CRUD within 2 weeks.
+- Activation: 30% of signups create at least 1 item within 7 days.
+- Performance: p95 API latency <200ms in production.
+- Quality: 80% test coverage on core services; regression rate <2% per release.
 
-**Success criteria (CEO):**
-- onboarding <2 min, API p95 <300ms, 99.9% uptime, automated test coverage ≥70%.
+**Dependencies & Constraints:**
+- Infra: Postgres (primary DB) + Redis (cache) + Kubernetes on cloud (CEO decision).
+- Taylor (#ai-tech-lead) to finalize service boundaries and scaling strategy.
+- Noah (#ai-devops) to provision IaC and CI after architecture doc.
 
-**Owners & Due Dates:**
-- Alex (#ai-product): finalize MVP scope & acceptance criteria — EOD today. (this doc)
-- Taylor (#ai-tech-lead): architecture + CI/CD checklist + infra scaling plan — Wed.
-- Maya (#ai-design): core signup/onboarding screens + design tokens — Tue.
-- Noah (#ai-devops): staging infra + cost estimate + deployment runbook — Thu.
-- Isabella (#ai-security): MVP threat assessment & minimal controls — Thu.
-- Jessica (#ai-growth): beta acquisition plan and KPIs — next Mon.
-- Chris (#ai-support): support playbook + top 10 FAQs — next Mon.
-- Yuki (Finance): budget review & runway impact — Fri.
+**Next Steps:**
+- Review and sign-off by Taylor (architecture) and Maya (design) by Thu/Fri.
+- Create engineering issues and assign owners (week 0 planning).
 
-**Edge conditions / Notes:**
-- If any owner needs >1 headcount or >2 weeks extra, escalate to CEO immediately.
-- Performance target (p95 <300ms) will be validated by load tests defined in Taylor's architecture plan.
-
-**GitHub Issue:** # (created from this spec)
+**File:** output/specs/mvp_scope.md
