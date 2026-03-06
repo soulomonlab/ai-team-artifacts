@@ -1,54 +1,52 @@
 from sqlalchemy.orm import Session
 from . import models, schemas
-from typing import List, Optional, Dict, Any
+from datetime import datetime
 
-def create_item(db: Session, item_in: schemas.ItemCreate, owner_id: Optional[int]=None) -> models.Item:
-    db_item = models.Item(
-        title=item_in.title,
-        description=item_in.description,
-        is_private=item_in.is_private,
-        metadata=item_in.metadata or {},
-        owner_id=owner_id,
-    )
-    db.add(db_item)
-    db.commit()
-    db.refresh(db_item)
-    # history
-    create_history(db, db_item.id, changed_by=owner_id, change_type="create", payload={"item": db_item.title})
-    return db_item
 
-def get_item(db: Session, item_id: int) -> Optional[models.Item]:
-    return db.query(models.Item).filter(models.Item.id == item_id).first()
-
-def list_items(db: Session, skip: int=0, limit: int=50, q: Optional[str]=None) -> List[models.Item]:
-    query = db.query(models.Item).order_by(models.Item.created_at.desc())
-    if q:
-        qlike = f"%{q}%"
-        query = query.filter(models.Item.title.ilike(qlike) | models.Item.description.ilike(qlike))
-    return query.offset(skip).limit(limit).all()
-
-def update_item(db: Session, item: models.Item, changes: Dict[str, Any], changed_by: Optional[int]=None) -> models.Item:
-    for k, v in changes.items():
-        setattr(item, k, v)
+def create_item(db: Session, item_in: schemas.ItemCreate):
+    item = models.Item(title=item_in.title, description=item_in.description)
     db.add(item)
     db.commit()
     db.refresh(item)
-    create_history(db, item.id, changed_by=changed_by, change_type="update", payload=changes)
-    return item
-
-def delete_item(db: Session, item: models.Item, deleted_by: Optional[int]=None):
-    create_history(db, item.id, changed_by=deleted_by, change_type="delete", payload={"id": item.id})
-    db.delete(item)
-    db.commit()
-
-# History helpers
-
-def create_history(db: Session, item_id: int, changed_by: Optional[int], change_type: str, payload: Dict[str, Any]):
-    hist = models.ItemHistory(item_id=item_id, changed_by=changed_by, change_type=change_type, payload=payload)
+    # create history entry
+    hist = models.ItemHistory(item_id=item.id, title=item.title, description=item.description, version=item.version)
     db.add(hist)
     db.commit()
-    db.refresh(hist)
-    return hist
+    return item
 
-def list_history(db: Session, item_id: int):
-    return db.query(models.ItemHistory).filter(models.ItemHistory.item_id == item_id).order_by(models.ItemHistory.created_at.desc()).all()
+
+def get_item(db: Session, item_id: int):
+    return db.query(models.Item).filter(models.Item.id == item_id).first()
+
+
+def list_items(db: Session, skip: int = 0, limit: int = 100):
+    return db.query(models.Item).offset(skip).limit(limit).all()
+
+
+def update_item(db: Session, item: models.Item, updates: schemas.ItemUpdate):
+    changed = False
+    if updates.title is not None and updates.title != item.title:
+        item.title = updates.title
+        changed = True
+    if updates.description is not None and updates.description != item.description:
+        item.description = updates.description
+        changed = True
+    if updates.is_archived is not None and updates.is_archived != item.is_archived:
+        item.is_archived = updates.is_archived
+        changed = True
+    if changed:
+        item.version = item.version + 1 if item.version else 1
+        item.updated_at = datetime.utcnow()
+        db.add(item)
+        db.commit()
+        db.refresh(item)
+        hist = models.ItemHistory(item_id=item.id, title=item.title, description=item.description, version=item.version)
+        db.add(hist)
+        db.commit()
+    return item
+
+
+def delete_item(db: Session, item: models.Item):
+    db.delete(item)
+    db.commit()
+    return True
