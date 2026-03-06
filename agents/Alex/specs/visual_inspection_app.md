@@ -1,59 +1,46 @@
-# Feature: Visual Inspection App
-**Goal:** Provide factory operators an intuitive app to capture, annotate, and manage visual inspection (defect detection) workflows that scales to multiple factories and maintains high code quality.
+# Feature: Visual Inspection App (Factory) - MVP
+**Goal:** Build an intuitive visual inspection application to detect defects on production lines in real-time and store inspection events for analysis and traceability.
 
-**North Star Impact:** Reduce manual inspection time by 50% and increase defect detection rate by 30% within 6 months of deployment.
+**North Star Impact:** Reduce undetected defects and inspection cycle time; increase first-pass yield and operator trust in automation.
 
 **Users:**
-- Primary: Line operators doing visual inspection on assembly lines (capture images, mark defects, submit reports).
-- Secondary: QA engineers and supervisors (review reports, analytics, audit trail).
-- Admin: Dev/Ops for deployment, model ops for ML improvements.
+- Production line operators: run inspections, view alerts, acknowledge events.
+- Quality engineers: review defect logs, tune models, generate reports.
+- Plant managers: monitor KPIs (defect rate, MTTR).
 
-**RICE Score:** Reach=[200 factories × 50 lines ≈ 10,000 operators/quarter] × Impact=[1.5 (meaningful improvement)] × Confidence=[70%] / Effort=[8w] = (10,000 × 1.5 × 0.7) / 8 ≈ 1,312.5
+**RICE Score:** Reach=500 production lines/quarter × Impact=2 (performance) × Confidence=70% / Effort=8w = 87.5
 
-**Kano Category:** Performance / Must-have for large customers
-
-**Core Capabilities (MVP):**
-- Real-time image capture from a web/mobile client (camera integration)
-- Guided inspection workflow: step list per product, pass/fail + defect type tagging
-- Annotation tools: bounding boxes, freehand marks, severity tag
-- Report submission with metadata (line, SKU, operator, timestamp)
-- Secure storage of images + metadata with scalable object storage
-- Admin dashboard: recent inspections, defect counts, filter/search
-- Exportable audit logs and CSV reports
+**Kano Category:** Performance (must improve inspection throughput and accuracy)
 
 **Acceptance Criteria:**
-- [ ] Operator can capture or upload an image and attach it to an inspection record.
-- [ ] Operator can annotate image (bounding box + label) and submit inspection.
-- [ ] System stores image in scalable object storage and returns a stable URL within 2s.
-- [ ] Submitted inspection appears in QA dashboard within 5s; searchable by SKU, line, operator.
-- [ ] API responds <200ms for metadata endpoints under 100 RPS; image upload throughput scalable (S3 presigned URLs).
-- [ ] Audit log records user, action, timestamp for every inspection event.
-- [ ] Role-based access control: operators vs QA vs admin.
-- [ ] End-to-end tests for happy paths + edge cases present in tests/ directory.
+- [ ] Operator can register a production line and attach one or more camera sources.
+- [ ] Operator can start/stop live inspection per line and receive real-time defect alerts in the UI.
+- [ ] Backend ingests frames (edge or cloud), runs inference, and returns per-frame results within 1s (edge) / aggregated results within 3s (cloud) for MVP.
+- [ ] System persists inspection events and associated snapshot images to storage with metadata (timestamp, line_id, camera_id, defect_type, confidence).
+- [ ] Dashboard allows filtering by time, line, and defect type and exports CSV for a selected time window.
+- [ ] Accuracy baseline for deployed model: precision >= 90% and recall >= 85% on validation dataset (MVP target; model training pipeline is out of scope).
+- [ ] System tolerates network disruption: camera-edge buffers up to 5 minutes of frames and uploads when connectivity resumes.
+- [ ] Concurrency: platform supports 100 concurrent camera streams for MVP; performance degradation documented in runbook.
+- [ ] Security: role-based access (operator, engineer, admin). Sensitive data storage follows encryption-at-rest.
 
-**Out of Scope (MVP):**
-- Automated ML-based defect classification (optional for v1; will be introduced as an integration in v2).
-- Offline-first mobile operation (v1 requires network connectivity).
-
-**Non-functional Requirements / Constraints:**
-- Scalability: object storage (S3-compatible), stateless API instances behind load balancer.
-- Security: images encrypted at rest, RBAC, audit logs retained 1 year.
-- Code quality: 80% unit test coverage for backend, linting, CI gating.
+**Out of Scope:**
+- Training new ML models end-to-end (only inference and model deployment supported in MVP)
+- Mobile native app (web-first)
+- Deep MES / ERP bidirectional sync (export API only)
 
 **Success Metrics:**
-- Adoption: >60% of lines using the app within 3 months.
-- Accuracy: manual QC shows 30% higher defect detection vs baseline.
-- Performance: metadata API p95 < 200ms under target load.
-- Reliability: 99.9% uptime for API layer.
+- Defect detection adoption: >60% of lines enrolled within 3 months
+- Detection precision >=90% and recall >=85% in production
+- Mean time to acknowledge alert < 2 minutes
+- System availability >= 99.5% for critical inspection endpoints
 
-**Dependencies:**
-- Camera hardware + browser/mobile support (product to validate supported devices)
-- Object storage (S3)
-- Auth service (SSO) or initial internal user DB
+**Architecture notes (high level):**
+- Edge inference recommended per line for latency: run model in container on edge gateway; fallback to cloud inference if edge unavailable.
+- Backend: REST API + event queue for ingestion, object storage for snapshots, relational DB for metadata, simple rules engine for alerting.
+- Telemetry: per-stream metrics, model confidence histogram, error rates.
 
-**Next Steps / Deliverables:**
-- Backend architecture & API spec (owner: Marcus)
-- Frontend wireframes and interaction spec (owner: Maya)
-- QA test plan and acceptance tests (owner: Dana)
+**GitHub Issue:** TBD
 
-**GitHub Issue:** (created by PO) #
+**Files created:** output/specs/visual_inspection_app.md
+
+**Next steps:** Create GitHub issue, estimate effort, and hand off to backend to propose API + DB schema and deployment plan.
