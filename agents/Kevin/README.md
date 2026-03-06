@@ -12,6 +12,7 @@
 - [frontend/[Feature]](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/[Feature])
 - [frontend/api-client.ts](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/api-client.ts)
 - [frontend/component_list.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/frontend/component_list.md)
+- [visual_inspection_README.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/code/visual_inspection_README.md.)
 
 ### 📁 design/
 
@@ -48,6 +49,7 @@
 - [2026-03-06/20260306_094450_Kevin_1772790124.961469.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_094450_Kevin_1772790124.961469.md)
 - [2026-03-06/20260306_101558_Kevin_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_101558_Kevin_1772792003.811909.md)
 - [2026-03-06/20260306_101720_Kevin_1772792003.811909.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_101720_Kevin_1772792003.811909.md)
+- [2026-03-06/20260306_131624_Kevin_1772802782.930239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin/slack/2026-03-06/20260306_131624_Kevin_1772802782.930239.md)
 
 ### 📁 specs/
 
