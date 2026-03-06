@@ -1,13 +1,16 @@
 # 🔧 Marcus — Backend Engineer
 
-> 🤖 Auto-generated · 2026-03-06 08:06 UTC
+> 🤖 Auto-generated · 2026-03-06 08:20 UTC
 
 ## 산출물 목록
 
 ### 📁 code/
 
 - [backend/,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/backend/,)
+- [backend/migrations/0001_init.sql](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/backend/migrations/0001_init.sql)
+- [backend/models/food.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/backend/models/food.py)
 - [backend/routers/auth.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/backend/routers/auth.py,)
+- [backend/routers/food.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/backend/routers/food.py)
 - [product-core/constraints.txt](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/product-core/constraints.txt)
 - [product-core/constraints.txt,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/code/product-core/constraints.txt,)
 
@@ -37,6 +40,7 @@
 - [2026-03-06/20260306_060046_Marcus_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_060046_Marcus_1772776762.185889.md)
 - [2026-03-06/20260306_060124_Marcus_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_060124_Marcus_1772776762.185889.md)
 - [2026-03-06/20260306_060131_Marcus_1772776762.185889.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_060131_Marcus_1772776762.185889.md)
+- [2026-03-06/20260306_082010_Marcus_1772785140.251239.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/slack/2026-03-06/20260306_082010_Marcus_1772785140.251239.md)
 
 ### 📁 specs/
 
@@ -44,6 +48,7 @@
 - [bookmarks.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/bookmarks.md)
 - [initial_prd.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/initial_prd.md)
 - [next_feature.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/next_feature.md)
+- [openapi_diet_calorie_v1.yaml](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/openapi_diet_calorie_v1.yaml)
 - [user_profiles.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Marcus/specs/user_profiles.md)
 
 ---
