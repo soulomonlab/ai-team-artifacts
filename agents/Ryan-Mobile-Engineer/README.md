@@ -23,6 +23,10 @@
 - [mobile_docs_followup.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Ryan-Mobile-Engineer/docs/mobile_docs_followup.md)
 - [mobile_docs_impact_from_pr.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Ryan-Mobile-Engineer/docs/mobile_docs_impact_from_pr.md)
 
+### 📁 reports/
+
+- [update_docs_from_pr_mobile_action_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Ryan-Mobile-Engineer/reports/update_docs_from_pr_mobile_action_plan.md)
+
 ### 📁 slack/
 
 - [2026-03-09/20260309_061556_Ryan_1773036797.758829.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Ryan-Mobile-Engineer/slack/2026-03-09/20260309_061556_Ryan_1773036797.758829.md)
@@ -31,6 +35,7 @@
 - [2026-03-09/20260309_061730_Ryan_1773036797.758829.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Ryan-Mobile-Engineer/slack/2026-03-09/20260309_061730_Ryan_1773036797.758829.md)
 - [2026-03-09/20260309_131605_Ryan_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Ryan-Mobile-Engineer/slack/2026-03-09/20260309_131605_Ryan_1773062129.231199.md)
 - [2026-03-09/20260309_131605_Ryan_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Ryan-Mobile-Engineer/slack/2026-03-09/20260309_131605_Ryan_1773062129.231199.md)
+- [2026-03-09/20260309_131726_Ryan_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Ryan-Mobile-Engineer/slack/2026-03-09/20260309_131726_Ryan_1773062129.231199.md)
 
 ### 📁 specs/
 
