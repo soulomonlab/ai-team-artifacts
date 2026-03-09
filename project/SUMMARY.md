@@ -7,11 +7,11 @@
 | 에이전트 | 역할 | 코드/문서 | Slack 아카이브 | 합계 |
 |----------|------|-----------|----------------|------|
 | 📋 Alex | Product-Owner | 27 | 40 | 67 |
-| 🤝 Chris | Customer-Success | 8 | 3 | 11 |
+| 🤝 Chris | Customer-Success | 9 | 4 | 13 |
 | 🤖 CustomerInsights | Customer-Insights | 5 | 3 | 8 |
 | 🎯 Dana | QA-Engineer | 59 | 21 | 80 |
 | 🤖 Dependency | Dependency-Manager | 7 | 7 | 14 |
-| 🤖 DocsSync | Docs-Sync | 5 | 2 | 7 |
+| 🤖 DocsSync | Docs-Sync | 8 | 4 | 12 |
 | 📝 Emma | Technical-Writer | 20 | 8 | 28 |
 | 🔒 Isabella | Security-Engineer | 15 | 9 | 24 |
 | ⚡ Kevin | Frontend-Engineer | 37 | 23 | 60 |
@@ -29,17 +29,17 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 204 |
+| slack | 207 |
 | specs | 90 |
 | design | 63 |
 | tests | 47 |
 | code | 35 |
-| docs | 33 |
-| reports | 26 |
+| docs | 34 |
+| reports | 29 |
 | config | 2 |
 | data | 1 |
 
-**총 산출물: 501개**
+**총 산출물: 508개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
