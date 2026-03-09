@@ -27,6 +27,9 @@ agents/
     reports/
     slack/
     specs/
+  DocsSync-Docs-Sync/          🤖
+    design/
+    slack/
   Emma-Technical-Writer/          📝
     docs/
     slack/
@@ -61,6 +64,9 @@ agents/
     slack/
   Oliver-Backend-Engineer/          🖥️
     slack/
+  Ryan-Mobile-Engineer/          📱
+    slack/
+    specs/
   Taylor-Tech-Lead/          🏗️
     design/
     docs/
@@ -68,8 +74,10 @@ agents/
     slack/
     specs/
   Victor-Architect/          🏛️
+    code/
     design/
     slack/
+    tests/
 project/
   SUMMARY.md
 ```
@@ -79,16 +87,18 @@ project/
 - 📋 **[Alex](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)** — Product-Owner · 50개 파일
 - 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA-Engineer · 75개 파일
 - 🤖 **[Dependency](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)** — Dependency-Manager · 12개 파일
-- 📝 **[Emma](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)** — Technical-Writer · 3개 파일
-- 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security-Engineer · 22개 파일
+- 🤖 **[DocsSync](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/DocsSync)** — Docs-Sync · 5개 파일
+- 📝 **[Emma](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)** — Technical-Writer · 6개 파일
+- 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security-Engineer · 24개 파일
 - ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend-Engineer · 53개 파일
-- 🧠 **[Lisa](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Lisa)** — ML-Engineer · 3개 파일
+- 🧠 **[Lisa](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Lisa)** — ML-Engineer · 7개 파일
 - 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend-Engineer · 46개 파일
-- 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 35개 파일
+- 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 40개 파일
 - 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps-Engineer · 10개 파일
 - 🖥️ **[Oliver](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Oliver)** — Backend-Engineer · 8개 파일
+- 📱 **[Ryan](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Ryan)** — Mobile-Engineer · 2개 파일
 - 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech-Lead · 23개 파일
-- 🏛️ **[Victor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Victor)** — Architect · 5개 파일
+- 🏛️ **[Victor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Victor)** — Architect · 8개 파일
 
 ## 빠른 링크
 
@@ -96,6 +106,7 @@ project/
 - 📋 [Alex 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)
 - 🎯 [Dana 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)
 - 🤖 [Dependency 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)
+- 🤖 [DocsSync 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/DocsSync)
 - 📝 [Emma 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)
 - 🔒 [Isabella 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)
 - ⚡ [Kevin 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)
@@ -104,5 +115,6 @@ project/
 - 🎨 [Maya 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)
 - 🚢 [Noah 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)
 - 🖥️ [Oliver 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Oliver)
+- 📱 [Ryan 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Ryan)
 - 🏗️ [Taylor 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)
 - 🏛️ [Victor 산출물](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Victor)
