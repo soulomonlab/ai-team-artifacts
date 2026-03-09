@@ -1,24 +1,16 @@
-from pydantic import BaseModel, EmailStr
-from typing import Optional
+from pydantic import BaseModel
 from datetime import datetime
+from typing import List, Optional
 
-class UserCreate(BaseModel):
-    email: EmailStr
-    password: str
-
-class Token(BaseModel):
-    access_token: str
-    token_type: str = "bearer"
-
-class TokenData(BaseModel):
-    email: Optional[str] = None
-
-class UserOut(BaseModel):
+class FeedItemOut(BaseModel):
     id: int
-    email: EmailStr
-    is_active: bool
-    is_verified: bool
     created_at: datetime
+    content: str
 
     class Config:
         orm_mode = True
+
+class FeedPage(BaseModel):
+    items: List[FeedItemOut]
+    next_cursor: Optional[str]
+
