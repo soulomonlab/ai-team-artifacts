@@ -14,11 +14,11 @@
 | 📝 Emma | Technical-Writer | 14 | 5 | 19 |
 | 🔒 Isabella | Security-Engineer | 15 | 9 | 24 |
 | ⚡ Kevin | Frontend-Engineer | 37 | 23 | 60 |
-| 🧠 Lisa | ML-Engineer | 7 | 4 | 11 |
-| 🔧 Marcus | Backend-Engineer | 28 | 20 | 48 |
+| 🧠 Lisa | ML-Engineer | 10 | 6 | 16 |
+| 🔧 Marcus | Backend-Engineer | 32 | 22 | 54 |
 | 🎨 Maya | Designer | 31 | 16 | 47 |
 | 🚢 Noah | DevOps-Engineer | 2 | 8 | 10 |
-| 🖥️ Oliver | Backend-Engineer | 0 | 9 | 9 |
+| 🖥️ Oliver | Backend-Engineer | 0 | 10 | 10 |
 | 📱 Ryan | Mobile-Engineer | 12 | 6 | 18 |
 | 🏗️ Taylor | Tech-Lead | 15 | 12 | 27 |
 | 🏛️ Victor | Architect | 9 | 4 | 13 |
@@ -27,17 +27,17 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 187 |
-| specs | 86 |
+| slack | 192 |
+| specs | 90 |
 | design | 63 |
 | tests | 47 |
 | code | 35 |
-| docs | 19 |
-| reports | 17 |
+| docs | 21 |
+| reports | 18 |
 | config | 2 |
 | data | 1 |
 
-**총 산출물: 457개**
+**총 산출물: 469개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
