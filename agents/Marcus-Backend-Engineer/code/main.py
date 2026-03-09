@@ -1,21 +1,13 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
-from .routers import posts
-from .db import Base, engine
+from .db import init_db
+from .routers.feed import router as feed_router
 
-app = FastAPI(title="Posts Service", version="1.0.0")
+app = FastAPI(title="Feed Service")
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+app.include_router(feed_router, prefix="/api/v1")
 
-# create tables at startup for local dev (Alembic should be used in prod)
 @app.on_event("startup")
 def on_startup():
-    Base.metadata.create_all(bind=engine)
+    init_db()
 
-app.include_router(posts.router, prefix="/api/v1")
+# For running with: uvicorn output.code.backend.main:app --reload
