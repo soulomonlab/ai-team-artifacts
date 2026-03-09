@@ -67,6 +67,7 @@ agents/
   Oliver-Backend-Engineer/          🖥️
     slack/
   Ryan-Mobile-Engineer/          📱
+    code/
     slack/
     specs/
   Taylor-Tech-Lead/          🏗️
@@ -86,7 +87,7 @@ project/
 
 ## 에이전트 목록
 
-- 📋 **[Alex](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)** — Product-Owner · 52개 파일
+- 📋 **[Alex](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)** — Product-Owner · 55개 파일
 - 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA-Engineer · 77개 파일
 - 🤖 **[Dependency](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)** — Dependency-Manager · 12개 파일
 - 🤖 **[DocsSync](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/DocsSync)** — Docs-Sync · 5개 파일
@@ -98,7 +99,7 @@ project/
 - 🎨 **[Maya](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Maya)** — Designer · 45개 파일
 - 🚢 **[Noah](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Noah)** — DevOps-Engineer · 10개 파일
 - 🖥️ **[Oliver](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Oliver)** — Backend-Engineer · 9개 파일
-- 📱 **[Ryan](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Ryan)** — Mobile-Engineer · 2개 파일
+- 📱 **[Ryan](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Ryan)** — Mobile-Engineer · 8개 파일
 - 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech-Lead · 23개 파일
 - 🏛️ **[Victor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Victor)** — Architect · 8개 파일
 
