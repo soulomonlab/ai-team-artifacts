@@ -1,6 +1,6 @@
 # 🎯 Dana — QA-Engineer
 
-> 🤖 Auto-generated · 2026-03-09 13:17 UTC
+> 🤖 Auto-generated · 2026-03-09 13:18 UTC
 
 ## 산출물 목록
 
@@ -52,6 +52,7 @@
 - [2026-03-09/20260309_061507_Dana_1773036797.758829.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/slack/2026-03-09/20260309_061507_Dana_1773036797.758829.md)
 - [2026-03-09/20260309_061614_Dana_1773036797.758829.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/slack/2026-03-09/20260309_061614_Dana_1773036797.758829.md)
 - [2026-03-09/20260309_061723_Dana_1773036931.039029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/slack/2026-03-09/20260309_061723_Dana_1773036931.039029.md)
+- [2026-03-09/20260309_131842_Dana_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/slack/2026-03-09/20260309_131842_Dana_1773062129.231199.md)
 
 ### 📁 specs/
 
@@ -96,6 +97,7 @@
 - [test_rate_limits.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/tests/test_rate_limits.py)
 - [test_refresh_token.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/tests/test_refresh_token.py)
 - [test_refresh_token.py,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/tests/test_refresh_token.py,)
+- [test_runbook_validation.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/tests/test_runbook_validation.py)
 - [test_saved_collections.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/tests/test_saved_collections.py)
 - [test_signup_and_tasks.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/tests/test_signup_and_tasks.py)
 - [test_soft_delete.py](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Dana-QA-Engineer/tests/test_soft_delete.py)
