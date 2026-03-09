@@ -1,6 +1,6 @@
 # ⚡ Kevin — Frontend-Engineer
 
-> 🤖 Auto-generated · 2026-03-09 13:17 UTC
+> 🤖 Auto-generated · 2026-03-09 13:18 UTC
 
 ## 산출물 목록
 
@@ -28,6 +28,10 @@
 - [onboarding_sketches.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/design/onboarding_sketches.md)
 - [onboarding_sketches.pdf](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/design/onboarding_sketches.pdf)
 
+### 📁 docs/
+
+- [update_docs_from_pr.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/docs/update_docs_from_pr.md.)
+
 ### 📁 slack/
 
 - [2026-03-04/20260304_181457_Kevin_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/slack/2026-03-04/20260304_181457_Kevin_1772648003.795029.md)
@@ -53,6 +57,7 @@
 - [2026-03-09/20260309_061510_Kevin_1773036797.758829.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/slack/2026-03-09/20260309_061510_Kevin_1773036797.758829.md)
 - [2026-03-09/20260309_061710_Kevin_1773036797.758829.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/slack/2026-03-09/20260309_061710_Kevin_1773036797.758829.md)
 - [2026-03-09/20260309_061722_Kevin_1773036931.039029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/slack/2026-03-09/20260309_061722_Kevin_1773036931.039029.md)
+- [2026-03-09/20260309_131814_Kevin_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/slack/2026-03-09/20260309_131814_Kevin_1773062129.231199.md)
 
 ### 📁 specs/
 
@@ -66,6 +71,8 @@
 - [frontend_design_requirements.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/specs/frontend_design_requirements.md)
 - [frontend_design_requirements.md,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/specs/frontend_design_requirements.md,)
 - [frontend_implementation_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/specs/frontend_implementation_plan.md)
+- [frontend_task_113.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/specs/frontend_task_113.md)
+- [frontend_task_113.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/specs/frontend_task_113.md.)
 - [frontend_task_for_app_for_sf_founders.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/specs/frontend_task_for_app_for_sf_founders.md)
 - [issue_product_api.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/specs/issue_product_api.md)
 - [product_api.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/specs/product_api.md)
