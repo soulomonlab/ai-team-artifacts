@@ -1,6 +1,6 @@
 # 🧠 Lisa — ML-Engineer
 
-> 🤖 Auto-generated · 2026-03-09 13:17 UTC
+> 🤖 Auto-generated · 2026-03-09 13:18 UTC
 
 ## 산출물 목록
 
@@ -26,6 +26,7 @@
 - [2026-03-09/20260309_131610_Lisa_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_131610_Lisa_1773062129.231199.md)
 - [2026-03-09/20260309_131647_Lisa_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_131647_Lisa_1773062129.231199.md)
 - [2026-03-09/20260309_131721_Lisa_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_131721_Lisa_1773062129.231199.md)
+- [2026-03-09/20260309_131807_Lisa_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_131807_Lisa_1773062129.231199.md)
 
 ### 📁 specs/
 
@@ -34,6 +35,7 @@
 - [design_data_requirements_for_maya.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/specs/design_data_requirements_for_maya.md)
 - [frontend_impl_plan.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/specs/frontend_impl_plan.md)
 - [frontend_missing_fields_and_examples.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/specs/frontend_missing_fields_and_examples.md)
+- [ml_etl_integration_spec.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/specs/ml_etl_integration_spec.md)
 - [ml_plan_app_for_sf_founders.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/specs/ml_plan_app_for_sf_founders.md)
 - [mobile_ml_integration.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/specs/mobile_ml_integration.md)
 
