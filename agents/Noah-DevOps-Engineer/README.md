@@ -1,0 +1,24 @@
+# 🚢 Noah — DevOps-Engineer
+
+> 🤖 Auto-generated · 2026-03-09 13:17 UTC
+
+## 산출물 목록
+
+### 📁 config/
+
+- [redis/{README.md,main.tf,variables.tf,outputs.tf,prometheus_rules.yaml}](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/config/redis/{README.md,main.tf,variables.tf,outputs.tf,prometheus_rules.yaml})
+- [staging_env.example](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/config/staging_env.example)
+
+### 📁 slack/
+
+- [2026-03-04/20260304_181611_Noah_1772648003.795029.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/slack/2026-03-04/20260304_181611_Noah_1772648003.795029.md)
+- [2026-03-04/20260304_183036_Noah_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/slack/2026-03-04/20260304_183036_Noah_1772648728.246069.md)
+- [2026-03-04/20260304_183056_Noah_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/slack/2026-03-04/20260304_183056_Noah_1772648728.246069.md)
+- [2026-03-04/20260304_183100_Noah_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/slack/2026-03-04/20260304_183100_Noah_1772648728.246069.md)
+- [2026-03-04/20260304_183122_Noah_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/slack/2026-03-04/20260304_183122_Noah_1772648728.246069.md)
+- [2026-03-04/20260304_183135_Noah_1772648728.246069.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/slack/2026-03-04/20260304_183135_Noah_1772648728.246069.md)
+- [2026-03-04/20260304_183716_Noah_1772649191.591039.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/slack/2026-03-04/20260304_183716_Noah_1772649191.591039.md)
+- [2026-03-04/20260304_183800_Noah_1772649191.591039.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Noah-DevOps-Engineer/slack/2026-03-04/20260304_183800_Noah_1772649191.591039.md)
+
+---
+[← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
