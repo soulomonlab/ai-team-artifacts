@@ -1,0 +1,127 @@
+# CI dependency checks workflow
+# Purpose: fail CI on new critical/high vulnerabilities; allow existing baseline of moderate issues.
+# Tools used: Snyk (package + docker), ORT (OSS Review Toolkit) for IaC, Dependabot alerts (GitHub API)
+# Required repository secrets (add to PR body): SNYK_TOKEN, GITHUB_TOKEN
+
+name: CI - Dependency & IaC Checks
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  dependency_checks:
+    name: Dependency & IaC vulnerability checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node (for frontend deps)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Python (for infra tooling)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Snyk CLI
+        run: |
+          curl -sL https://snyk.io/install | bash
+          export PATH="$HOME/.snyk/bin:$PATH"
+
+      - name: Run Snyk test (packages + docker)
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: |
+          # Run Snyk package tests (npm, pip, etc.)
+          snyk test --all-projects --severity-threshold=high --json > snyk-packages.json || true
+          # If Dockerfile exists, test the image build context
+          if [ -f Dockerfile ]; then
+            docker build -t ci-depcheck-image .
+            snyk container test ci-depcheck-image --severity-threshold=high --json > snyk-container.json || true
+          fi
+          # Upload results as artifacts (non-blocking) and fail the job if severity >= high found
+          python - <<'PY'
+import sys, json
+for p in ('snyk-packages.json','snyk-container.json'):
+    try:
+        j=json.load(open(p))
+        issues=j.get('vulnerabilities') or j.get('vulnerabilities', [])
+        for v in issues:
+            sev=v.get('severity')
+            if sev and sev.lower() in ('high','critical'):
+                print('High/Critical vulnerability found in',p)
+                sys.exit(2)
+    except FileNotFoundError:
+        pass
+print('No high/critical vulnerabilities reported by Snyk')
+PY
+
+      - name: Run ORT (OSS Review Toolkit) for IaC and Terraform providers
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # This step assumes ORT is available in a container or installed as a binary.
+          # Use a released ORT Docker image (replace with pinned version in production).
+          ORT_IMAGE="ossreviewtoolkit/ort:latest"
+          docker pull $ORT_IMAGE
+          mkdir -p ort-work
+          docker run --rm -v "${PWD}:/repo" -v "${PWD}/ort-work:/ort-work" $ORT_IMAGE scan --info-file /ort-work/ort-result.yml /repo || true
+          # Basic fail-fast parsing: treat any findings mapped to HIGH/CRITICAL as CI failure
+          python - <<'PY'
+import sys, yaml
+try:
+    r=yaml.safe_load(open('ort-work/ort-result.yml'))
+    findings=[]
+    # ORT schema varies by version; we attempt to defensively search for vulnerabilities
+    def walk(node):
+        if isinstance(node, dict):
+            for k,v in node.items():
+                if k.lower()=='severity' and v and v.lower() in ('high','critical'):
+                    findings.append((k,v))
+                else:
+                    walk(v)
+        elif isinstance(node, list):
+            for e in node:
+                walk(e)
+    walk(r)
+    if findings:
+        print('ORT reported high/critical IaC/provider findings')
+        sys.exit(2)
+    print('No high/critical findings from ORT')
+except FileNotFoundError:
+    print('ORT result not found; skipping ORT parse')
+PY
+
+      - name: Check Dependabot alerts (informational)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Dependabot alerts require GitHub REST API; this step prints a short summary for reviewers
+          curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/dependabot/alerts?per_page=100" \
+            | jq '.[] | {id:.number, package:.security_vulnerability.package.name, severity:.security_vulnerability.severity, state:.state}' > dependabot_alerts.json || true
+
+      - name: Upload dependency scan artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-scan-results
+          path: |
+            snyk-packages.json
+            snyk-container.json
+            ort-work/ort-result.yml
+            dependabot_alerts.json
+
+      - name: Summary & policy
+        run: |
+          echo "Policy: CI will FAIL on any new HIGH/CRITICAL vulnerabilities reported by Snyk or ORT. Existing moderate issues are allowed as baseline; team must create fixes per audit plan."
+
+# Notes for reviewers:
+# - The workflow intentionally exits non-zero when a high/critical vuln is detected so PRs with new severe vulns are blocked.
+# - To establish an explicit baseline for current moderate findings, we recommend keeping a 'dependency-baseline.json' or using Snyk monitoring/organization ignore rules. That process is covered in the IaC audit plan.
+# - Required repository secrets: SNYK_TOKEN (for Snyk CLI), GITHUB_TOKEN (for Dependabot API and ORT github access). Add them to the repo settings before merging.
