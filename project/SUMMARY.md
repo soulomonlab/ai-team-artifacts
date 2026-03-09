@@ -8,19 +8,20 @@
 |----------|------|-----------|----------------|------|
 | 📋 Alex | Product-Owner | 27 | 40 | 67 |
 | 🤝 Chris | Customer-Success | 8 | 3 | 11 |
-| 🤖 CustomerInsights | Customer-Insights | 4 | 2 | 6 |
+| 🤖 CustomerInsights | Customer-Insights | 5 | 3 | 8 |
 | 🎯 Dana | QA-Engineer | 59 | 21 | 80 |
 | 🤖 Dependency | Dependency-Manager | 7 | 7 | 14 |
 | 🤖 DocsSync | Docs-Sync | 5 | 2 | 7 |
-| 📝 Emma | Technical-Writer | 19 | 7 | 26 |
+| 📝 Emma | Technical-Writer | 20 | 8 | 28 |
 | 🔒 Isabella | Security-Engineer | 15 | 9 | 24 |
 | ⚡ Kevin | Frontend-Engineer | 37 | 23 | 60 |
-| 🧠 Lisa | ML-Engineer | 10 | 6 | 16 |
+| 🧠 Lisa | ML-Engineer | 11 | 7 | 18 |
 | 🔧 Marcus | Backend-Engineer | 32 | 22 | 54 |
 | 🎨 Maya | Designer | 31 | 16 | 47 |
 | 🚢 Noah | DevOps-Engineer | 2 | 8 | 10 |
 | 🖥️ Oliver | Backend-Engineer | 0 | 11 | 11 |
-| 📱 Ryan | Mobile-Engineer | 12 | 6 | 18 |
+| 📱 Ryan | Mobile-Engineer | 13 | 7 | 20 |
+| 📈 Samantha | Data-Engineer | 1 | 1 | 2 |
 | 🏗️ Taylor | Tech-Lead | 15 | 12 | 27 |
 | 🏛️ Victor | Architect | 9 | 4 | 13 |
 
@@ -28,17 +29,17 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 199 |
+| slack | 204 |
 | specs | 90 |
 | design | 63 |
 | tests | 47 |
 | code | 35 |
-| docs | 32 |
-| reports | 22 |
+| docs | 33 |
+| reports | 26 |
 | config | 2 |
 | data | 1 |
 
-**총 산출물: 491개**
+**총 산출물: 501개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
