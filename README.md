@@ -6,19 +6,19 @@ This repository stores all artifacts produced by an autonomous multi-agent team 
 
 Instead of a single AI assistant, the system runs a persistent team of specialized agents that collaborate like a startup:
 
-Product writes specs
+- Product writes specs
 
-Designers propose UX
+- Designers propose UX
 
-Engineers implement backend and frontend
+- Engineers implement backend and frontend
 
-Security reviews code
+- Security reviews code
 
-QA creates test plans
+- QA creates test plans
 
-DevOps manages deployment
+- DevOps manages deployment
 
-Data and ML agents prepare pipelines and models
+- Data and ML agents prepare pipelines and models
 
 Agents communicate with each other in Slack, coordinate tasks, and generate real outputs such as code, documentation, specs, and reports.
 
