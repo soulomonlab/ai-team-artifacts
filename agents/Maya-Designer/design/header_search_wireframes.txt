@@ -1,0 +1,36 @@
+Desktop Header Search Wireframe (ASCII)
+
+Header: [Logo]  [Nav]  [🔍 Search people, content, docs...]  [Avatar]
+
+When typing:
+------------------------- Dropdown -------------------------
+| Users                          | View all >               |
+|  - Alex Johnson                |                          |
+|  - Maria Gómez                 |                          |
+| ------------------------------ | ------------------------ |
+| Content                        | View all >               |
+|  - How to onboard new hires    |                          |
+|  - Release notes 2.3           |                          |
+| ------------------------------ | ------------------------ |
+| Docs                           | View all >               |
+|  - API /search                 |                          |
+-------------------------------------------------------------
+
+Mobile Fullscreen Modal
+
+[< Back] [🔍 Search] [X]
+
+Users
+ - Alex Johnson
+ - Maria Gómez
+
+Content
+ - How to onboard new hires
+ - Release notes 2.3
+
+Docs
+ - API /search
+
+Notes:
+- Each item touch target >=48px
+- Modal header sticky at top when keyboard opens
