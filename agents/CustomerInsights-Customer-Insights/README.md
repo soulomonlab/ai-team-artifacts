@@ -11,6 +11,7 @@
 ### 📁 reports/
 
 - [customer_insights_docs_pr.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CustomerInsights-Customer-Insights/reports/customer_insights_docs_pr.md)
+- [docs_ambiguities_product_impact.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CustomerInsights-Customer-Insights/reports/docs_ambiguities_product_impact.md)
 - [docs_followup_from_pr.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CustomerInsights-Customer-Insights/reports/docs_followup_from_pr.md)
 - [docs_followup_from_pr.md,](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CustomerInsights-Customer-Insights/reports/docs_followup_from_pr.md,)
 
@@ -18,6 +19,7 @@
 
 - [2026-03-09/20260309_131650_CustomerInsights_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CustomerInsights-Customer-Insights/slack/2026-03-09/20260309_131650_CustomerInsights_1773062129.231199.md)
 - [2026-03-09/20260309_131705_CustomerInsights_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CustomerInsights-Customer-Insights/slack/2026-03-09/20260309_131705_CustomerInsights_1773062129.231199.md)
+- [2026-03-09/20260309_131727_CustomerInsights_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/CustomerInsights-Customer-Insights/slack/2026-03-09/20260309_131727_CustomerInsights_1773062129.231199.md)
 
 ---
 [← 전체 목록](https://github.com/soulomonlab/ai-team-artifacts)
