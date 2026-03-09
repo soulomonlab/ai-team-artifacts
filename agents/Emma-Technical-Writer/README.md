@@ -26,6 +26,7 @@
 - [onboarding_cta_copy.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Emma-Technical-Writer/docs/onboarding_cta_copy.md)
 - [onboarding_cta_copy.md.](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Emma-Technical-Writer/docs/onboarding_cta_copy.md.)
 - [runbook_ops.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Emma-Technical-Writer/docs/runbook_ops.md)
+- [update_docs_from_pr.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Emma-Technical-Writer/docs/update_docs_from_pr.md)
 
 ### 📁 slack/
 
@@ -36,6 +37,7 @@
 - [2026-03-09/20260309_131605_Emma_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Emma-Technical-Writer/slack/2026-03-09/20260309_131605_Emma_1773062129.231199.md)
 - [2026-03-09/20260309_131651_Emma_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Emma-Technical-Writer/slack/2026-03-09/20260309_131651_Emma_1773062129.231199.md)
 - [2026-03-09/20260309_131700_Emma_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Emma-Technical-Writer/slack/2026-03-09/20260309_131700_Emma_1773062129.231199.md)
+- [2026-03-09/20260309_131728_Emma_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Emma-Technical-Writer/slack/2026-03-09/20260309_131728_Emma_1773062129.231199.md)
 
 ### 📁 specs/
 
