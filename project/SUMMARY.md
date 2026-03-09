@@ -6,7 +6,7 @@
 
 | 에이전트 | 역할 | 코드/문서 | Slack 아카이브 | 합계 |
 |----------|------|-----------|----------------|------|
-| 📋 Alex | Product-Owner | 23 | 29 | 52 |
+| 📋 Alex | Product-Owner | 25 | 30 | 55 |
 | 🎯 Dana | QA-Engineer | 57 | 20 | 77 |
 | 🤖 Dependency | Dependency-Manager | 6 | 6 | 12 |
 | 🤖 DocsSync | Docs-Sync | 4 | 1 | 5 |
@@ -18,7 +18,7 @@
 | 🎨 Maya | Designer | 30 | 15 | 45 |
 | 🚢 Noah | DevOps-Engineer | 2 | 8 | 10 |
 | 🖥️ Oliver | Backend-Engineer | 0 | 9 | 9 |
-| 📱 Ryan | Mobile-Engineer | 1 | 1 | 2 |
+| 📱 Ryan | Mobile-Engineer | 6 | 2 | 8 |
 | 🏗️ Taylor | Tech-Lead | 12 | 11 | 23 |
 | 🏛️ Victor | Architect | 6 | 2 | 8 |
 
@@ -26,17 +26,17 @@
 
 | 유형 | 파일 수 |
 |------|---------|
-| slack | 156 |
-| specs | 71 |
-| design | 58 |
+| slack | 158 |
+| specs | 72 |
+| design | 59 |
 | tests | 42 |
-| code | 28 |
+| code | 33 |
 | docs | 15 |
 | reports | 14 |
 | config | 2 |
 | data | 1 |
 
-**총 산출물: 387개**
+**총 산출물: 396개**
 
 ---
 *https://github.com/soulomonlab/ai-team-artifacts*
