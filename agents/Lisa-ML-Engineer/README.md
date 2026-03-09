@@ -13,6 +13,10 @@
 - [docs_followup_pr_recommendation.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/docs/docs_followup_pr_recommendation.md)
 - [ml_docs_pr_followup.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/docs/ml_docs_pr_followup.md)
 
+### 📁 reports/
+
+- [update_docs_from_pr_ml_impact.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/reports/update_docs_from_pr_ml_impact.md)
+
 ### 📁 slack/
 
 - [2026-03-09/20260309_061457_Lisa_1773036797.758829.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_061457_Lisa_1773036797.758829.md)
@@ -21,6 +25,7 @@
 - [2026-03-09/20260309_061716_Lisa_1773036797.758829.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_061716_Lisa_1773036797.758829.md)
 - [2026-03-09/20260309_131610_Lisa_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_131610_Lisa_1773062129.231199.md)
 - [2026-03-09/20260309_131647_Lisa_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_131647_Lisa_1773062129.231199.md)
+- [2026-03-09/20260309_131721_Lisa_1773062129.231199.md](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Lisa-ML-Engineer/slack/2026-03-09/20260309_131721_Lisa_1773062129.231199.md)
 
 ### 📁 specs/
 
