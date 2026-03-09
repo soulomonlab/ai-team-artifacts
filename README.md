@@ -13,6 +13,7 @@ agents/
     code/
     design/
     docs/
+    reports/
     slack/
     specs/
   Chris-Customer-Success/          🤝
@@ -103,6 +104,7 @@ agents/
   Victor-Architect/          🏛️
     code/
     design/
+    docs/
     slack/
     specs/
     tests/
@@ -112,14 +114,14 @@ project/
 
 ## 에이전트 목록
 
-- 📋 **[Alex](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)** — Product-Owner · 70개 파일
-- 🤝 **[Chris](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Chris)** — Customer-Success · 13개 파일
-- 🤖 **[CustomerInsights](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/CustomerInsights)** — Customer-Insights · 10개 파일
-- 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA-Engineer · 80개 파일
+- 📋 **[Alex](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Alex)** — Product-Owner · 73개 파일
+- 🤝 **[Chris](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Chris)** — Customer-Success · 21개 파일
+- 🤖 **[CustomerInsights](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/CustomerInsights)** — Customer-Insights · 16개 파일
+- 🎯 **[Dana](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dana)** — QA-Engineer · 82개 파일
 - 🤖 **[Dependency](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Dependency)** — Dependency-Manager · 14개 파일
-- 🤖 **[DocsSync](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/DocsSync)** — Docs-Sync · 14개 파일
-- 📝 **[Emma](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)** — Technical-Writer · 32개 파일
-- 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security-Engineer · 24개 파일
+- 🤖 **[DocsSync](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/DocsSync)** — Docs-Sync · 18개 파일
+- 📝 **[Emma](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Emma)** — Technical-Writer · 37개 파일
+- 🔒 **[Isabella](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Isabella)** — Security-Engineer · 27개 파일
 - ⚡ **[Kevin](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Kevin)** — Frontend-Engineer · 64개 파일
 - 🧠 **[Lisa](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Lisa)** — ML-Engineer · 20개 파일
 - 🔧 **[Marcus](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Marcus)** — Backend-Engineer · 54개 파일
@@ -129,7 +131,7 @@ project/
 - 📱 **[Ryan](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Ryan)** — Mobile-Engineer · 20개 파일
 - 📈 **[Samantha](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Samantha)** — Data-Engineer · 2개 파일
 - 🏗️ **[Taylor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Taylor)** — Tech-Lead · 27개 파일
-- 🏛️ **[Victor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Victor)** — Architect · 13개 파일
+- 🏛️ **[Victor](https://github.com/soulomonlab/ai-team-artifacts/tree/main/agents/Victor)** — Architect · 17개 파일
 
 ## 빠른 링크
 
