@@ -2,8 +2,6 @@
 
 > 🤖 Auto-generated · 2026-03-09 13:18 UTC
 
-## 산출물 목록
-
 ### 📁 code/
 
 - [HomePage.tsx](https://github.com/soulomonlab/ai-team-artifacts/blob/main/agents/Kevin-Frontend-Engineer/code/HomePage.tsx)
