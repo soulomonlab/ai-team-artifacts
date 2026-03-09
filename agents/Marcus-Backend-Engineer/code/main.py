@@ -1,10 +1,21 @@
 from fastapi import FastAPI
-from .routers import auth as auth_router
+from fastapi.middleware.cors import CORSMiddleware
+from .routers import posts
+from .db import Base, engine
 
-app = FastAPI(title="Auth Service")
+app = FastAPI(title="Posts Service", version="1.0.0")
 
-app.include_router(auth_router.router, prefix="/api/v1/auth", tags=["auth"]) 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
-@app.get("/healthz")
-def healthz():
-    return {"status": "ok"}
+# create tables at startup for local dev (Alembic should be used in prod)
+@app.on_event("startup")
+def on_startup():
+    Base.metadata.create_all(bind=engine)
+
+app.include_router(posts.router, prefix="/api/v1")
